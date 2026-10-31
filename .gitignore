@@ -46,3 +46,8 @@ docs/planning_chat/*.txt
 timing/guide/
 timing/check/*.wav
 timing/check/*.mp4
+public/media/
+public/audio/
+out/
+# Regenerable: scripts/grain_plates.py
+public/grain/

@@ -1,0 +1,173 @@
+{
+ "_doc": "M3 batch 1: FLUX.2 [dev] stills via ComfyUI (scripts/stills.py). Prompt = subject + the brief's shared still style, unchanged across the video. Four takes each (brief), seeds from 1929. Picks go in 'kept'. Batch 2 (after picks): N06, N08, N26 conditioned on the references; N15 from N14; N27 from N26; the LTX clips.",
+ "style": "1920s black-and-white documentary photograph, orthochromatic film look, high contrast, soft natural light, period clothing and interiors, 4:3 frame, clean image with no grain, no scratches, no text, no logos, no signage",
+ "model": {
+  "unet": "flux2_dev_fp8mixed.safetensors",
+  "clip": "mistral_3_small_flux2_fp4_mixed.safetensors",
+  "vae": "flux2-vae.safetensors",
+  "steps": 28,
+  "guidance": 4.0,
+  "sampler": "euler"
+ },
+ "seeds": [
+  1929,
+  1930,
+  1931,
+  1932
+ ],
+ "items": {
+  "ref_customer": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "Character reference of one invented man in his thirties in 1928: a round clean-shaven face, dark hair slicked down and parted in the middle, white shirt with sleeve garters, a striped tie and a waistcoat. The same man shown twice side by side on a plain light-gray studio backdrop: full body from the front, and full body in three-quarter view. Identical face, hair and clothes in both views",
+   "note": "reference for N08, N26, N27 (brief: consistency)"
+  },
+  "ref_machine": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "Product photograph of a tall brass cabinet about the height of a man, on a plain light-gray studio backdrop: riveted brass panels, three round dials with needles, a row of toggle switches, vacuum tubes glowing faintly behind a small round glass window, and a single round glass bulb on top. A plain machine, not a robot: no face, no arms, no legs",
+   "note": "reference for N06 and the running gag; brief guardrail: a plain cabinet, not a famous film robot"
+  },
+  "N02": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a 1920s family parlor at evening, a mother, a father and two children leaning in close toward a tall wooden cathedral-shaped radio set on a side table, a fringed lamp, patterned wallpaper, the family seen from behind and the side, their faces turned to the radio",
+   "note": "slow push to the radio; iris opens"
+  },
+  "N04": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a 1920s barbershop, a barber with a straight razor leaning down to whisper to a man in the chair, mirrors and bottles behind",
+   "note": "brief's example subject; push in"
+  },
+  "N05": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a 1920s shoeshine stand on a city street corner, the shoeshine man kneeling at a customer's raised shoe and looking up with two fingers held up, the customer in a suit and hat holding a folded newspaper",
+   "note": "corner caption 'according to legend' added in code"
+  },
+  "N07": {
+   "size": [
+    1248,
+    1872
+   ],
+   "subject": "a tall wall in a 1920s brokerage office covered edge to edge with large hand-drawn line charts on paper sheets, every line climbing steeply and running off the top of its sheet, a wooden ladder leaning against the wall, a clerk in shirtsleeves on the ladder pinning up another chart",
+   "note": "pan up"
+  },
+  "N11": {
+   "size": [
+    1248,
+    2016
+   ],
+   "subject": "a 1920s city skyline seen from street level looking up, one skyscraper rising far taller than all the others, so tall its spire disappears into the clouds, the other buildings stopping at a fraction of its height",
+   "note": "tilt up"
+  },
+  "N14": {
+   "size": [
+    2208,
+    1248
+   ],
+   "subject": "a windowless modern building glowing at night in the middle of a cornfield, viewed from a dirt road",
+   "note": "brief's example subject; slow pan; N15 adds the power plant to this frame (batch 2)"
+  },
+  "N16a": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a long 1920s office corridor seen straight on, at its end an open office door, and through it a small office whose back wall has a second, smaller open door",
+   "note": "first of three nested doors; zoom between stills"
+  },
+  "N16b": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a small cramped 1920s office seen straight on, a desk and a filing cabinet, the back wall with an even smaller open door leading to a tiny closet-sized office",
+   "note": "second nested door"
+  },
+  "N16c": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a tiny closet-sized 1920s office seen straight on through a small doorway, room for one small desk and one chair, a round hatbox on the desk",
+   "note": "third nested door; leads into N17"
+  },
+  "N17": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a round hatbox on a wooden office desk, overflowing with small blank paper slips that spill onto the desk and the floor, a green-shaded desk lamp, a 1920s office",
+   "note": "IOUs in its hat; slips blank (no generated text)"
+  },
+  "N22": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "one young woman in modern 2020s clothes, a hoodie, jeans and white sneakers, dancing the Charleston in the middle of a crowded 1920s dance hall among flappers in fringed dresses and men in suits, full-body wide shot",
+   "note": "one-frame insert; should match the C1 hall"
+  },
+  "N24": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "a banker in a dark three-piece suit with both hands on a giant brass dial mounted on a marble wall, the dial as big as a clock face with a blank face, tick marks and a long pointer, in a 1920s bank hall, seen from the side",
+   "note": "needle animated in code (K overlay)"
+  },
+  "N32": {
+   "size": [
+    2304,
+    1728
+   ],
+   "subject": "an empty 1920s dance hall, floor buried knee-deep in paper ticker tape, one spotlight on a man in a tuxedo at an upright piano holding a megaphone, wide shot",
+   "note": "brief's example subject; generated wide for the pull-back"
+  },
+  "kf_C1a": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "couples dancing the Charleston in a crowded 1920s dance hall, flappers and men in suits, full-body wide shot",
+   "note": "keyframe for clip C1 take 1 (LTX-2.3 image-to-video, batch 2)"
+  },
+  "kf_C1b": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "couples dancing the Charleston in a crowded 1920s dance hall seen from a balcony at an angle, flappers in fringed dresses and men in suits kicking their heels, a jazz band on a small stage at the back, full-body wide shot",
+   "note": "keyframe for clip C1 take 2"
+  },
+  "kf_C2": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "long strips of paper ticker tape streaming down from the ceiling of a crowded 1920s dance hall onto dancing couples, the air full of falling tape",
+   "note": "keyframe for clip C2"
+  },
+  "kf_C3": {
+   "size": [
+    1664,
+    1248
+   ],
+   "subject": "close-up of two men's hands in 1920s suit cuffs passing a crumpled paper banknote from one hand to the other, a dance hall softly out of focus behind",
+   "note": "keyframe for clip C3; the crumpled dollar callback"
+  }
+ },
+ "kept": {}
+}

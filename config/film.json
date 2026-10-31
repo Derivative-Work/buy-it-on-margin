@@ -1,0 +1,16 @@
+{
+ "_doc": "Every period effect's parameters (brief, 'The film layer'). Read by src/film/*. Seed from config/seeds.json.",
+ "frame": {"width": 1920, "height": 1080, "fps": 24, "picture": {"width": 1440, "height": 1080}, "picture_fps": 18},
+ "tone": {"contrast_curve": [0.0, 0.0, 0.06, 0.24, 0.48, 0.70, 0.85, 0.93, 0.97], "warm_tint": 0.04},
+ "softness_px": 0.6,
+ "weave": {"x_px": 1.5, "y_px": 2.0, "smooth_frames": 4},
+ "flicker": {"min": 0.92, "max": 1.05},
+ "grain": {"plates": 24, "opacity": 0.55},
+ "dust": {"specks_per_s": 5, "size_px": [1.5, 5], "hair_chance_per_s": 0.15},
+ "scratch": {"chance_per_s": 0.25, "picture_frames": [3, 9], "opacity": 0.5},
+ "clean_ranges_s": [],
+ "vignette": {"strength": 0.55, "inner": 0.55},
+ "move": {"max_width_per_s": 0.05},
+ "burn": {"holes": 9, "duration_s": 1.0, "black_tail": 0.2},
+ "card": {"min_hold_s": 1.5, "s_per_word": 0.3333, "display_font": "Limelight", "body_font": "Old Standard TT"}
+}

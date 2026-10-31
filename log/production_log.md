@@ -78,3 +78,18 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - N30 now starts on "mar—" (151.32 s, the brief's cue): freeze, burn, black at the cut, 0.56 s.
 - N34 ends on its hold rule (`"end": "hold"`): credits 181.00–202.17 s, 16.3 s past the music. The final mux pads the master with the seeded crackle bed for that tail (M5); the locked master is unchanged.
 - Timing map, shot times and review video rebuilt. Card-hold exceptions kept as defaults: N05 (corner caption), N19/N20 (break cards, 1.1–1.6 s), N31a/b (dates 2.0 s each in the silence), N31c (5.6 s, over the coda's first line).
+
+## 13. 2026-10-31 — M3 batch 1 started (stills)
+
+- ComfyUI 0.42.1 started (`~/ComfyUI/.venv/bin/python ~/ComfyUI/main.py --listen 127.0.0.1 --port 8188`).
+- `config/stills.json`: 19 items (references for the customer and the thinking machine, every independent S still, keyframes for clips C1a, C1b, C2, C3), prompt = subject + the brief's shared still style, seeds 1929–1932. Sizes: 1664×1248 (4:3, room for pushes), 2208×1248 for pans, portrait for N07/N11 tilts, 2304×1728 for the N32 pull-back.
+- `scripts/stills.py` (from Folks Like Us; FLUX.2 [dev] fp8, Mistral fp4 encoder, 28 steps, euler, guidance 4). Rows per take in `shots/prompts.md`, prompts in `shots/prompts/`. Test take N04 s1929: 72 s, look approved by the agent (period, clean, no text). Batch running in the background (~1 min per take).
+- Deferred to batch 2 (needs picks): N06, N08, N26 (conditioned on the references), N15 (from N14), N27 (from N26), and the LTX-2.3 clips from the picked keyframes. Tape overlays (N12, N18) will be code (K), not generated.
+
+## 14. 2026-10-31 — M2: film layer and cards in Remotion
+
+- Remotion 4.0.534 (pinned; released 2026-10-07), React 18.3.1. `src/film/FilmLayer.tsx` is the one wrapper: 18 fps picture cadence via `<Freeze>` on a 2,1,1 hold pattern (measured: one repeated frame in four), tone (full desaturation, contrast curve, faint warm tint), 0.6 px blur, seeded gate weave (±1.5/±2 px, smoothed), flicker 0.92–1.05, grain loop (`scripts/grain_plates.py`, 24 plates, seed 1929, overlay blend), seeded dust, hairs and persisting vertical scratches (skipped inside `clean_ranges_s`), vignette, 4:3 picture pillarboxed. All parameters in `config/film.json`.
+- `src/film/devices.tsx`: `Still` (eased push/pan; warns past 5%/s of width), `Clip` (OffthreadVideo, playback rate for over-crank), `Card` (Deco stepped double border; Limelight for short lines, Old Standard TT for fact text; fonts SIL OFL from google/fonts in `public/fonts/`), `Leader` (5-4-3-2 with sweep), `Iris` (open/close), `Burn` (seeded holes bloom from pinpricks with scorched rims, merge, white flare, black tail). Freeze and one-frame inserts use Remotion's `<Freeze>`/sequences.
+- Burn v1 merged into a white blob by 40% of its length; v2 grows each hole as rmax·u^p and draws rims under cores so merged holes read as one burn.
+- `src/M2Test.tsx`: leader → iris open on a pushed still → N03 card → pan → placeholder clip → freeze + burn → N31a date card → N31c fact card → iris close; master audio 0–25 s. Placeholders: N04 s1929, ref_customer s1929, and a 640×480 zoompan clip made from N04 by ffmpeg.
+- `npx remotion render src/index.ts M2Test out/m2/m2_filmtest.mp4 --codec=h264 --crf=18`: 600 frames at 1080p in 15 s.
