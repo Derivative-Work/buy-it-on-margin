@@ -1,0 +1,9 @@
+{
+  "name": "buy-it-on-margin",
+  "private": true,
+  "type": "module",
+  "description": "Buy It on Margin: silent-newsreel music video; film layer and cards in Remotion.",
+  "dependencies": {
+    "puppeteer": "24.43.1"
+  }
+}

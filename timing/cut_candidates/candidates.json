@@ -1,0 +1,38 @@
+{
+ "source": "audio/track/Buy It On Margin.wav",
+ "seed": 1929,
+ "silence_s": 4.0,
+ "coda_in_s": 169.2,
+ "candidates": {
+  "A": {
+   "cut_s": 150.8,
+   "coda_starts_at_s": 154.8,
+   "duration_s": 174.8,
+   "listen_clip": "listen_A.wav",
+   "listen_clip_covers_s": [
+    144.8,
+    "\u2192 cut \u2192 4 s \u2192 coda + 6 s"
+   ]
+  },
+  "B": {
+   "cut_s": 150.88,
+   "coda_starts_at_s": 154.88,
+   "duration_s": 174.88,
+   "listen_clip": "listen_B.wav",
+   "listen_clip_covers_s": [
+    144.88,
+    "\u2192 cut \u2192 4 s \u2192 coda + 6 s"
+   ]
+  },
+  "C": {
+   "cut_s": 150.96,
+   "coda_starts_at_s": 154.96,
+   "duration_s": 174.96,
+   "listen_clip": "listen_C.wav",
+   "listen_clip_covers_s": [
+    144.96,
+    "\u2192 cut \u2192 4 s \u2192 coda + 6 s"
+   ]
+  }
+ }
+}

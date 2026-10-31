@@ -1,0 +1,169 @@
+{
+ "status": "complete",
+ "title": "Buy It On Margin",
+ "play_count": 20,
+ "upvote_count": 1,
+ "allow_comments": true,
+ "is_verified": false,
+ "id": "2414ddab-0ec6-4dcc-87d0-506ad1ca49bf",
+ "entity_type": "song_schema",
+ "video_url": "",
+ "audio_url": "https://studio-api.prod.suno.com/api/forbidden",
+ "media_urls": [
+  {
+   "url": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/2414ddab-0ec6-4dcc-87d0-506ad1ca49bf.m4a",
+   "content_type": "m4a-opus",
+   "delivery": "progressive",
+   "encoding": "1.0.0"
+  }
+ ],
+ "image_url": "https://cdn2.suno.ai/image_2414ddab-0ec6-4dcc-87d0-506ad1ca49bf.jpeg",
+ "image_large_url": "https://cdn2.suno.ai/image_large_2414ddab-0ec6-4dcc-87d0-506ad1ca49bf.jpeg",
+ "major_model_version": "v6",
+ "model_name": "chirp-hawk",
+ "metadata": {
+  "tags": "1920s hot jazz, fast Charleston dance-band pulse; bright male tenor delivered in hushed, close-mic intimacy, with whispered ad-libs between lines and group-shout choruses; banjo, clarinet and muted trumpet trading featured breaks over tuba bass, stride piano and brushed snare, with stop-time hits and a thinning piano coda; acoustic gramophone recording, shellac 78 rpm crackle, narrow mono sound.",
+  "prompt": "$d0",
+  "type": "gen",
+  "duration": 189.2,
+  "refund_credits": false,
+  "stream": true,
+  "make_instrumental": false,
+  "is_max_mode": true,
+  "control_sliders": {
+   "style_weight": 0.85,
+   "weirdness_constraint": 0.4,
+   "aug_creativity": 1
+  },
+  "can_remix": true,
+  "is_remix": false,
+  "priority": 10,
+  "has_stem": true,
+  "uses_latest_model": true,
+  "model_badges": {
+   "songcard": {
+    "display_name": "V6",
+    "light": {
+     "text_color": "FD429C",
+     "background_color": "0000004D",
+     "border_color": "00000000"
+    },
+    "dark": {
+     "text_color": "FD429C",
+     "background_color": "0000004D",
+     "border_color": "00000000"
+    }
+   },
+   "songrow": {
+    "display_name": "V6",
+    "light": {
+     "text_color": "FD429C",
+     "text_color_gradient": [
+      "FD429C",
+      "FF5126"
+     ],
+     "background_color": "00000000",
+     "border_color": "00000000"
+    },
+    "dark": {
+     "text_color": "FD429C",
+     "text_color_gradient": [
+      "FD429C",
+      "FF5126"
+     ],
+     "background_color": "00000000",
+     "border_color": "00000000"
+    }
+   }
+  },
+  "image_config": {
+   "use_image_config_template": true,
+   "id": "polaroid",
+   "default_cover_style": "brand_refresh"
+  },
+  "is_mumble": false
+ },
+ "is_liked": false,
+ "user_id": "b136ba79-b707-4129-8a0f-c20e3d41f767",
+ "display_name": "Derivative Work",
+ "handle": "derivativework",
+ "is_handle_updated": false,
+ "avatar_image_url": "https://cdn2.suno.ai/image_9bd3501a-1684-4bd8-ac0f-d3f0b88a4fa3.jpeg",
+ "is_trashed": false,
+ "is_hidden": false,
+ "created_at": "2026-10-31T09:28:14.878Z",
+ "updated_at": "2026-10-31T09:28:54.137Z",
+ "is_public": false,
+ "is_persona_root": false,
+ "is_following_creator": false,
+ "albums": [],
+ "ownership": {
+  "ownership_reason": "subscribed"
+ },
+ "explicit": false,
+ "comment_count": 0,
+ "flag_count": 0,
+ "display_tags": "hot jazz, Charleston",
+ "is_contest_clip": false,
+ "has_hook": false,
+ "batch_index": 1,
+ "action_config": {
+  "actions": [
+   {
+    "action_type": "add_to_playlist",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "like_song",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "share_song",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "dislike_song",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "report_song",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "remove_from_playlist",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "play_next",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "add_to_queue",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "remix_extend",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "remix_cover",
+    "disabled": false,
+    "visible": true
+   },
+   {
+    "action_type": "remix_reuse_style",
+    "disabled": false,
+    "visible": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,2291 @@
+{
+ "model": "large-v3",
+ "stem": "audio/stems/0 Lead Vocals.wav",
+ "whisperx": null,
+ "segments": [
+  {
+   "start": 2.327,
+   "end": 12.603,
+   "text": "Ladies and gentlemen, from the trading floor to your front parlor, the music of tomorrow on the installment plan.",
+   "words": [
+    {
+     "w": "Ladies",
+     "start": 2.327,
+     "end": 2.668,
+     "score": 0.897
+    },
+    {
+     "w": "and",
+     "start": 2.748,
+     "end": 2.828,
+     "score": 0.952
+    },
+    {
+     "w": "gentlemen,",
+     "start": 2.888,
+     "end": 3.309,
+     "score": 0.963
+    },
+    {
+     "w": "from",
+     "start": 4.15,
+     "end": 4.31,
+     "score": 0.759
+    },
+    {
+     "w": "the",
+     "start": 4.35,
+     "end": 4.43,
+     "score": 0.997
+    },
+    {
+     "w": "trading",
+     "start": 4.491,
+     "end": 4.871,
+     "score": 0.902
+    },
+    {
+     "w": "floor",
+     "start": 4.951,
+     "end": 5.372,
+     "score": 0.725
+    },
+    {
+     "w": "to",
+     "start": 5.432,
+     "end": 5.532,
+     "score": 0.858
+    },
+    {
+     "w": "your",
+     "start": 5.572,
+     "end": 5.772,
+     "score": 0.878
+    },
+    {
+     "w": "front",
+     "start": 5.853,
+     "end": 6.093,
+     "score": 0.811
+    },
+    {
+     "w": "parlor,",
+     "start": 6.173,
+     "end": 6.574,
+     "score": 0.971
+    },
+    {
+     "w": "the",
+     "start": 7.815,
+     "end": 7.916,
+     "score": 0.969
+    },
+    {
+     "w": "music",
+     "start": 7.976,
+     "end": 8.436,
+     "score": 0.939
+    },
+    {
+     "w": "of",
+     "start": 8.496,
+     "end": 8.597,
+     "score": 0.764
+    },
+    {
+     "w": "tomorrow",
+     "start": 8.677,
+     "end": 9.238,
+     "score": 0.885
+    },
+    {
+     "w": "on",
+     "start": 10.86,
+     "end": 10.96,
+     "score": 0.878
+    },
+    {
+     "w": "the",
+     "start": 10.98,
+     "end": 11.1,
+     "score": 0.72
+    },
+    {
+     "w": "installment",
+     "start": 11.2,
+     "end": 11.982,
+     "score": 0.906
+    },
+    {
+     "w": "plan.",
+     "start": 12.062,
+     "end": 12.603,
+     "score": 0.895
+    }
+   ]
+  },
+  {
+   "start": 16.558,
+   "end": 20.361,
+   "text": "Well, my barber's got a hot tip and the shoeshine's got two.",
+   "words": [
+    {
+     "w": "Well,",
+     "start": 16.558,
+     "end": 16.798,
+     "score": 0.825
+    },
+    {
+     "w": "my",
+     "start": 16.818,
+     "end": 16.938,
+     "score": 0.822
+    },
+    {
+     "w": "barber's",
+     "start": 16.978,
+     "end": 17.439,
+     "score": 0.795
+    },
+    {
+     "w": "got",
+     "start": 17.479,
+     "end": 17.759,
+     "score": 0.865
+    },
+    {
+     "w": "a",
+     "start": 17.799,
+     "end": 17.839,
+     "score": 0.62
+    },
+    {
+     "w": "hot",
+     "start": 17.919,
+     "end": 18.119,
+     "score": 0.976
+    },
+    {
+     "w": "tip",
+     "start": 18.179,
+     "end": 18.44,
+     "score": 0.988
+    },
+    {
+     "w": "and",
+     "start": 18.66,
+     "end": 18.8,
+     "score": 0.852
+    },
+    {
+     "w": "the",
+     "start": 18.86,
+     "end": 18.94,
+     "score": 0.829
+    },
+    {
+     "w": "shoeshine's",
+     "start": 19.04,
+     "end": 19.761,
+     "score": 0.791
+    },
+    {
+     "w": "got",
+     "start": 19.801,
+     "end": 20.001,
+     "score": 0.872
+    },
+    {
+     "w": "two.",
+     "start": 20.121,
+     "end": 20.361,
+     "score": 0.955
+    }
+   ]
+  },
+  {
+   "start": 20.822,
+   "end": 24.505,
+   "text": "There's a thinking machine a-comin' and it's gonna think for you.",
+   "words": [
+    {
+     "w": "There's",
+     "start": 20.822,
+     "end": 21.102,
+     "score": 0.728
+    },
+    {
+     "w": "a",
+     "start": 21.142,
+     "end": 21.182,
+     "score": 0.533
+    },
+    {
+     "w": "thinking",
+     "start": 21.202,
+     "end": 21.482,
+     "score": 0.592
+    },
+    {
+     "w": "machine",
+     "start": 21.522,
+     "end": 22.023,
+     "score": 0.829
+    },
+    {
+     "w": "a-comin'",
+     "start": 22.083,
+     "end": 22.723,
+     "score": 0.8
+    },
+    {
+     "w": "and",
+     "start": 22.883,
+     "end": 22.984,
+     "score": 0.78
+    },
+    {
+     "w": "it's",
+     "start": 23.064,
+     "end": 23.244,
+     "score": 0.836
+    },
+    {
+     "w": "gonna",
+     "start": 23.304,
+     "end": 23.644,
+     "score": 0.829
+    },
+    {
+     "w": "think",
+     "start": 23.724,
+     "end": 23.984,
+     "score": 0.84
+    },
+    {
+     "w": "for",
+     "start": 24.085,
+     "end": 24.245,
+     "score": 0.852
+    },
+    {
+     "w": "you.",
+     "start": 24.285,
+     "end": 24.505,
+     "score": 0.95
+    }
+   ]
+  },
+  {
+   "start": 25.145,
+   "end": 28.909,
+   "text": "Every lab's got a forecast and the forecast sure are grand.",
+   "words": [
+    {
+     "w": "Every",
+     "start": 25.145,
+     "end": 25.346,
+     "score": 0.879
+    },
+    {
+     "w": "lab's",
+     "start": 25.446,
+     "end": 25.946,
+     "score": 0.796
+    },
+    {
+     "w": "got",
+     "start": 25.986,
+     "end": 26.186,
+     "score": 0.878
+    },
+    {
+     "w": "a",
+     "start": 26.226,
+     "end": 26.286,
+     "score": 0.628
+    },
+    {
+     "w": "forecast",
+     "start": 26.366,
+     "end": 27.127,
+     "score": 0.856
+    },
+    {
+     "w": "and",
+     "start": 27.207,
+     "end": 27.307,
+     "score": 0.725
+    },
+    {
+     "w": "the",
+     "start": 27.327,
+     "end": 27.407,
+     "score": 0.83
+    },
+    {
+     "w": "forecast",
+     "start": 27.447,
+     "end": 28.028,
+     "score": 0.891
+    },
+    {
+     "w": "sure",
+     "start": 28.068,
+     "end": 28.308,
+     "score": 0.643
+    },
+    {
+     "w": "are",
+     "start": 28.348,
+     "end": 28.468,
+     "score": 0.376
+    },
+    {
+     "w": "grand.",
+     "start": 28.488,
+     "end": 28.909,
+     "score": 0.829
+    }
+   ]
+  },
+  {
+   "start": 29.269,
+   "end": 33.232,
+   "text": "So I borrowed from my broker on the ten percent down plan.",
+   "words": [
+    {
+     "w": "So",
+     "start": 29.269,
+     "end": 29.409,
+     "score": 0.905
+    },
+    {
+     "w": "I",
+     "start": 29.489,
+     "end": 29.569,
+     "score": 0.985
+    },
+    {
+     "w": "borrowed",
+     "start": 29.649,
+     "end": 30.01,
+     "score": 0.882
+    },
+    {
+     "w": "from",
+     "start": 30.19,
+     "end": 30.37,
+     "score": 0.864
+    },
+    {
+     "w": "my",
+     "start": 30.47,
+     "end": 30.63,
+     "score": 0.912
+    },
+    {
+     "w": "broker",
+     "start": 30.71,
+     "end": 31.251,
+     "score": 0.963
+    },
+    {
+     "w": "on",
+     "start": 31.411,
+     "end": 31.511,
+     "score": 0.929
+    },
+    {
+     "w": "the",
+     "start": 31.571,
+     "end": 31.651,
+     "score": 0.854
+    },
+    {
+     "w": "ten",
+     "start": 31.691,
+     "end": 31.991,
+     "score": 0.782
+    },
+    {
+     "w": "percent",
+     "start": 32.071,
+     "end": 32.452,
+     "score": 0.807
+    },
+    {
+     "w": "down",
+     "start": 32.492,
+     "end": 32.772,
+     "score": 0.953
+    },
+    {
+     "w": "plan.",
+     "start": 32.812,
+     "end": 33.232,
+     "score": 0.869
+    }
+   ]
+  },
+  {
+   "start": 33.272,
+   "end": 34.834,
+   "text": "Buy it on margin, sugar.",
+   "words": [
+    {
+     "w": "Buy",
+     "start": 33.272,
+     "end": 33.573,
+     "score": 0.905
+    },
+    {
+     "w": "it",
+     "start": 33.613,
+     "end": 33.693,
+     "score": 0.818
+    },
+    {
+     "w": "on",
+     "start": 33.793,
+     "end": 33.873,
+     "score": 0.831
+    },
+    {
+     "w": "margin,",
+     "start": 33.933,
+     "end": 34.393,
+     "score": 0.747
+    },
+    {
+     "w": "sugar.",
+     "start": 34.433,
+     "end": 34.834,
+     "score": 0.838
+    }
+   ]
+  },
+  {
+   "start": 35.414,
+   "end": 36.835,
+   "text": "Buy it on margin.",
+   "words": [
+    {
+     "w": "Buy",
+     "start": 35.414,
+     "end": 35.715,
+     "score": 0.803
+    },
+    {
+     "w": "it",
+     "start": 35.755,
+     "end": 35.815,
+     "score": 0.957
+    },
+    {
+     "w": "on",
+     "start": 35.915,
+     "end": 35.995,
+     "score": 0.826
+    },
+    {
+     "w": "margin.",
+     "start": 36.075,
+     "end": 36.835,
+     "score": 0.847
+    }
+   ]
+  },
+  {
+   "start": 38.057,
+   "end": 40.539,
+   "text": "Ten cents down and a promise for the rest.",
+   "words": [
+    {
+     "w": "Ten",
+     "start": 38.057,
+     "end": 38.337,
+     "score": 0.868
+    },
+    {
+     "w": "cents",
+     "start": 38.397,
+     "end": 38.657,
+     "score": 0.863
+    },
+    {
+     "w": "down",
+     "start": 38.717,
+     "end": 38.977,
+     "score": 0.925
+    },
+    {
+     "w": "and",
+     "start": 39.037,
+     "end": 39.137,
+     "score": 0.707
+    },
+    {
+     "w": "a",
+     "start": 39.157,
+     "end": 39.178,
+     "score": 0.587
+    },
+    {
+     "w": "promise",
+     "start": 39.238,
+     "end": 39.638,
+     "score": 0.91
+    },
+    {
+     "w": "for",
+     "start": 39.758,
+     "end": 40.038,
+     "score": 0.845
+    },
+    {
+     "w": "the",
+     "start": 40.058,
+     "end": 40.178,
+     "score": 0.914
+    },
+    {
+     "w": "rest.",
+     "start": 40.218,
+     "end": 40.539,
+     "score": 0.801
+    }
+   ]
+  },
+  {
+   "start": 42.392,
+   "end": 44.313,
+   "text": "Up goes the ticker, up goes the building.",
+   "words": [
+    {
+     "w": "Up",
+     "start": 42.392,
+     "end": 42.492,
+     "score": 0.98
+    },
+    {
+     "w": "goes",
+     "start": 42.552,
+     "end": 42.792,
+     "score": 0.742
+    },
+    {
+     "w": "the",
+     "start": 42.832,
+     "end": 42.912,
+     "score": 0.963
+    },
+    {
+     "w": "ticker,",
+     "start": 42.932,
+     "end": 43.212,
+     "score": 0.854
+    },
+    {
+     "w": "up",
+     "start": 43.432,
+     "end": 43.532,
+     "score": 0.966
+    },
+    {
+     "w": "goes",
+     "start": 43.593,
+     "end": 43.853,
+     "score": 0.773
+    },
+    {
+     "w": "the",
+     "start": 43.893,
+     "end": 43.973,
+     "score": 0.835
+    },
+    {
+     "w": "building.",
+     "start": 43.993,
+     "end": 44.313,
+     "score": 0.846
+    }
+   ]
+  },
+  {
+   "start": 44.373,
+   "end": 46.494,
+   "text": "Profit comes later and later is the best.",
+   "words": [
+    {
+     "w": "Profit",
+     "start": 44.373,
+     "end": 44.753,
+     "score": 0.938
+    },
+    {
+     "w": "comes",
+     "start": 44.793,
+     "end": 44.973,
+     "score": 0.864
+    },
+    {
+     "w": "later",
+     "start": 45.033,
+     "end": 45.333,
+     "score": 0.887
+    },
+    {
+     "w": "and",
+     "start": 45.413,
+     "end": 45.513,
+     "score": 0.672
+    },
+    {
+     "w": "later",
+     "start": 45.573,
+     "end": 45.853,
+     "score": 0.882
+    },
+    {
+     "w": "is",
+     "start": 45.913,
+     "end": 45.993,
+     "score": 0.682
+    },
+    {
+     "w": "the",
+     "start": 46.013,
+     "end": 46.093,
+     "score": 0.83
+    },
+    {
+     "w": "best.",
+     "start": 46.113,
+     "end": 46.494,
+     "score": 0.936
+    }
+   ]
+  },
+  {
+   "start": 46.674,
+   "end": 48.614,
+   "text": "Everybody's in it, nobody's out of it.",
+   "words": [
+    {
+     "w": "Everybody's",
+     "start": 46.674,
+     "end": 47.174,
+     "score": 0.929
+    },
+    {
+     "w": "in",
+     "start": 47.234,
+     "end": 47.434,
+     "score": 0.38
+    },
+    {
+     "w": "it,",
+     "start": 47.454,
+     "end": 47.514,
+     "score": 0.245
+    },
+    {
+     "w": "nobody's",
+     "start": 47.594,
+     "end": 48.234,
+     "score": 0.876
+    },
+    {
+     "w": "out",
+     "start": 48.294,
+     "end": 48.394,
+     "score": 0.882
+    },
+    {
+     "w": "of",
+     "start": 48.434,
+     "end": 48.494,
+     "score": 0.765
+    },
+    {
+     "w": "it.",
+     "start": 48.554,
+     "end": 48.614,
+     "score": 0.714
+    }
+   ]
+  },
+  {
+   "start": 48.654,
+   "end": 50.575,
+   "text": "Who needs a dollar when the bank will float alone?",
+   "words": [
+    {
+     "w": "Who",
+     "start": 48.654,
+     "end": 48.855,
+     "score": 0.902
+    },
+    {
+     "w": "needs",
+     "start": 48.915,
+     "end": 49.195,
+     "score": 0.835
+    },
+    {
+     "w": "a",
+     "start": 49.235,
+     "end": 49.275,
+     "score": 0.603
+    },
+    {
+     "w": "dollar",
+     "start": 49.295,
+     "end": 49.535,
+     "score": 0.881
+    },
+    {
+     "w": "when",
+     "start": 49.555,
+     "end": 49.695,
+     "score": 0.651
+    },
+    {
+     "w": "the",
+     "start": 49.715,
+     "end": 49.775,
+     "score": 0.995
+    },
+    {
+     "w": "bank",
+     "start": 49.815,
+     "end": 49.955,
+     "score": 0.942
+    },
+    {
+     "w": "will",
+     "start": 49.975,
+     "end": 50.075,
+     "score": 0.3
+    },
+    {
+     "w": "float",
+     "start": 50.095,
+     "end": 50.255,
+     "score": 0.685
+    },
+    {
+     "w": "alone?",
+     "start": 50.275,
+     "end": 50.575,
+     "score": 0.759
+    }
+   ]
+  },
+  {
+   "start": 50.755,
+   "end": 53.776,
+   "text": "Buy it on margin, sugar, buy it on margin.",
+   "words": [
+    {
+     "w": "Buy",
+     "start": 50.755,
+     "end": 51.055,
+     "score": 0.783
+    },
+    {
+     "w": "it",
+     "start": 51.115,
+     "end": 51.175,
+     "score": 0.944
+    },
+    {
+     "w": "on",
+     "start": 51.255,
+     "end": 51.355,
+     "score": 0.634
+    },
+    {
+     "w": "margin,",
+     "start": 51.416,
+     "end": 51.876,
+     "score": 0.885
+    },
+    {
+     "w": "sugar,",
+     "start": 51.916,
+     "end": 52.276,
+     "score": 0.884
+    },
+    {
+     "w": "buy",
+     "start": 52.336,
+     "end": 52.636,
+     "score": 0.726
+    },
+    {
+     "w": "it",
+     "start": 52.676,
+     "end": 52.756,
+     "score": 0.836
+    },
+    {
+     "w": "on",
+     "start": 52.856,
+     "end": 52.956,
+     "score": 0.814
+    },
+    {
+     "w": "margin.",
+     "start": 53.016,
+     "end": 53.776,
+     "score": 0.84
+    }
+   ]
+  },
+  {
+   "start": 54.857,
+   "end": 57.498,
+   "text": "A dime on the dollar and the moon's your own.",
+   "words": [
+    {
+     "w": "A",
+     "start": 54.857,
+     "end": 54.917,
+     "score": 0.608
+    },
+    {
+     "w": "dime",
+     "start": 54.997,
+     "end": 55.397,
+     "score": 0.879
+    },
+    {
+     "w": "on",
+     "start": 55.457,
+     "end": 55.537,
+     "score": 0.834
+    },
+    {
+     "w": "the",
+     "start": 55.557,
+     "end": 55.617,
+     "score": 0.987
+    },
+    {
+     "w": "dollar",
+     "start": 55.657,
+     "end": 55.917,
+     "score": 0.954
+    },
+    {
+     "w": "and",
+     "start": 55.977,
+     "end": 56.057,
+     "score": 0.542
+    },
+    {
+     "w": "the",
+     "start": 56.077,
+     "end": 56.137,
+     "score": 0.993
+    },
+    {
+     "w": "moon's",
+     "start": 56.197,
+     "end": 56.658,
+     "score": 0.822
+    },
+    {
+     "w": "your",
+     "start": 56.698,
+     "end": 57.118,
+     "score": 0.838
+    },
+    {
+     "w": "own.",
+     "start": 57.318,
+     "end": 57.498,
+     "score": 0.826
+    }
+   ]
+  },
+  {
+   "start": 58.982,
+   "end": 82.938,
+   "text": "They're building in the cornfield and it's humming day and night Takes a power plant to feed it so they're building one outright There's a company that owns it and a company owns that And a holding company holds them with the IOUs in its hat Buy it on margin, sugar, buy it on margin Ten cents down and a promise for the rest",
+   "words": [
+    {
+     "w": "They're",
+     "start": 58.982,
+     "end": 59.262,
+     "score": 0.663
+    },
+    {
+     "w": "building",
+     "start": 59.342,
+     "end": 59.823,
+     "score": 0.828
+    },
+    {
+     "w": "in",
+     "start": 59.963,
+     "end": 60.063,
+     "score": 0.851
+    },
+    {
+     "w": "the",
+     "start": 60.083,
+     "end": 60.183,
+     "score": 0.761
+    },
+    {
+     "w": "cornfield",
+     "start": 60.283,
+     "end": 60.963,
+     "score": 0.868
+    },
+    {
+     "w": "and",
+     "start": 61.023,
+     "end": 61.123,
+     "score": 0.834
+    },
+    {
+     "w": "it's",
+     "start": 61.183,
+     "end": 61.324,
+     "score": 0.692
+    },
+    {
+     "w": "humming",
+     "start": 61.464,
+     "end": 61.824,
+     "score": 0.891
+    },
+    {
+     "w": "day",
+     "start": 61.904,
+     "end": 62.164,
+     "score": 0.885
+    },
+    {
+     "w": "and",
+     "start": 62.244,
+     "end": 62.344,
+     "score": 0.764
+    },
+    {
+     "w": "night",
+     "start": 62.424,
+     "end": 62.805,
+     "score": 0.657
+    },
+    {
+     "w": "Takes",
+     "start": 63.065,
+     "end": 63.325,
+     "score": 0.859
+    },
+    {
+     "w": "a",
+     "start": 63.405,
+     "end": 63.445,
+     "score": 0.512
+    },
+    {
+     "w": "power",
+     "start": 63.505,
+     "end": 63.885,
+     "score": 0.905
+    },
+    {
+     "w": "plant",
+     "start": 63.965,
+     "end": 64.266,
+     "score": 0.927
+    },
+    {
+     "w": "to",
+     "start": 64.386,
+     "end": 64.506,
+     "score": 0.889
+    },
+    {
+     "w": "feed",
+     "start": 64.626,
+     "end": 64.866,
+     "score": 0.72
+    },
+    {
+     "w": "it",
+     "start": 64.906,
+     "end": 64.966,
+     "score": 0.983
+    },
+    {
+     "w": "so",
+     "start": 65.066,
+     "end": 65.266,
+     "score": 0.915
+    },
+    {
+     "w": "they're",
+     "start": 65.326,
+     "end": 65.606,
+     "score": 0.636
+    },
+    {
+     "w": "building",
+     "start": 65.706,
+     "end": 66.167,
+     "score": 0.802
+    },
+    {
+     "w": "one",
+     "start": 66.327,
+     "end": 66.427,
+     "score": 0.859
+    },
+    {
+     "w": "outright",
+     "start": 66.527,
+     "end": 67.087,
+     "score": 0.756
+    },
+    {
+     "w": "There's",
+     "start": 67.428,
+     "end": 67.648,
+     "score": 0.83
+    },
+    {
+     "w": "a",
+     "start": 67.708,
+     "end": 67.748,
+     "score": 0.492
+    },
+    {
+     "w": "company",
+     "start": 67.848,
+     "end": 68.468,
+     "score": 0.921
+    },
+    {
+     "w": "that",
+     "start": 68.508,
+     "end": 68.708,
+     "score": 0.86
+    },
+    {
+     "w": "owns",
+     "start": 68.889,
+     "end": 69.189,
+     "score": 0.739
+    },
+    {
+     "w": "it",
+     "start": 69.309,
+     "end": 69.369,
+     "score": 0.873
+    },
+    {
+     "w": "and",
+     "start": 69.509,
+     "end": 69.629,
+     "score": 0.748
+    },
+    {
+     "w": "a",
+     "start": 69.709,
+     "end": 69.749,
+     "score": 0.906
+    },
+    {
+     "w": "company",
+     "start": 69.849,
+     "end": 70.43,
+     "score": 0.95
+    },
+    {
+     "w": "owns",
+     "start": 70.65,
+     "end": 70.93,
+     "score": 0.761
+    },
+    {
+     "w": "that",
+     "start": 71.01,
+     "end": 71.23,
+     "score": 0.952
+    },
+    {
+     "w": "And",
+     "start": 71.63,
+     "end": 71.75,
+     "score": 0.803
+    },
+    {
+     "w": "a",
+     "start": 71.83,
+     "end": 71.891,
+     "score": 0.859
+    },
+    {
+     "w": "holding",
+     "start": 71.971,
+     "end": 72.351,
+     "score": 0.854
+    },
+    {
+     "w": "company",
+     "start": 72.391,
+     "end": 72.811,
+     "score": 0.952
+    },
+    {
+     "w": "holds",
+     "start": 72.891,
+     "end": 73.311,
+     "score": 0.897
+    },
+    {
+     "w": "them",
+     "start": 73.331,
+     "end": 73.512,
+     "score": 0.652
+    },
+    {
+     "w": "with",
+     "start": 73.692,
+     "end": 73.852,
+     "score": 0.885
+    },
+    {
+     "w": "the",
+     "start": 73.892,
+     "end": 74.012,
+     "score": 0.647
+    },
+    {
+     "w": "IOUs",
+     "start": 74.272,
+     "end": 74.792,
+     "score": 0.902
+    },
+    {
+     "w": "in",
+     "start": 74.852,
+     "end": 74.933,
+     "score": 0.981
+    },
+    {
+     "w": "its",
+     "start": 75.013,
+     "end": 75.133,
+     "score": 0.82
+    },
+    {
+     "w": "hat",
+     "start": 75.173,
+     "end": 75.393,
+     "score": 0.936
+    },
+    {
+     "w": "Buy",
+     "start": 75.713,
+     "end": 75.993,
+     "score": 0.873
+    },
+    {
+     "w": "it",
+     "start": 76.033,
+     "end": 76.133,
+     "score": 0.806
+    },
+    {
+     "w": "on",
+     "start": 76.213,
+     "end": 76.293,
+     "score": 0.954
+    },
+    {
+     "w": "margin,",
+     "start": 76.353,
+     "end": 76.834,
+     "score": 0.879
+    },
+    {
+     "w": "sugar,",
+     "start": 76.874,
+     "end": 77.234,
+     "score": 0.961
+    },
+    {
+     "w": "buy",
+     "start": 77.834,
+     "end": 78.135,
+     "score": 0.878
+    },
+    {
+     "w": "it",
+     "start": 78.195,
+     "end": 78.275,
+     "score": 0.859
+    },
+    {
+     "w": "on",
+     "start": 78.375,
+     "end": 78.455,
+     "score": 0.953
+    },
+    {
+     "w": "margin",
+     "start": 78.515,
+     "end": 79.195,
+     "score": 0.817
+    },
+    {
+     "w": "Ten",
+     "start": 80.516,
+     "end": 80.836,
+     "score": 0.808
+    },
+    {
+     "w": "cents",
+     "start": 80.876,
+     "end": 81.137,
+     "score": 0.916
+    },
+    {
+     "w": "down",
+     "start": 81.197,
+     "end": 81.477,
+     "score": 0.866
+    },
+    {
+     "w": "and",
+     "start": 81.537,
+     "end": 81.617,
+     "score": 0.54
+    },
+    {
+     "w": "a",
+     "start": 81.637,
+     "end": 81.657,
+     "score": 0.779
+    },
+    {
+     "w": "promise",
+     "start": 81.717,
+     "end": 82.177,
+     "score": 0.83
+    },
+    {
+     "w": "for",
+     "start": 82.237,
+     "end": 82.518,
+     "score": 0.88
+    },
+    {
+     "w": "the",
+     "start": 82.558,
+     "end": 82.658,
+     "score": 0.819
+    },
+    {
+     "w": "rest",
+     "start": 82.698,
+     "end": 82.938,
+     "score": 0.961
+    }
+   ]
+  },
+  {
+   "start": 84.87,
+   "end": 86.852,
+   "text": "Up goes the ticker, up goes the building.",
+   "words": [
+    {
+     "w": "Up",
+     "start": 84.87,
+     "end": 84.99,
+     "score": 0.966
+    },
+    {
+     "w": "goes",
+     "start": 85.05,
+     "end": 85.331,
+     "score": 0.714
+    },
+    {
+     "w": "the",
+     "start": 85.351,
+     "end": 85.431,
+     "score": 0.625
+    },
+    {
+     "w": "ticker,",
+     "start": 85.451,
+     "end": 85.751,
+     "score": 0.793
+    },
+    {
+     "w": "up",
+     "start": 85.931,
+     "end": 86.051,
+     "score": 0.96
+    },
+    {
+     "w": "goes",
+     "start": 86.111,
+     "end": 86.391,
+     "score": 0.776
+    },
+    {
+     "w": "the",
+     "start": 86.411,
+     "end": 86.491,
+     "score": 0.8
+    },
+    {
+     "w": "building.",
+     "start": 86.532,
+     "end": 86.852,
+     "score": 0.869
+    }
+   ]
+  },
+  {
+   "start": 86.892,
+   "end": 89.094,
+   "text": "Profit comes later and later is the best.",
+   "words": [
+    {
+     "w": "Profit",
+     "start": 86.892,
+     "end": 87.272,
+     "score": 0.809
+    },
+    {
+     "w": "comes",
+     "start": 87.312,
+     "end": 87.512,
+     "score": 0.869
+    },
+    {
+     "w": "later",
+     "start": 87.572,
+     "end": 87.853,
+     "score": 0.807
+    },
+    {
+     "w": "and",
+     "start": 87.933,
+     "end": 88.013,
+     "score": 0.656
+    },
+    {
+     "w": "later",
+     "start": 88.093,
+     "end": 88.393,
+     "score": 0.804
+    },
+    {
+     "w": "is",
+     "start": 88.453,
+     "end": 88.513,
+     "score": 0.792
+    },
+    {
+     "w": "the",
+     "start": 88.553,
+     "end": 88.633,
+     "score": 0.586
+    },
+    {
+     "w": "best.",
+     "start": 88.653,
+     "end": 89.094,
+     "score": 0.702
+    }
+   ]
+  },
+  {
+   "start": 89.254,
+   "end": 91.195,
+   "text": "Everybody's in it, nobody's out of it.",
+   "words": [
+    {
+     "w": "Everybody's",
+     "start": 89.254,
+     "end": 89.734,
+     "score": 0.944
+    },
+    {
+     "w": "in",
+     "start": 89.794,
+     "end": 89.874,
+     "score": 0.857
+    },
+    {
+     "w": "it,",
+     "start": 89.914,
+     "end": 90.115,
+     "score": 0.686
+    },
+    {
+     "w": "nobody's",
+     "start": 90.175,
+     "end": 90.815,
+     "score": 0.813
+    },
+    {
+     "w": "out",
+     "start": 90.875,
+     "end": 90.975,
+     "score": 0.851
+    },
+    {
+     "w": "of",
+     "start": 90.995,
+     "end": 91.055,
+     "score": 0.896
+    },
+    {
+     "w": "it.",
+     "start": 91.115,
+     "end": 91.195,
+     "score": 0.955
+    }
+   ]
+  },
+  {
+   "start": 91.215,
+   "end": 93.217,
+   "text": "Who needs a dollar when the bank will float alone?",
+   "words": [
+    {
+     "w": "Who",
+     "start": 91.215,
+     "end": 91.436,
+     "score": 0.7
+    },
+    {
+     "w": "needs",
+     "start": 91.476,
+     "end": 91.756,
+     "score": 0.881
+    },
+    {
+     "w": "a",
+     "start": 91.816,
+     "end": 91.856,
+     "score": 0.402
+    },
+    {
+     "w": "dollar",
+     "start": 91.876,
+     "end": 92.116,
+     "score": 0.966
+    },
+    {
+     "w": "when",
+     "start": 92.136,
+     "end": 92.276,
+     "score": 0.889
+    },
+    {
+     "w": "the",
+     "start": 92.316,
+     "end": 92.376,
+     "score": 0.996
+    },
+    {
+     "w": "bank",
+     "start": 92.416,
+     "end": 92.557,
+     "score": 0.953
+    },
+    {
+     "w": "will",
+     "start": 92.577,
+     "end": 92.657,
+     "score": 0.0
+    },
+    {
+     "w": "float",
+     "start": 92.677,
+     "end": 92.857,
+     "score": 0.534
+    },
+    {
+     "w": "alone?",
+     "start": 92.897,
+     "end": 93.217,
+     "score": 0.959
+    }
+   ]
+  },
+  {
+   "start": 93.317,
+   "end": 96.38,
+   "text": "Buy it on margin, sugar, buy it on margin.",
+   "words": [
+    {
+     "w": "Buy",
+     "start": 93.317,
+     "end": 93.638,
+     "score": 0.63
+    },
+    {
+     "w": "it",
+     "start": 93.678,
+     "end": 93.758,
+     "score": 0.969
+    },
+    {
+     "w": "on",
+     "start": 93.858,
+     "end": 93.938,
+     "score": 0.929
+    },
+    {
+     "w": "margin,",
+     "start": 93.998,
+     "end": 94.478,
+     "score": 0.868
+    },
+    {
+     "w": "sugar,",
+     "start": 94.518,
+     "end": 94.859,
+     "score": 0.853
+    },
+    {
+     "w": "buy",
+     "start": 94.939,
+     "end": 95.239,
+     "score": 0.78
+    },
+    {
+     "w": "it",
+     "start": 95.279,
+     "end": 95.359,
+     "score": 0.979
+    },
+    {
+     "w": "on",
+     "start": 95.459,
+     "end": 95.559,
+     "score": 0.754
+    },
+    {
+     "w": "margin.",
+     "start": 95.619,
+     "end": 96.38,
+     "score": 0.92
+    }
+   ]
+  },
+  {
+   "start": 97.481,
+   "end": 100.023,
+   "text": "A dime on the dollar and the moon's your own.",
+   "words": [
+    {
+     "w": "A",
+     "start": 97.481,
+     "end": 97.581,
+     "score": 0.833
+    },
+    {
+     "w": "dime",
+     "start": 97.641,
+     "end": 98.001,
+     "score": 0.971
+    },
+    {
+     "w": "on",
+     "start": 98.081,
+     "end": 98.161,
+     "score": 0.842
+    },
+    {
+     "w": "the",
+     "start": 98.181,
+     "end": 98.241,
+     "score": 0.992
+    },
+    {
+     "w": "dollar",
+     "start": 98.281,
+     "end": 98.542,
+     "score": 0.902
+    },
+    {
+     "w": "and",
+     "start": 98.602,
+     "end": 98.702,
+     "score": 0.797
+    },
+    {
+     "w": "the",
+     "start": 98.722,
+     "end": 98.782,
+     "score": 0.982
+    },
+    {
+     "w": "moon's",
+     "start": 98.822,
+     "end": 99.282,
+     "score": 0.662
+    },
+    {
+     "w": "your",
+     "start": 99.342,
+     "end": 99.743,
+     "score": 0.731
+    },
+    {
+     "w": "own.",
+     "start": 99.863,
+     "end": 100.023,
+     "score": 0.77
+    }
+   ]
+  },
+  {
+   "start": 100.103,
+   "end": 100.723,
+   "text": "What's it make?",
+   "words": [
+    {
+     "w": "What's",
+     "start": 100.103,
+     "end": 100.323,
+     "score": 0.773
+    },
+    {
+     "w": "it",
+     "start": 100.383,
+     "end": 100.443,
+     "score": 0.815
+    },
+    {
+     "w": "make?",
+     "start": 100.483,
+     "end": 100.723,
+     "score": 0.799
+    }
+   ]
+  },
+  {
+   "start": 100.844,
+   "end": 101.444,
+   "text": "Tomorrow.",
+   "words": [
+    {
+     "w": "Tomorrow.",
+     "start": 100.844,
+     "end": 101.444,
+     "score": 0.884
+    }
+   ]
+  },
+  {
+   "start": 101.524,
+   "end": 102.245,
+   "text": "What's it cost?",
+   "words": [
+    {
+     "w": "What's",
+     "start": 101.524,
+     "end": 101.704,
+     "score": 0.935
+    },
+    {
+     "w": "it",
+     "start": 101.764,
+     "end": 101.824,
+     "score": 0.915
+    },
+    {
+     "w": "cost?",
+     "start": 101.864,
+     "end": 102.245,
+     "score": 0.783
+    }
+   ]
+  },
+  {
+   "start": 102.285,
+   "end": 102.725,
+   "text": "Today.",
+   "words": [
+    {
+     "w": "Today.",
+     "start": 102.285,
+     "end": 102.725,
+     "score": 0.819
+    }
+   ]
+  },
+  {
+   "start": 102.805,
+   "end": 103.506,
+   "text": "When's it pay?",
+   "words": [
+    {
+     "w": "When's",
+     "start": 102.805,
+     "end": 102.985,
+     "score": 0.887
+    },
+    {
+     "w": "it",
+     "start": 103.045,
+     "end": 103.105,
+     "score": 0.986
+    },
+    {
+     "w": "pay?",
+     "start": 103.186,
+     "end": 103.506,
+     "score": 0.81
+    }
+   ]
+  },
+  {
+   "start": 103.606,
+   "end": 104.407,
+   "text": "Why, 1930.",
+   "words": [
+    {
+     "w": "Why,",
+     "start": 103.606,
+     "end": 104.066,
+     "score": 0.942
+    },
+    {
+     "w": "1930.",
+     "start": 104.186,
+     "end": 104.407,
+     "score": 0.952
+    }
+   ]
+  },
+  {
+   "start": 104.467,
+   "end": 105.407,
+   "text": "Sometime after 2030.",
+   "words": [
+    {
+     "w": "Sometime",
+     "start": 104.467,
+     "end": 104.787,
+     "score": 0.419
+    },
+    {
+     "w": "after",
+     "start": 104.987,
+     "end": 105.287,
+     "score": 0.491
+    },
+    {
+     "w": "2030.",
+     "start": 105.307,
+     "end": 105.407,
+     "score": 0.998
+    }
+   ]
+  },
+  {
+   "start": 105.528,
+   "end": 106.268,
+   "text": "Same difference.",
+   "words": [
+    {
+     "w": "Same",
+     "start": 105.528,
+     "end": 105.708,
+     "score": 0.854
+    },
+    {
+     "w": "difference.",
+     "start": 105.748,
+     "end": 106.268,
+     "score": 0.612
+    }
+   ]
+  },
+  {
+   "start": 126.522,
+   "end": 130.388,
+   "text": "Now the banker's raising interest says the money's getting dear.",
+   "words": [
+    {
+     "w": "Now",
+     "start": 126.522,
+     "end": 126.722,
+     "score": 0.964
+    },
+    {
+     "w": "the",
+     "start": 126.783,
+     "end": 126.863,
+     "score": 0.834
+    },
+    {
+     "w": "banker's",
+     "start": 126.903,
+     "end": 127.343,
+     "score": 0.813
+    },
+    {
+     "w": "raising",
+     "start": 127.443,
+     "end": 127.884,
+     "score": 0.854
+    },
+    {
+     "w": "interest",
+     "start": 127.964,
+     "end": 128.385,
+     "score": 0.868
+    },
+    {
+     "w": "says",
+     "start": 128.465,
+     "end": 128.745,
+     "score": 0.88
+    },
+    {
+     "w": "the",
+     "start": 128.805,
+     "end": 128.926,
+     "score": 0.883
+    },
+    {
+     "w": "money's",
+     "start": 129.046,
+     "end": 129.527,
+     "score": 0.794
+    },
+    {
+     "w": "getting",
+     "start": 129.587,
+     "end": 129.967,
+     "score": 0.921
+    },
+    {
+     "w": "dear.",
+     "start": 130.027,
+     "end": 130.388,
+     "score": 0.841
+    }
+   ]
+  },
+  {
+   "start": 130.828,
+   "end": 134.694,
+   "text": "And the fellow with the cloud boom got a sock right in the ear.",
+   "words": [
+    {
+     "w": "And",
+     "start": 130.828,
+     "end": 130.929,
+     "score": 0.853
+    },
+    {
+     "w": "the",
+     "start": 130.969,
+     "end": 131.049,
+     "score": 0.894
+    },
+    {
+     "w": "fellow",
+     "start": 131.209,
+     "end": 131.529,
+     "score": 0.911
+    },
+    {
+     "w": "with",
+     "start": 131.59,
+     "end": 131.77,
+     "score": 0.912
+    },
+    {
+     "w": "the",
+     "start": 131.81,
+     "end": 131.89,
+     "score": 0.831
+    },
+    {
+     "w": "cloud",
+     "start": 131.97,
+     "end": 132.351,
+     "score": 0.951
+    },
+    {
+     "w": "boom",
+     "start": 132.431,
+     "end": 132.771,
+     "score": 0.872
+    },
+    {
+     "w": "got",
+     "start": 132.831,
+     "end": 133.032,
+     "score": 0.821
+    },
+    {
+     "w": "a",
+     "start": 133.092,
+     "end": 133.152,
+     "score": 0.588
+    },
+    {
+     "w": "sock",
+     "start": 133.332,
+     "end": 133.633,
+     "score": 0.996
+    },
+    {
+     "w": "right",
+     "start": 133.673,
+     "end": 133.953,
+     "score": 0.948
+    },
+    {
+     "w": "in",
+     "start": 134.033,
+     "end": 134.133,
+     "score": 0.938
+    },
+    {
+     "w": "the",
+     "start": 134.193,
+     "end": 134.314,
+     "score": 0.645
+    },
+    {
+     "w": "ear.",
+     "start": 134.454,
+     "end": 134.694,
+     "score": 0.801
+    }
+   ]
+  },
+  {
+   "start": 135.195,
+   "end": 138.88,
+   "text": "His sales came in a doubling, but his cash went out the door.",
+   "words": [
+    {
+     "w": "His",
+     "start": 135.195,
+     "end": 135.355,
+     "score": 0.87
+    },
+    {
+     "w": "sales",
+     "start": 135.415,
+     "end": 135.796,
+     "score": 0.848
+    },
+    {
+     "w": "came",
+     "start": 135.856,
+     "end": 136.116,
+     "score": 0.785
+    },
+    {
+     "w": "in",
+     "start": 136.196,
+     "end": 136.317,
+     "score": 0.809
+    },
+    {
+     "w": "a",
+     "start": 136.357,
+     "end": 136.397,
+     "score": 0.5
+    },
+    {
+     "w": "doubling,",
+     "start": 136.517,
+     "end": 137.018,
+     "score": 0.802
+    },
+    {
+     "w": "but",
+     "start": 137.178,
+     "end": 137.338,
+     "score": 0.987
+    },
+    {
+     "w": "his",
+     "start": 137.378,
+     "end": 137.498,
+     "score": 0.843
+    },
+    {
+     "w": "cash",
+     "start": 137.578,
+     "end": 137.939,
+     "score": 0.9
+    },
+    {
+     "w": "went",
+     "start": 137.999,
+     "end": 138.159,
+     "score": 0.774
+    },
+    {
+     "w": "out",
+     "start": 138.239,
+     "end": 138.38,
+     "score": 0.854
+    },
+    {
+     "w": "the",
+     "start": 138.42,
+     "end": 138.5,
+     "score": 0.942
+    },
+    {
+     "w": "door.",
+     "start": 138.56,
+     "end": 138.88,
+     "score": 0.847
+    }
+   ]
+  },
+  {
+   "start": 139.261,
+   "end": 141.724,
+   "text": "Hey, what's everybody running for?",
+   "words": [
+    {
+     "w": "Hey,",
+     "start": 139.261,
+     "end": 139.561,
+     "score": 0.727
+    },
+    {
+     "w": "what's",
+     "start": 139.621,
+     "end": 139.922,
+     "score": 0.88
+    },
+    {
+     "w": "everybody",
+     "start": 140.042,
+     "end": 140.843,
+     "score": 0.915
+    },
+    {
+     "w": "running",
+     "start": 141.003,
+     "end": 141.324,
+     "score": 0.947
+    },
+    {
+     "w": "for?",
+     "start": 141.404,
+     "end": 141.724,
+     "score": 0.95
+    }
+   ]
+  },
+  {
+   "start": 169.612,
+   "end": 185.913,
+   "text": "I bought it on margin, darlin' Ten cents down and I'm still in hock And the machine that wrote you this ditty Why, its maker just filed to sell stock",
+   "words": [
+    {
+     "w": "I",
+     "start": 169.612,
+     "end": 169.752,
+     "score": 0.914
+    },
+    {
+     "w": "bought",
+     "start": 169.813,
+     "end": 170.053,
+     "score": 0.905
+    },
+    {
+     "w": "it",
+     "start": 170.093,
+     "end": 170.153,
+     "score": 0.824
+    },
+    {
+     "w": "on",
+     "start": 170.253,
+     "end": 170.333,
+     "score": 0.851
+    },
+    {
+     "w": "margin,",
+     "start": 170.413,
+     "end": 171.334,
+     "score": 0.921
+    },
+    {
+     "w": "darlin'",
+     "start": 171.495,
+     "end": 172.216,
+     "score": 0.706
+    },
+    {
+     "w": "Ten",
+     "start": 173.898,
+     "end": 174.218,
+     "score": 0.886
+    },
+    {
+     "w": "cents",
+     "start": 174.298,
+     "end": 174.639,
+     "score": 0.782
+    },
+    {
+     "w": "down",
+     "start": 174.759,
+     "end": 175.279,
+     "score": 0.935
+    },
+    {
+     "w": "and",
+     "start": 175.359,
+     "end": 175.46,
+     "score": 0.811
+    },
+    {
+     "w": "I'm",
+     "start": 175.56,
+     "end": 175.72,
+     "score": 0.887
+    },
+    {
+     "w": "still",
+     "start": 175.88,
+     "end": 176.381,
+     "score": 0.925
+    },
+    {
+     "w": "in",
+     "start": 176.521,
+     "end": 176.661,
+     "score": 0.822
+    },
+    {
+     "w": "hock",
+     "start": 176.761,
+     "end": 177.142,
+     "score": 0.844
+    },
+    {
+     "w": "And",
+     "start": 178.303,
+     "end": 178.503,
+     "score": 0.705
+    },
+    {
+     "w": "the",
+     "start": 178.583,
+     "end": 178.704,
+     "score": 0.944
+    },
+    {
+     "w": "machine",
+     "start": 178.744,
+     "end": 179.324,
+     "score": 0.813
+    },
+    {
+     "w": "that",
+     "start": 179.805,
+     "end": 180.045,
+     "score": 0.811
+    },
+    {
+     "w": "wrote",
+     "start": 180.145,
+     "end": 180.466,
+     "score": 0.82
+    },
+    {
+     "w": "you",
+     "start": 180.506,
+     "end": 180.806,
+     "score": 0.251
+    },
+    {
+     "w": "this",
+     "start": 180.906,
+     "end": 181.147,
+     "score": 0.861
+    },
+    {
+     "w": "ditty",
+     "start": 181.287,
+     "end": 181.647,
+     "score": 0.92
+    },
+    {
+     "w": "Why,",
+     "start": 182.629,
+     "end": 183.089,
+     "score": 0.764
+    },
+    {
+     "w": "its",
+     "start": 183.189,
+     "end": 183.369,
+     "score": 0.794
+    },
+    {
+     "w": "maker",
+     "start": 183.47,
+     "end": 183.89,
+     "score": 0.93
+    },
+    {
+     "w": "just",
+     "start": 184.15,
+     "end": 184.451,
+     "score": 0.897
+    },
+    {
+     "w": "filed",
+     "start": 184.551,
+     "end": 185.032,
+     "score": 0.897
+    },
+    {
+     "w": "to",
+     "start": 185.092,
+     "end": 185.212,
+     "score": 0.942
+    },
+    {
+     "w": "sell",
+     "start": 185.272,
+     "end": 185.572,
+     "score": 0.962
+    },
+    {
+     "w": "stock",
+     "start": 185.632,
+     "end": 185.913,
+     "score": 0.977
+    }
+   ]
+  }
+ ]
+}
