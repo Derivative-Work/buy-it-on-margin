@@ -111,8 +111,12 @@
     1664,
     1248
    ],
-   "subject": "a round hatbox on a wooden office desk, overflowing with small blank paper slips that spill onto the desk and the floor, a green-shaded desk lamp, a 1920s office",
-   "note": "IOUs in its hat; slips blank (no generated text)"
+   "subject": "the same office, desk, lamp and round hatbox as the reference image, the hatbox overflowing with blank paper IOU slips mixed with modern computer memory sticks and computer graphics cards with cooling fans, more memory sticks and graphics cards scattered across the desk among the paper slips, all plain and unbranded",
+   "note": "v2 (human, 2026-10-31): RAM sticks and GPUs in the hatbox and on the desk; conditioned on the v1 pick; unbranded (brief: no real logos)",
+   "v": 2,
+   "refs": [
+    "N17_v1"
+   ]
   },
   "N22": {
    "size": [
@@ -228,6 +232,42 @@
    "note": "hard cut from N26; batch 2, conditioned on the N26 pick",
    "v": 2,
    "v1_problem": "the pie barely showed: each take stayed too close to its N26 reference"
+  },
+  "kf_N23band": {
+   "size": [
+    1664,
+    1248
+   ],
+   "style": "shadowplay",
+   "subject": "two 1920s jazz musicians in profile facing each other, the one on the left playing a clarinet, the one on the right playing a trumpet raised high, both in suits and hats, full body, standing apart",
+   "note": "mask source for N23 (human, 2026-10-31: replace the code cut-outs with generated movement)"
+  },
+  "kf_N23kick": {
+   "size": [
+    1664,
+    1248
+   ],
+   "style": "shadowplay",
+   "subject": "a chorus line of six 1920s flapper dancers in fringed dresses and bobbed hair, side by side, mid Charleston kick, full body, small in frame with space around them",
+   "note": "mask source for N23 kick line"
+  },
+  "kf_N28run": {
+   "size": [
+    1664,
+    1248
+   ],
+   "style": "shadowplay",
+   "subject": "a crowd of 1920s men in suits and hats and women in cloche hats running in a panic from left to right, full body, side view, spread across the frame",
+   "note": "mask source for N28"
+  },
+  "tape_pile": {
+   "size": [
+    2208,
+    1248
+   ],
+   "style": "isolated",
+   "subject": "a wide low heap of curled and tangled white paper ticker tape strips, long narrow paper ribbons piled on the ground, seen from the front at floor level, the heap spanning the full width of the frame",
+   "note": "overlay for N12/N18/N32 tape: lighten blend over the floor"
   }
  },
  "kept": {
@@ -242,7 +282,7 @@
   "N16a": 1929,
   "N16b": 1929,
   "N16c": 1930,
-  "N17": 1930,
+  "N17": "N17_v2_s1932",
   "N22": 1930,
   "N24": "N24_v2_s1931",
   "N32": 1932,
@@ -254,6 +294,17 @@
   "N08": 1932,
   "N15": 1929,
   "N26": 1930,
-  "N27": "N27_v2_s1932"
+  "N27": "N27_v2_s1932",
+  "kf_N23band": 1929,
+  "kf_N23kick": 1929,
+  "kf_N28run": 1929,
+  "tape_pile": 1929
+ },
+ "style_sets": {
+  "shadowplay": "shadow theater, pure solid black silhouettes against an evenly backlit plain white paper screen, crisp silhouette edges, no detail inside the silhouettes, no floor, no shadows on the ground, no text",
+  "isolated": "isolated on a pure black background, studio photograph, black-and-white, sharp focus, nothing else in frame, no text"
+ },
+ "kept_v1": {
+  "N17": 1930
  }
 }

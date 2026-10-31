@@ -44,16 +44,17 @@ export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: b
 /** Clips are 4 s; a longer shot loops it (brief: loop or re-cut rather than generate more), mirrored on every
  * other pass so the repeat reads as a new angle rather than a jump. */
 export const CLIP_FRAMES = 97;
-export const Clip: React.FC<{src: string; rate?: number; startFrom?: number}> = ({src, rate = 1, startFrom = 0}) => {
+export const Clip: React.FC<{src: string; rate?: number; startFrom?: number; mirror?: boolean; frames?: number}> =
+  ({src, rate = 1, startFrom = 0, mirror = true, frames = CLIP_FRAMES}) => {
   const frame = useCurrentFrame();
-  const pass = Math.floor((CLIP_FRAMES - startFrom) / rate);
+  const pass = Math.floor((frames - startFrom) / rate);
   const k = Math.floor(frame / Math.max(1, pass));
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Loop durationInFrames={Math.max(1, pass)}>
-        <AbsoluteFill style={{transform: k % 2 ? 'scaleX(-1)' : undefined}}>
+        <AbsoluteFill style={{transform: mirror && k % 2 ? 'scaleX(-1)' : undefined}}>
           <OffthreadVideo src={staticFile(src)} playbackRate={rate} startFrom={startFrom} muted
-            style={{width: PIC_W, height: PIC_H, objectFit: 'cover'}} />
+            style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </AbsoluteFill>
       </Loop>
     </AbsoluteFill>

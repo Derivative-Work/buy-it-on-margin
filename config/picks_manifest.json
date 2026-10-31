@@ -25,12 +25,22 @@
   "media/picks/N26.png",
   "media/picks/N27.png",
   "media/picks/N32.png",
+  "media/picks/S23band.mp4",
+  "media/picks/S23band_matte.mp4",
+  "media/picks/S23kick.mp4",
+  "media/picks/S23kick_matte.mp4",
+  "media/picks/S28run.mp4",
+  "media/picks/S28run_matte.mp4",
   "media/picks/kf_C1a.png",
   "media/picks/kf_C1b.png",
   "media/picks/kf_C2.png",
   "media/picks/kf_C3.png",
+  "media/picks/kf_N23band.png",
+  "media/picks/kf_N23kick.png",
+  "media/picks/kf_N28run.png",
   "media/picks/ref_customer.png",
-  "media/picks/ref_machine.png"
+  "media/picks/ref_machine.png",
+  "media/picks/tape_pile.png"
  ],
  "sizes": {
   "media/chat/planning_chat.png": [
@@ -125,12 +135,28 @@
    1664,
    1248
   ],
+  "media/picks/kf_N23band.png": [
+   1664,
+   1248
+  ],
+  "media/picks/kf_N23kick.png": [
+   1664,
+   1248
+  ],
+  "media/picks/kf_N28run.png": [
+   1664,
+   1248
+  ],
   "media/picks/ref_customer.png": [
    1664,
    1248
   ],
   "media/picks/ref_machine.png": [
    1664,
+   1248
+  ],
+  "media/picks/tape_pile.png": [
+   2208,
    1248
   ]
  }

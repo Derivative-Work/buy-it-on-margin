@@ -27,13 +27,37 @@
   "C3": {
    "keyframe": "kf_C3",
    "motion": "one hand passes the crumpled banknote to the other hand, which closes around it and pulls away"
+  },
+  "S23band": {
+   "keyframe": "kf_N23band",
+   "style": "shadowplay",
+   "seconds": 8,
+   "motion": "the clarinet player and the trumpet player take turns playing hot jazz breaks, swaying and bobbing their instruments up and down, tapping their feet, the one not playing nods along"
+  },
+  "S23kick": {
+   "keyframe": "kf_N23kick",
+   "style": "shadowplay",
+   "seconds": 8,
+   "motion": "the six dancers dance the Charleston in unison, swiveling their feet, kicking their legs high and swinging their arms, their fringe swinging"
+  },
+  "S28run": {
+   "keyframe": "kf_N28run",
+   "style": "shadowplay",
+   "seconds": 5,
+   "motion": "the crowd runs fast from left to right across the screen in a panic, arms pumping, coats flapping, hats bobbing"
   }
  },
  "kept": {
   "C1a": "takes/clips/C1a/C1a_s1930.mp4",
   "C1b": "takes/clips/C1b/C1b_s1929.mp4",
   "C2": "takes/clips/C2/C2_s1929.mp4",
-  "C3": "takes/clips/C3/C3_s1929.mp4"
+  "C3": "takes/clips/C3/C3_s1929.mp4",
+  "S23band": "takes/clips/S23band/S23band_s1930.mp4",
+  "S23kick": "takes/clips/S23kick/S23kick_s1929.mp4",
+  "S28run": "takes/clips/S28run/S28run_s1929.mp4"
  },
- "_kept_status": "provisional (agent's suggestion, 2026-10-31), for the human to confirm in the M4 animatic"
+ "_kept_status": "provisional (agent's suggestion, 2026-10-31), for the human to confirm in the M4 animatic",
+ "style_sets": {
+  "shadowplay": "shadow theater, pure solid black silhouettes against an evenly backlit plain white paper screen, static camera, smooth motion, no text"
+ }
 }

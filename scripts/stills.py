@@ -88,7 +88,7 @@ def main():
     args = ap.parse_args()
     kept = CFG.get("kept", {})
     # Default run: every item whose references are all picked (batch 2 items wait for their references).
-    items = args.items or [k for k, v in CFG["items"].items() if all(r in kept for r in v.get("refs", []))]
+    items = args.items or [k for k, v in CFG["items"].items() if all(r in kept or r.endswith("_v1") for r in v.get("refs", []))]
     seeds = [int(s) for s in args.seeds.split(",")] if args.seeds else CFG["seeds"]
     m = CFG["model"]
     PROMPTS.mkdir(parents=True, exist_ok=True)
@@ -100,12 +100,15 @@ def main():
                     f"| Item | Seed | Size | Output | Seconds | When | Status |\n| --- | --- | --- | --- | --- | --- | --- |\n")
     for item in items:
         spec = CFG["items"][item]
-        prompt = spec["subject"] + ", " + CFG["style"]
+        prompt = spec["subject"] + ", " + CFG["style_sets"][spec["style"]] if "style" in spec else spec["subject"] + ", " + CFG["style"]
         stem = item if spec.get("v", 1) == 1 else f"{item}_v{spec['v']}"   # a revised prompt keeps earlier takes
         (PROMPTS / f"{stem}.txt").write_text(prompt + "\n")
         w, h = spec["size"]
         refs = []
         for r in spec.get("refs", []):
+            if r.endswith("_v1") and r[:-3] in CFG.get("kept_v1", {}):   # condition on this item's own v1 pick
+                refs.append(cc.upload_image(kept_path(r[:-3], CFG["kept_v1"][r[:-3]])))
+                continue
             if r not in kept:
                 raise SystemExit(f"{item}: reference {r} not picked yet")
             refs.append(cc.upload_image(kept_path(r, kept[r])))

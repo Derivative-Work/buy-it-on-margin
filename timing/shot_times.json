@@ -209,13 +209,13 @@
   },
   "N22": {
    "start": 105.49,
-   "end": 105.546,
-   "duration": 0.056,
+   "end": 106.268,
+   "duration": 0.778,
    "start_frame": 2532,
-   "end_frame": 2533,
+   "end_frame": 2550,
    "cue": "'(…Sometime' (Break 3.0)",
    "insert_over": "previous shot",
-   "note": "one picture frame (1/18 s) of the modern dancer on 'Sometime', then back to N21"
+   "note": "the modern dancer on 'Sometime': 14 picture frames (0.78 s), long enough to register (human, 2026-10-31: was 1 frame), then back to N21"
   },
   "N23": {
    "start": 109.633,

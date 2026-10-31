@@ -131,3 +131,21 @@ ComfyUI template `video_ltx2_3_i2v` (`ltx-2.3-22b-dev-fp8` + distilled LoRA 0.5,
 | C2 | `takes/stills/kf_C2/kf_C2_s1929.png` | 1930 | `takes/clips/C2/C2_s1930.mp4` | 11.1 | 2026-10-31T15:50:40-04:00 | pending pick |
 | C3 | `takes/stills/kf_C3/kf_C3_s1930.png` | 1929 | `takes/clips/C3/C3_s1929.mp4` | 14.0 | 2026-10-31T15:50:54-04:00 | pending pick |
 | C3 | `takes/stills/kf_C3/kf_C3_s1930.png` | 1930 | `takes/clips/C3/C3_s1930.mp4` | 11.0 | 2026-10-31T15:51:05-04:00 | pending pick |
+| kf_N23band | 1929 | 1664×1248 | `takes/stills/kf_N23band/kf_N23band_s1929.png` | 63.1 | 2026-10-31T16:07:01-04:00 | pending pick |
+| kf_N23band | 1930 | 1664×1248 | `takes/stills/kf_N23band/kf_N23band_s1930.png` | 49.2 | 2026-10-31T16:07:50-04:00 | pending pick |
+| kf_N23kick | 1929 | 1664×1248 | `takes/stills/kf_N23kick/kf_N23kick_s1929.png` | 51.1 | 2026-10-31T16:08:42-04:00 | pending pick |
+| kf_N23kick | 1930 | 1664×1248 | `takes/stills/kf_N23kick/kf_N23kick_s1930.png` | 50.1 | 2026-10-31T16:09:32-04:00 | pending pick |
+| kf_N28run | 1929 | 1664×1248 | `takes/stills/kf_N28run/kf_N28run_s1929.png` | 51.1 | 2026-10-31T16:10:24-04:00 | pending pick |
+| kf_N28run | 1930 | 1664×1248 | `takes/stills/kf_N28run/kf_N28run_s1930.png` | 50.1 | 2026-10-31T16:11:14-04:00 | pending pick |
+| tape_pile | 1929 | 2208×1248 | `takes/stills/tape_pile/tape_pile_s1929.png` | 74.7 | 2026-10-31T16:12:29-04:00 | pending pick |
+| tape_pile | 1930 | 2208×1248 | `takes/stills/tape_pile/tape_pile_s1930.png` | 69.3 | 2026-10-31T16:13:38-04:00 | pending pick |
+| N17_v2 (refs: N17_v1) | 1929 | 1664×1248 | `takes/stills/N17/N17_v2_s1929.png` | 94.6 | 2026-10-31T16:16:09-04:00 | pending pick |
+| N17_v2 (refs: N17_v1) | 1930 | 1664×1248 | `takes/stills/N17/N17_v2_s1930.png` | 79.1 | 2026-10-31T16:17:28-04:00 | pending pick |
+| N17_v2 (refs: N17_v1) | 1931 | 1664×1248 | `takes/stills/N17/N17_v2_s1931.png` | 79.1 | 2026-10-31T16:18:47-04:00 | pending pick |
+| N17_v2 (refs: N17_v1) | 1932 | 1664×1248 | `takes/stills/N17/N17_v2_s1932.png` | 79.1 | 2026-10-31T16:20:06-04:00 | pending pick |
+| S23band | `takes/stills/kf_N23band/kf_N23band_s1929.png` | 1929 | `takes/clips/S23band/S23band_s1929.mp4` | 43.5 | 2026-10-31T16:20:56-04:00 | pending pick |
+| S23band | `takes/stills/kf_N23band/kf_N23band_s1929.png` | 1930 | `takes/clips/S23band/S23band_s1930.mp4` | 24.3 | 2026-10-31T16:21:20-04:00 | pending pick |
+| S23kick | `takes/stills/kf_N23kick/kf_N23kick_s1929.png` | 1929 | `takes/clips/S23kick/S23kick_s1929.mp4` | 26.5 | 2026-10-31T16:21:47-04:00 | pending pick |
+| S23kick | `takes/stills/kf_N23kick/kf_N23kick_s1929.png` | 1930 | `takes/clips/S23kick/S23kick_s1930.mp4` | 23.1 | 2026-10-31T16:22:10-04:00 | pending pick |
+| S28run | `takes/stills/kf_N28run/kf_N28run_s1929.png` | 1929 | `takes/clips/S28run/S28run_s1929.mp4` | 17.2 | 2026-10-31T16:22:27-04:00 | pending pick |
+| S28run | `takes/stills/kf_N28run/kf_N28run_s1929.png` | 1930 | `takes/clips/S28run/S28run_s1930.mp4` | 14.0 | 2026-10-31T16:22:41-04:00 | pending pick |

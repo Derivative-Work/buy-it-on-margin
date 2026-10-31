@@ -134,7 +134,8 @@
    "src": "media/picks/C1b.mp4",
    "fallback_still": "media/picks/kf_C1b.png",
    "overlay": "tape_ankle",
-   "swap_to_k": true
+   "swap_to_k": true,
+   "tape_src": "media/picks/tape_pile.png"
   },
   "N13": {
    "kind": "clip",
@@ -229,7 +230,12 @@
    "src": "media/picks/N22.png"
   },
   "N23": {
-   "kind": "silhouette_band"
+   "kind": "silhouette_band",
+   "mattes": {
+    "band": "media/picks/S23band_matte.mp4",
+    "kick": "media/picks/S23kick_matte.mp4"
+   },
+   "matte_frames": 193
   },
   "N24": {
    "kind": "still",
@@ -284,7 +290,11 @@
    }
   },
   "N28": {
-   "kind": "silhouette_crowd"
+   "kind": "silhouette_crowd",
+   "mattes": {
+    "run": "media/picks/S28run_matte.mp4"
+   },
+   "matte_frames": 121
   },
   "N29": {
    "kind": "clip_montage",

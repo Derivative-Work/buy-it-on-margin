@@ -53,3 +53,8 @@ Append-only. Every human action: when, what, and why.
 ## 9. 2026-10-31 — Batch-2 picks, N27 v2, clip rerun
 
 - **What:** "go ahead with all three": picks N06 1929, N08 1932, N15 1929, N26 1930 (the agent's suggestions); regenerate N27 with a v2 prompt (the pie didn't show); free ComfyUI's memory and rerun the clips.
+
+## 10. 2026-10-31 — Animatic v1 review
+
+- **What:** "N18: can visually confirm that the ticker tape piles need to be redone · the one-frame modern dancer timing is correct, but let's keep it on screen longer so the joke is more visible · N23: this whole part is not reading right -- can you try to make a video mask from generated dancing instead so the dancing looks better · N24: the clock hands need to be redone -- the simple stick-and-dot reads too modern for this era · N28: same as N23, see about making a video mask from generated running"
+- Mid-turn: "N17: I think the joke can be enhanced if the hat box or the desk also has visible RAM sticks and GPUs"

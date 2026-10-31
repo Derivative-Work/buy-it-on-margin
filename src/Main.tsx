@@ -75,18 +75,30 @@ const ZoomThrough: React.FC<{id: string; srcs: string[]}> = ({id, srcs}) => {
     transform: `scale(${1 + k * k * 1.4})`, transformOrigin: '50% 48%'}} />;
 };
 
-/** Ticker tape that rises shot by shot: a seeded band of paper strips at the bottom of the frame (code, type K). */
+/** Ticker tape piled on the floor, rising shot by shot (ankle in N12, knee in N18): the generated tape-pile still
+ * (white paper on pure black) laid over the bottom of the frame with a lighten blend, so only the paper shows. */
 const TapePile: React.FC<{level: number}> = ({level}) => {
-  const strips = Array.from({length: 140}, (_, i) => {
-    const r = (n: number) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
-    return {x: r(1) * PIC_W, y: PIC_H - r(2) * level * PIC_H, w: 60 + r(3) * 140, a: (r(4) - 0.5) * 70, sh: 0.7 + r(5) * 0.3};
-  });
+  const src = EDIT.N12?.tape_src ?? 'media/picks/tape_pile.png';
+  if (!has(src)) return null;
+  // The heap in the image peaks 25% down from its top (measured; its sides fall to ~55%). Six small copies at natural
+  // aspect (so paper strips stay small next to the dancers), alternately mirrored, each sunk so its peak stands
+  // ~`level` of the frame above the bottom: together an uneven drift. contrast/brightness crush the image's dark floor
+  // to black so the lighten blend shows only paper.
+  const sz = SIZES[src] ?? [2208, 1248];
+  const n = 6;
   return (
-    <svg width={PIC_W} height={PIC_H} style={{position: 'absolute', inset: 0}}>
-      <rect x={0} y={PIC_H - level * PIC_H * 0.55} width={PIC_W} height={PIC_H} fill="#d9d4c8" opacity={0.85} />
-      {strips.map((s, i) => <rect key={i} x={s.x} y={s.y} width={s.w} height={9} fill={`rgb(${235 * s.sh},${230 * s.sh},${218 * s.sh})`}
-        transform={`rotate(${s.a} ${s.x} ${s.y})`} />)}
-    </svg>
+    <>
+      {Array.from({length: n}, (_, k) => {
+        const r = (m: number) => ((Math.sin((k + 1) * 12.9898 + m * 78.233) * 43758.5453) % 1 + 1) % 1;
+        const w = PIC_W * (0.38 + 0.1 * r(1));
+        const h = (w * sz[1]) / sz[0];
+        const peak = level * PIC_H * (0.85 + 0.3 * r(2));
+        const bottom = peak - 0.75 * h;
+        const left = -0.12 * PIC_W + (k / (n - 1)) * 1.04 * PIC_W - w / 2 + (r(3) - 0.5) * 0.08 * PIC_W;
+        return <Img key={k} src={staticFile(src)} style={{position: 'absolute', left, bottom, width: w, height: h,
+          transform: k % 2 ? 'scaleX(-1)' : undefined, mixBlendMode: 'lighten', filter: 'contrast(2.2) brightness(0.85)'}} />;
+      })}
+    </>
   );
 };
 
@@ -99,19 +111,52 @@ const Bulb: React.FC<{x?: number; y?: number}> = ({x = 0.5, y = 0.2}) => {
     background: 'radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 70%)', opacity: on ? 1 : 0.1}} />;
 };
 
-/** N24: the rate dial's needle climbs (code overlay). */
+/** N24: the rate dial's needle climbs (code overlay). A period gauge hand: a blackened steel spade-tipped pointer
+ * with a counterweight tail, under a domed brass cap with a centre rivet (not a modern stick-and-dot). */
 const Needle: React.FC<{x?: number; y?: number; r?: number}> = ({x = 0.62, y = 0.4, r = 0.13}) => {
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
-  const a = interpolate(frame, [0, durationInFrames], [-110, 95]);
+  const a = interpolate(frame, [0, durationInFrames], [-110, 95], {easing: (t) => t * t * (3 - 2 * t)});
+  const L = r * PIC_W;                     // pointer length (px, image space at 1440 wide)
+  const cx = x * PIC_W, cy = y * PIC_H;
+  const w = L * 0.035;                     // shaft half-width at the hub
+  const hand = [
+    `M ${-w * 0.5},${L * 0.22}`,                                   // tail end
+    `L ${-w},${0}`, `L ${-w * 0.45},${-L * 0.70}`,                 // shaft tapers toward the tip
+    `L ${-w * 2.6},${-L * 0.74}`, `L 0,${-L}`, `L ${w * 2.6},${-L * 0.74}`,   // spade tip
+    `L ${w * 0.45},${-L * 0.70}`, `L ${w},${0}`, `L ${w * 0.5},${L * 0.22}`, 'Z',
+  ].join(' ');
   return (
-    <svg width={PIC_W} height={PIC_H} style={{position: 'absolute', inset: 0}}>
-      <line x1={x * PIC_W} y1={y * PIC_H} x2={x * PIC_W + Math.sin((a * Math.PI) / 180) * r * PIC_W}
-        y2={y * PIC_H - Math.cos((a * Math.PI) / 180) * r * PIC_W} stroke="#111" strokeWidth={9} strokeLinecap="round" />
-      <circle cx={x * PIC_W} cy={y * PIC_H} r={14} fill="#111" />
+    <svg viewBox={`0 0 ${PIC_W} ${PIC_H}`} preserveAspectRatio="none" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+      <defs>
+        <radialGradient id="brasscap" cx="38%" cy="35%" r="70%">
+          <stop offset="0%" stopColor="#f6eccb" /><stop offset="45%" stopColor="#b89a55" /><stop offset="100%" stopColor="#4a3a18" />
+        </radialGradient>
+      </defs>
+      <g transform={`translate(${cx} ${cy}) rotate(${a})`}>
+        <path d={hand} fill="#000" opacity={0.25} transform={`translate(${L * 0.012} ${L * 0.02})`} />
+        <path d={hand} fill="#141414" stroke="#3a3a3a" strokeWidth={1} />
+        <circle cx={0} cy={L * 0.2} r={L * 0.07} fill="#141414" stroke="#3a3a3a" strokeWidth={1} />
+      </g>
+      <circle cx={cx} cy={cy} r={L * 0.095} fill="url(#brasscap)" stroke="#2a2010" strokeWidth={2} />
+      <circle cx={cx} cy={cy} r={L * 0.022} fill="#2a2010" />
     </svg>
   );
 };
+
+/** Generated shadow-play footage as silhouettes: a pale stage, each matte (black figures on white) multiplied on. */
+const MatteStage: React.FC<{children: React.ReactNode}> = ({children}) => (
+  <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 40%, #f1ece0 0%, #d8d1c2 70%, #bdb5a5 100%)'}}>
+    {children}
+  </AbsoluteFill>
+);
+const MatteLayer: React.FC<{src: string; frames: number; box: {x: number; y: number; w: number; h: number}; mirror?: boolean}> =
+  ({src, frames, box, mirror = false}) => (
+    <div style={{position: 'absolute', left: box.x * PIC_W, top: box.y * PIC_H, width: box.w * PIC_W, height: box.h * PIC_H,
+      mixBlendMode: 'multiply', overflow: 'hidden'}}>
+      <Clip src={src} frames={frames} mirror={mirror} />
+    </div>
+  );
 
 const Credits: React.FC = () => <Card text={CARDS.N34.text} variant="body" />;
 
@@ -165,14 +210,14 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
       return (
         <AbsoluteFill>
           <ClipOr id={id} src={e.src} fallback={e.fallback_still} />
-          {e.overlay === 'tape_ankle' && <TapePile level={0.12} />}
+          {e.overlay === 'tape_ankle' && <TapePile level={0.08} />}
         </AbsoluteFill>
       );
     case 'clip_montage':
       return (
         <AbsoluteFill>
           <Montage id={id} e={e} startS={s.start} />
-          {e.overlay === 'tape_knee' && <TapePile level={0.28} />}
+          {e.overlay === 'tape_knee' && <TapePile level={0.2} />}
         </AbsoluteFill>
       );
     case 'dissolve': {
@@ -203,9 +248,20 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
     case 'insert':
       return has(e.src) ? <Img src={staticFile(e.src)} style={{width: PIC_W, height: PIC_H, objectFit: 'cover'}} /> : <Placeholder id={id} what="insert" />;
     case 'silhouette_band':
-      return <SilhouetteBand startS={s.start} />;
+      return has(e.mattes?.band) && has(e.mattes?.kick) ? (
+        <MatteStage>
+          {/* the band on a riser in the upper frame (the matte's feet sit ~88% down its box), the kick line below */}
+          <MatteLayer src={e.mattes.band} frames={e.matte_frames} box={{x: 0.22, y: -0.02, w: 0.56, h: 0.47}} />
+          <div style={{position: 'absolute', left: PIC_W * 0.2, top: PIC_H * 0.395, width: PIC_W * 0.6, height: 14, background: '#0b0b0b'}} />
+          <div style={{position: 'absolute', left: PIC_W * 0.23, top: PIC_H * 0.395, width: 10, height: PIC_H * 0.08, background: '#0b0b0b'}} />
+          <div style={{position: 'absolute', left: PIC_W * 0.77 - 10, top: PIC_H * 0.395, width: 10, height: PIC_H * 0.08, background: '#0b0b0b'}} />
+          <MatteLayer src={e.mattes.kick} frames={e.matte_frames} box={{x: 0.02, y: 0.43, w: 0.96, h: 0.6}} />
+        </MatteStage>
+      ) : <SilhouetteBand startS={s.start} />;
     case 'silhouette_crowd':
-      return <SilhouetteCrowd />;
+      return has(e.mattes?.run) ? (
+        <MatteStage><MatteLayer src={e.mattes.run} frames={e.matte_frames} mirror={false} box={{x: -0.05, y: 0.05, w: 1.1, h: 1.0}} /></MatteStage>
+      ) : <SilhouetteCrowd />;
     case 'freeze_burn':
       return (
         <AbsoluteFill>

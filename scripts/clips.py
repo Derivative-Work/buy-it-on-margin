@@ -38,8 +38,8 @@ def main():
         k = KEPT[kf]
         src = Path(f"takes/stills/{kf}/{k if isinstance(k, str) else f'{kf}_s{k}'}.png")
         name = cc.upload_image(src)
-        prompt = spec["motion"] + ". " + CFG["style"]
-        for seed in CFG["seeds"]:
+        prompt = spec["motion"] + ". " + CFG["style_sets"].get(spec.get("style"), CFG["style"])
+        for seed in spec.get("seeds", CFG["seeds"]):
             dest = OUT / clip / f"{clip}_s{seed}.mp4"
             if dest.exists():
                 continue
@@ -49,7 +49,7 @@ def main():
             g["320:328"]["inputs"]["value"] = False
             g["320:312"]["inputs"]["value"], g["320:299"]["inputs"]["value"] = CFG["size"]
             g["320:300"]["inputs"]["value"] = CFG["fps"]
-            g["320:301"]["inputs"]["value"] = CFG["seconds"]
+            g["320:301"]["inputs"]["value"] = spec.get("seconds", CFG["seconds"])
             g["320:276"]["inputs"]["noise_seed"] = seed
             g["320:277"]["inputs"]["noise_seed"] = seed + 1
             g["75"]["inputs"]["filename_prefix"] = f"bim/{clip}_s{seed}"

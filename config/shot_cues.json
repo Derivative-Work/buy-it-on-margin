@@ -118,8 +118,8 @@
   {
    "id": "N22",
    "cue": "Break|3|0",
-   "insert_picture_frames": 1,
-   "note": "one picture frame (1/18 s) of the modern dancer on 'Sometime', then back to N21"
+   "insert_picture_frames": 14,
+   "note": "the modern dancer on 'Sometime': 14 picture frames (0.78 s), long enough to register (human, 2026-10-31: was 1 frame), then back to N21"
   },
   {
    "id": "N23",
