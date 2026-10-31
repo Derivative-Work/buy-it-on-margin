@@ -125,3 +125,9 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 ## 19. 2026-10-31 — K silhouettes (N23, N28)
 
 - `src/film/Silhouettes.tsx`: jointed paper-cutout figures (hinged shoulder, elbow, hip, knee; hats, skirts, horns), poses locked to the band's beat grid. N23: clarinet and trumpet trade the break every two bars on a riser over a six-figure Charleston kick line. N28: 16 seeded figures run left to right at mixed speeds. v1 had arms hinged upward and merged legs; fixed and checked on 5 frames. Also the brief's fallback for any dance clip that comes out mushy.
+
+## 20. 2026-10-31 — M3 batch 2: stills done, clips stopped
+
+- `scripts/batch2.sh`: N06 (ref_machine), N08 and N26 (ref_customer), N15 (N14 v2) ×4 seeds at ~100 s each (reference conditioning roughly doubles FLUX.2's time), then N27 from each N26 take with the matching seed (~78 s each). All 20 takes in `takes/stills/`, rows in `shots/prompts.md`.
+- The clip stage (`scripts/clips.py`) never produced a take: Claude Code stopped the batch for low system memory as the LTX-2.3 stage began. ComfyUI was holding ~33 GB of RAM (FLUX.2 staged for dynamic VRAM loading) with 4 GB free of 38 GB. Not restarted by the agent; waits for the human. Suggested before rerunning: free ComfyUI's models (`POST /free`, as `comfy_client.free()`), or restart ComfyUI, so LTX-2.3 and Gemma load into empty RAM.
+- `config/stills.json` "kept" came back clean (the temporary N26 pick was removed before the stop).

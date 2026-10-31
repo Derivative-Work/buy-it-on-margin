@@ -93,3 +93,29 @@ Model `flux2_dev_fp8mixed.safetensors`, text encoder `mistral_3_small_flux2_fp4_
 | N14_v2 | 1931 | 2208×1248 | `takes/stills/N14/N14_v2_s1931.png` | 70.2 | 2026-10-31T14:48:44-04:00 | pending pick |
 | N14_v2 | 1932 | 2208×1248 | `takes/stills/N14/N14_v2_s1932.png` | 70.1 | 2026-10-31T14:49:54-04:00 | pending pick |
 | N06 (refs: ref_machine) | 1929 | 2208×1248 | `takes/stills/N06/N06_s1929.png` | 101.4 | 2026-10-31T14:59:23-04:00 | pending pick |
+| N06 (refs: ref_machine) | 1930 | 2208×1248 | `takes/stills/N06/N06_s1930.png` | 103.2 | 2026-10-31T15:01:06-04:00 | pending pick |
+| N06 (refs: ref_machine) | 1931 | 2208×1248 | `takes/stills/N06/N06_s1931.png` | 102.2 | 2026-10-31T15:02:48-04:00 | pending pick |
+| N06 (refs: ref_machine) | 1932 | 2208×1248 | `takes/stills/N06/N06_s1932.png` | 101.4 | 2026-10-31T15:04:29-04:00 | pending pick |
+| N08 (refs: ref_customer) | 1929 | 1664×1248 | `takes/stills/N08/N08_s1929.png` | 80.1 | 2026-10-31T15:05:50-04:00 | pending pick |
+| N08 (refs: ref_customer) | 1930 | 1664×1248 | `takes/stills/N08/N08_s1930.png` | 79.1 | 2026-10-31T15:07:09-04:00 | pending pick |
+| N08 (refs: ref_customer) | 1931 | 1664×1248 | `takes/stills/N08/N08_s1931.png` | 78.3 | 2026-10-31T15:08:28-04:00 | pending pick |
+| N08 (refs: ref_customer) | 1932 | 1664×1248 | `takes/stills/N08/N08_s1932.png` | 78.3 | 2026-10-31T15:09:46-04:00 | pending pick |
+| N15 (refs: N14) | 1929 | 2208×1248 | `takes/stills/N15/N15_s1929.png` | 102.2 | 2026-10-31T15:11:29-04:00 | pending pick |
+| N15 (refs: N14) | 1930 | 2208×1248 | `takes/stills/N15/N15_s1930.png` | 102.1 | 2026-10-31T15:13:11-04:00 | pending pick |
+| N15 (refs: N14) | 1931 | 2208×1248 | `takes/stills/N15/N15_s1931.png` | 103.1 | 2026-10-31T15:14:54-04:00 | pending pick |
+| N15 (refs: N14) | 1932 | 2208×1248 | `takes/stills/N15/N15_s1932.png` | 101.4 | 2026-10-31T15:16:36-04:00 | pending pick |
+| N26 (refs: ref_customer) | 1929 | 1664×1248 | `takes/stills/N26/N26_s1929.png` | 79.4 | 2026-10-31T15:17:56-04:00 | pending pick |
+| N26 (refs: ref_customer) | 1930 | 1664×1248 | `takes/stills/N26/N26_s1930.png` | 79.1 | 2026-10-31T15:19:15-04:00 | pending pick |
+| N26 (refs: ref_customer) | 1931 | 1664×1248 | `takes/stills/N26/N26_s1931.png` | 79.1 | 2026-10-31T15:20:34-04:00 | pending pick |
+| N26 (refs: ref_customer) | 1932 | 1664×1248 | `takes/stills/N26/N26_s1932.png` | 78.4 | 2026-10-31T15:21:52-04:00 | pending pick |
+| N27 (refs: N26) | 1929 | 1664×1248 | `takes/stills/N27/N27_s1929.png` | 79.1 | 2026-10-31T15:23:12-04:00 | pending pick |
+| N27 (refs: N26) | 1930 | 1664×1248 | `takes/stills/N27/N27_s1930.png` | 79.1 | 2026-10-31T15:24:31-04:00 | pending pick |
+| N27 (refs: N26) | 1931 | 1664×1248 | `takes/stills/N27/N27_s1931.png` | 78.1 | 2026-10-31T15:25:50-04:00 | pending pick |
+| N27 (refs: N26) | 1932 | 1664×1248 | `takes/stills/N27/N27_s1932.png` | 78.2 | 2026-10-31T15:27:08-04:00 | pending pick |
+
+## Clips: LTX-2.3
+
+ComfyUI template `video_ltx2_3_i2v` (`ltx-2.3-22b-dev-fp8` + distilled LoRA 0.5, Gemma 3 12B fp4 encoder, x2 spatial upscaler), via `scripts/clips.py`. Prompt = motion + the shared clip style.
+
+| Clip | Keyframe | Seed | Output | Seconds | When | Status |
+| --- | --- | --- | --- | --- | --- | --- |
