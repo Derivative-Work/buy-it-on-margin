@@ -84,3 +84,11 @@ Model `flux2_dev_fp8mixed.safetensors`, text encoder `mistral_3_small_flux2_fp4_
 | kf_C3 | 1930 | 1664×1248 | `takes/stills/kf_C3/kf_C3_s1930.png` | 50.1 | 2026-10-31T14:39:47-04:00 | pending pick |
 | kf_C3 | 1931 | 1664×1248 | `takes/stills/kf_C3/kf_C3_s1931.png` | 50.1 | 2026-10-31T14:40:37-04:00 | pending pick |
 | kf_C3 | 1932 | 1664×1248 | `takes/stills/kf_C3/kf_C3_s1932.png` | 50.1 | 2026-10-31T14:41:27-04:00 | pending pick |
+| N24_v2 | 1929 | 1664×1248 | `takes/stills/N24/N24_v2_s1929.png` | 50.1 | 2026-10-31T14:42:43-04:00 | pending pick |
+| N24_v2 | 1930 | 1664×1248 | `takes/stills/N24/N24_v2_s1930.png` | 50.1 | 2026-10-31T14:43:33-04:00 | pending pick |
+| N24_v2 | 1931 | 1664×1248 | `takes/stills/N24/N24_v2_s1931.png` | 50.1 | 2026-10-31T14:44:23-04:00 | pending pick |
+| N24_v2 | 1932 | 1664×1248 | `takes/stills/N24/N24_v2_s1932.png` | 50.1 | 2026-10-31T14:45:13-04:00 | pending pick |
+| N14_v2 | 1929 | 2208×1248 | `takes/stills/N14/N14_v2_s1929.png` | 70.1 | 2026-10-31T14:46:24-04:00 | pending pick |
+| N14_v2 | 1930 | 2208×1248 | `takes/stills/N14/N14_v2_s1930.png` | 70.3 | 2026-10-31T14:47:34-04:00 | pending pick |
+| N14_v2 | 1931 | 2208×1248 | `takes/stills/N14/N14_v2_s1931.png` | 70.2 | 2026-10-31T14:48:44-04:00 | pending pick |
+| N14_v2 | 1932 | 2208×1248 | `takes/stills/N14/N14_v2_s1932.png` | 70.1 | 2026-10-31T14:49:54-04:00 | pending pick |
