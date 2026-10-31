@@ -224,8 +224,10 @@
    "refs": [
     "N26"
    ],
-   "subject": "the same man in the same office and pose as the reference image, but his face is covered in a cream pie that has just hit him, cream splattered on his collar, still holding the chart",
-   "note": "hard cut from N26; batch 2, conditioned on the N26 pick"
+   "subject": "the same man in the same office as the reference image, his whole face completely plastered with a thick white cream pie that has just been smashed into it, only cream visible where his face was, an empty pie tin falling away from his face, thick cream dripping down his collar and shirt, still holding up the chart",
+   "note": "hard cut from N26; batch 2, conditioned on the N26 pick",
+   "v": 2,
+   "v1_problem": "the pie barely showed: each take stayed too close to its N26 reference"
   }
  },
  "kept": {
@@ -247,6 +249,10 @@
   "kf_C1a": 1930,
   "kf_C1b": 1931,
   "kf_C2": 1929,
-  "kf_C3": 1930
+  "kf_C3": 1930,
+  "N06": 1929,
+  "N08": 1932,
+  "N15": 1929,
+  "N26": 1930
  }
 }

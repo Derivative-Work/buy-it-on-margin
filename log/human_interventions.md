@@ -49,3 +49,7 @@ Append-only. Every human action: when, what, and why.
 ## 8. 2026-10-31 — M3 batch-1 picks
 
 - **What:** "go with these": the agent's suggested picks for all 19 items (`config/stills.json` → `kept`): ref_customer 1930, ref_machine 1929, N02 1930, N04 1929, N05 1930, N07 1930, N11 1931 (the Empire-State-like tower stays), N14 v2 1929, N16a 1929, N16b 1929, N16c 1930, N17 1930, N22 1930, N24 v2 1931, N32 1932, kf_C1a 1930, kf_C1b 1931, kf_C2 1929, kf_C3 1930. The man beside the machine in ref_machine stands.
+
+## 9. 2026-10-31 — Batch-2 picks, N27 v2, clip rerun
+
+- **What:** "go ahead with all three": picks N06 1929, N08 1932, N15 1929, N26 1930 (the agent's suggestions); regenerate N27 with a v2 prompt (the pie didn't show); free ComfyUI's memory and rerun the clips.
