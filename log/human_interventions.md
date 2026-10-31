@@ -45,3 +45,7 @@ Append-only. Every human action: when, what, and why.
 ## 7. 2026-10-31 — M2 gate: look approved
 
 - **What:** "the look is approved, keep the warm tint. M2 is good." (`out/m2/m2_filmtest.mp4`, `config/film.json` as of commit cc0aafa.)
+
+## 8. 2026-10-31 — M3 batch-1 picks
+
+- **What:** "go with these": the agent's suggested picks for all 19 items (`config/stills.json` → `kept`): ref_customer 1930, ref_machine 1929, N02 1930, N04 1929, N05 1930, N07 1930, N11 1931 (the Empire-State-like tower stays), N14 v2 1929, N16a 1929, N16b 1929, N16c 1930, N17 1930, N22 1930, N24 v2 1931, N32 1932, kf_C1a 1930, kf_C1b 1931, kf_C2 1929, kf_C3 1930. The man beside the machine in ref_machine stands.
