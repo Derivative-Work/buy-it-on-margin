@@ -1,0 +1,10 @@
+{
+ "_doc": "Inputs for scripts/timing_map.py that the transcript can't give. Times on the master timeline (s).",
+ "line_window_overrides": {
+  "_why": "Whisper finds no words in the final chorus (group vocal under the band); windows from the vocals guide's level and a forced alignment, production log step 9.",
+  "Final chorus|0": [143.3, 147.6],
+  "Final chorus|1": [148.3, 150.65],
+  "Final chorus|2": [150.65, 151.884]
+ },
+ "beats": {"start_bpm": 224, "band_span": [0.0, 151.884], "coda_span": [155.884, 185.834], "coda_start_bpm": 70}
+}

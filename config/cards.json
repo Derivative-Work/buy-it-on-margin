@@ -1,0 +1,19 @@
+{
+ "_doc": "Every intertitle and overlay word on screen (brief: one file, so a fact fix is a one-line change). Text from the brief rev 10 and the song doc's fact card rev 24; checked against the fact card at M6. 'hold_rule' = brief: >= 1.5 s + ~1 s per 3 words.",
+ "cards": {
+  "N03": {"kind": "card", "text": "THE MUSIC OF TOMORROW"},
+  "N05": {"kind": "corner_caption", "text": "according to legend"},
+  "N08": {"kind": "card", "text": "Ten per cent down."},
+  "N16": {"kind": "overlay", "text": "COMPANY A owns COMPANY B owns COMPANY C"},
+  "N19": {"kind": "card", "text": "WHAT'S IT MAKE?"},
+  "N20": {"kind": "card", "text": "WHAT'S IT COST?"},
+  "N21": {"kind": "card", "text": "WHEN'S IT PAY?"},
+  "N25": {"kind": "card", "text": "TECH STOCKS: $1,000,000,000,000 GONE IN A DAY"},
+  "N31a": {"kind": "card", "text": "TUESDAY, OCTOBER 29, 1929"},
+  "N31b": {"kind": "card", "text": "THURSDAY, OCTOBER 29, 2026"},
+  "N31c": {"kind": "card", "text": "One of these began the Great Depression. The other was two bad days, so far."},
+  "N33": {"kind": "card", "text": "The End?"},
+  "N34": {"kind": "credits", "text": "Lyrics drafted by Claude, an AI model made by Anthropic, PBC. Anthropic filed to go public on October 26, 2026. Its filing reports a first-half 2026 net loss of $80.7 billion, of which $72.4 billion is a non-cash accounting charge that grew with its valuation, and $518 billion in committed future infrastructure spending. This is satire, not investment advice.",
+          "note": "Disclosure end card only; the fact cards and 'Derived from' credits are added at M4 from the song doc."}
+ }
+}

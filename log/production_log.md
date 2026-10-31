@@ -47,3 +47,21 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
   `cd ~/Code/music-deslop && uv run python -m postfilter.infer --in <src> --out audio/postfilter/{v1,v2}_postfilter.wav --ckpt ~/Code/music-deslop-data/release/m6f_10k.safetensors --source suno` (strength 1.0, null latent). About 20 s and 5.7 GB RAM per track on the 5090 box.
 - Checks: same length, 0-sample lag against the source; change −35.1 dB (v1) and −35.8 dB (v2) below the music, −31 to −40 dB in every 2 s window. No passage falls back to the input, so `--no-fallback` would give the same result.
 - `../folks-like-us/.venv/bin/python -I scripts/build_master.py postfilter` → `audio/master/master_postfilter.wav` (+ `listen_postfilter.wav`, `.json`), same edit list as `master_raw`.
+
+## 8. 2026-10-31 — M1: guide stems and master-timeline transcript
+
+- `scripts/guide_stems.py` → `timing/guide/{vocals,lead,backing,drums,keys}.wav`: v1/v2 stems re-edited exactly like the master (unfiltered; the filter keeps timing).
+- `scripts/transcribe_vocals.py timing/guide/{lead,backing}.wav timing/whisper_master_{lead,backing}.json` (script now takes stem/out args). Every section transcribed in order except the final chorus.
+
+## 9. 2026-10-31 — M1: lyrics as sung
+
+- `lyrics/as_sung.txt`: the lyrics as pasted, directions removed, Chorus 2 written out, with one change. The final chorus is sung "Buy it on margin, sugar, buy it on margin! / Ten cents down and a promise for the— / Buy—": group vocals 143.5–150.6 s, one last "Buy—" hit at ~150.75 s, then the voice drops to −60 dB and the band rings out to the cut. The written "it on mar—" is not found (vocals-guide level in 100 ms frames; WhisperX forced alignment places it in near-silence at 151.0–151.3 s). To confirm by ear; it matches the human's "C's final 'buy' is cut off".
+- Whisper variants kept as written (likely mishearings, to confirm): "float alone", "the forecast sure", "sell stuff". Logged in `log/ai_changes.md`.
+
+## 10. 2026-10-31 — M1: timing map, shot times, review video
+
+- `scripts/timing_map.py` (from Folks Like Us) → `timing/timing_map.json`, `timing/as_sung_{lines,words}.srt`. 356 words aligned (6 with score < 0.3, all short words under the band). Final chorus windows from `config/timing.json` (no transcript anchors).
+- Beats (drums guide, 0–151.884 s): 224.7 bpm quarter notes, IBI 255–279 ms, no drift; the stop-time hits at 149.70/150.25/150.75 s land within 10–30 ms of grid beats. Bars of 4, phase 3 (low-band onset strength by phase 119/248/134/285: phases 1 and 3 both strong, tuba on 1 and 3; to confirm by ear). Coda beats (keys guide) unreliable: 107.7 bpm against the ~70 planned; not used for cuts.
+- Sections (master s): Intro 0–12.58, Verse 1 16.57–33.15, Chorus 1 33.25–57.72, Verse 2 58.98–75.34, Chorus 2 75.69–100.02, Break 100.10–106.90, Instrumental 106.90–126.53, Verse 3 126.53–141.82, Final chorus 143.58–151.884, Silence 151.884–155.884, Coda 156.49–185.834 (last word ends 177.46; band tag after).
+- `scripts/shot_times.py` → `timing/shot_times.json` from `config/shot_cues.json`: 37 entries (N01–N34, N31 split a/b/c, N22 as a one-picture-frame insert, B01 in the coda). Starts snap to the beat at or before the word (sung onsets trail the beat by 80–130 ms). Card texts in `config/cards.json`; the hold rule flags N05, N19, N20, N31a–c and N34.
+- `scripts/m1_review.py` → `timing/check/m1_review.mp4` (shot ID, picture and card on top, as-sung lyric with the current word lit, bar.beat counter; master + beat click, high on downbeats) and `master_click.wav`. Frames checked at 19.0, 104.2 and 152.5 s.

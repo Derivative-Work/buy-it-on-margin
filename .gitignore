@@ -43,3 +43,6 @@ docs/suno*/resp_*.json
 docs/suno*/page.html
 docs/planning_chat/*.html
 docs/planning_chat/*.txt
+timing/guide/
+timing/check/*.wav
+timing/check/*.mp4

@@ -2,7 +2,8 @@
 
 The transcript is evidence for lyrics/as_sung.txt, not the lyrics: Whisper mishears sung words. timing_map.py
 force-aligns the as-sung lyrics, not this transcript.
-Usage: .venv/bin/python scripts/transcribe_vocals.py [model=large-v3]  ->  timing/whisper_words.json
+Usage: <venv>/bin/python scripts/transcribe_vocals.py [stem] [out] [model=large-v3]
+  default: v1 lead stem -> timing/whisper_words.json; M1 runs it on timing/guide/{lead,backing}.wav (master timeline)
 """
 import json
 import sys
@@ -10,10 +11,10 @@ from pathlib import Path
 
 import whisperx
 
-STEM = "audio/stems/0 Lead Vocals.wav"
-OUT = Path("timing/whisper_words.json")
+STEM = sys.argv[1] if len(sys.argv) > 1 else "audio/stems/0 Lead Vocals.wav"
+OUT = Path(sys.argv[2] if len(sys.argv) > 2 else "timing/whisper_words.json")
 
-model_name = sys.argv[1] if len(sys.argv) > 1 else "large-v3"
+model_name = sys.argv[3] if len(sys.argv) > 3 else "large-v3"
 audio = whisperx.load_audio(STEM)
 # No VAD trimming of quiet passages: the stops and the mumbled disclaimer are what we're looking for.
 model = whisperx.load_model(model_name, "cuda", compute_type="float16", language="en",

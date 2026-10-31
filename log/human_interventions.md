@@ -28,3 +28,7 @@ Append-only. Every human action: when, what, and why.
 ## 3. 2026-10-31 — Agent runs the post-filter
 
 - **What:** "go ahead and run the post-filter yourself." In earlier videos the human ran it (R4); here the agent did, on the human's instruction.
+
+## 4. 2026-10-31 — Master locked
+
+- **What:** "lock the post-filtered master and start M1." `audio/master/buy_it_on_margin_master.wav` = `master_postfilter.wav`, 185.834 s, sha256 `d2f9028739d033bc…` (in `config/master.json` → `locked`).

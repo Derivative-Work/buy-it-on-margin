@@ -1,0 +1,155 @@
+{
+ "_doc": "Shot type and picture from the brief rev 10 shot list, for review overlays. B01 and N31a-c split per the M1 cue plan.",
+ "B01": {
+  "type": "K",
+  "picture": "Zoom out from the newsreel to the planning chat (moved from the opening)"
+ },
+ "N01": {
+  "type": "K",
+  "picture": "Film leader countdown"
+ },
+ "N02": {
+  "type": "S",
+  "picture": "Iris opens on a cathedral radio in a parlor; a family leans in. Slow push to the radio"
+ },
+ "N03": {
+  "type": "K",
+  "picture": "Card"
+ },
+ "N04": {
+  "type": "S",
+  "picture": "Barbershop: the barber, razor raised, leans to whisper. Push in"
+ },
+ "N05": {
+  "type": "S",
+  "picture": "Shoeshine stand, two fingers raised"
+ },
+ "N06": {
+  "type": "S",
+  "picture": "The thinking machine (brass cabinet, one bulb) wheeled past the window on a hand truck. Pan"
+ },
+ "N07": {
+  "type": "S",
+  "picture": "A wall of hand-drawn charts, every line pointing up off the paper. Pan up"
+ },
+ "N08": {
+  "type": "K + S",
+  "picture": "Card, then the man in the chair signing a margin slip, lather on his face"
+ },
+ "N09": {
+  "type": "C1 →K",
+  "picture": "Dance hall: couples doing the Charleston"
+ },
+ "N10": {
+  "type": "C2",
+  "picture": "Ticker tape streaming down from above"
+ },
+ "N11": {
+  "type": "S",
+  "picture": "Skyline with one building far taller than the rest. Tilt up"
+ },
+ "N12": {
+  "type": "C1 →K",
+  "picture": "Dance hall, re-cut"
+ },
+ "N13": {
+  "type": "C3",
+  "picture": "The crumpled dollar passed hand to hand"
+ },
+ "N14": {
+  "type": "S",
+  "picture": "Night cornfield; a windowless building glows. Slow pan"
+ },
+ "N15": {
+  "type": "S + S",
+  "picture": "Same frame; a dissolve adds a power plant with smokestacks beside it"
+ },
+ "N16": {
+  "type": "K + S",
+  "picture": "Push through three nested office doors, each smaller (zoom between three stills)"
+ },
+ "N17": {
+  "type": "S",
+  "picture": "Hatbox on a desk, overflowing with IOU slips"
+ },
+ "N18": {
+  "type": "C1, C2 →K",
+  "picture": "Dance hall faster, cut on every bar; tape"
+ },
+ "N19": {
+  "type": "K",
+  "picture": "Freeze frame of a C1 dancer"
+ },
+ "N20": {
+  "type": "K",
+  "picture": "Freeze, different dancer"
+ },
+ "N21": {
+  "type": "K",
+  "picture": "Freeze"
+ },
+ "N22": {
+  "type": "S",
+  "picture": "One-frame insert: a dancer in modern clothes"
+ },
+ "N23": {
+  "type": "K",
+  "picture": "Silhouette band: clarinet and trumpet trading, a kick line below"
+ },
+ "N24": {
+  "type": "S + K",
+  "picture": "Banker at a big rate dial; the needle climbs (K overlay)"
+ },
+ "N25": {
+  "type": "K",
+  "picture": "Card"
+ },
+ "N26": {
+  "type": "S",
+  "picture": "Man proudly holding a rising sales chart; banknotes stream from his back pocket"
+ },
+ "N27": {
+  "type": "S",
+  "picture": "Same man, pie in the face. Hard cut on the beat"
+ },
+ "N28": {
+  "type": "K",
+  "picture": "Silhouette crowd running across frame"
+ },
+ "N29": {
+  "type": "C1, C2 + K",
+  "picture": "Over-cranked dance montage, speeding up"
+ },
+ "N30": {
+  "type": "K",
+  "picture": "Freeze mid-kick, then film burn to black"
+ },
+ "N31": {
+  "type": "K",
+  "picture": "Three cards in turn"
+ },
+ "N32": {
+  "type": "S",
+  "picture": "Iris opens on a crooner with a megaphone at a piano, one spotlight, empty hall knee-deep in tape. Slow pull back"
+ },
+ "N33": {
+  "type": "K",
+  "picture": "Iris closes; card"
+ },
+ "N34": {
+  "type": "K",
+  "picture": "Credits: disclosure card, fact cards, 'Derived from'"
+ },
+ "N31a": {
+  "type": "K",
+  "picture": "Card (silence, ticker)"
+ },
+ "N31b": {
+  "type": "K",
+  "picture": "Card (silence, ticker)"
+ },
+ "N31c": {
+  "type": "K",
+  "picture": "Card (silence, ticker)"
+ }
+}
