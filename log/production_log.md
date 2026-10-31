@@ -106,3 +106,9 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 
 - `comfy/templates/video_ltx2_3_i2v.json` (ComfyUI workflow templates package) → `comfy/api/video_ltx2_3_i2v.api.json` via `node scripts/comfy_ui_to_api.mjs` (from Folks Like Us; 51 nodes).
 - `config/clips.json` + `scripts/clips.py`: C1a, C1b, C2, C3 from the picked keyframes, two seeds each, prompt = motion + the brief's clip style, prompt enhancer off. 4 s at 24 fps, 960×720. Deviation: the brief says 480p; the template renders at half size and upscales ×2, so 960×720 costs the same first pass as 480×360 and gives a cleaner 4:3 frame. Logged in decisions.
+
+## 17. 2026-10-31 — M3 batch 1 done; N24 and N14 regenerated as v2
+
+- 76 takes (19 items × 4, seeds 1929–1932), ~55–75 s each, rows in `shots/prompts.md`. `scripts/contact_sheet.py` → `takes/stills/contact_sheet.jpg`.
+- Agent review: usable takes for every item except two prompt misses. N24: FLUX drew a clock with hands (A gold clock; B–D hands), which would fight the code needle. N14: a glass pavilion with lit windows, against the brief's "windowless". Notes for the human: N16a C/D have a white photo border; ref_machine has a man beside the cabinet in every take (usable as scale); N11's tower resembles the Empire State Building.
+- `scripts/stills.py` now versions revised prompts (`"v": 2` → `<item>_v2_s<seed>.png`; v1 takes stay); "kept" accepts a seed or a file stem. `stills.py N24 N14` with v2 subjects (blank gauge face, no hands; blank concrete walls, no windows, glow from the roof edge).

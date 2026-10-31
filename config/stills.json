@@ -77,8 +77,10 @@
     2208,
     1248
    ],
-   "subject": "a windowless modern building glowing at night in the middle of a cornfield, viewed from a dirt road",
-   "note": "brief's example subject; slow pan; N15 adds the power plant to this frame (batch 2)"
+   "subject": "a large windowless building with blank concrete walls and a flat roof in the middle of a cornfield at night, no windows at all, a pale glow rising from its roof edge into the night haze, viewed from a dirt road",
+   "note": "brief's example subject; slow pan; N15 adds the power plant to this frame (batch 2)",
+   "v": 2,
+   "v1_problem": "rendered a glass pavilion with lit windows; the brief says windowless"
   },
   "N16a": {
    "size": [
@@ -125,8 +127,10 @@
     1664,
     1248
    ],
-   "subject": "a banker in a dark three-piece suit with both hands on a giant brass dial mounted on a marble wall, the dial as big as a clock face with a blank face, tick marks and a long pointer, in a 1920s bank hall, seen from the side",
-   "note": "needle animated in code (K overlay)"
+   "subject": "a banker in a dark three-piece suit with one hand on the rim of a giant round brass gauge mounted on a marble wall, the gauge as big as a cartwheel, its face completely blank and pale with only short tick marks around the edge, no hands, no needle, no numbers, in a 1920s bank hall, seen from the side",
+   "note": "needle animated in code (K overlay)",
+   "v": 2,
+   "v1_problem": "FLUX drew a clock with hands; the needle is a code overlay"
   },
   "N32": {
    "size": [

@@ -35,7 +35,8 @@ def main():
         if kf not in KEPT:
             print(f"{clip}: keyframe {kf} not picked yet, skipping")
             continue
-        src = Path(f"takes/stills/{kf}/{kf}_s{KEPT[kf]}.png")
+        k = KEPT[kf]
+        src = Path(f"takes/stills/{kf}/{k if isinstance(k, str) else f'{kf}_s{k}'}.png")
         name = cc.upload_image(src)
         prompt = spec["motion"] + ". " + CFG["style"]
         for seed in CFG["seeds"]:

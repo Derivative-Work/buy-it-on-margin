@@ -5,7 +5,7 @@ render with the FLUX.2 text-to-image graph (the image_flux2_fp8 template's nodes
 takes/stills/<item>/<item>_s<seed>.png, and append one row per take to shots/prompts.md (prompt files in
 shots/prompts/<item>.txt). A 2x2 pick grid per item goes to takes/stills/review_<item>.png, and
 scripts/contact_sheet.py lays all items out on one sheet.
-Items with "refs" are conditioned on the picked takes of those items (ReferenceLatent) and wait until they are picked.
+An item with "v" > 1 is a revised prompt: files <item>_v<N>_s<seed>.png, earlier takes kept. Items with "refs" are conditioned on the picked takes of those items (ReferenceLatent) and wait until they are picked.
 Usage: <venv>/bin/python -I scripts/stills.py [item ...] [--seeds 1929,1930]   (ComfyUI must be running)
 """
 import argparse
@@ -58,6 +58,11 @@ def graph(prompt, seed, w, h, prefix, refs=()):
     return g
 
 
+def kept_path(item, k):
+    """config "kept" values: a seed (v1 prompt) or a file stem such as "N24_v2_s1930"."""
+    return Path(f"takes/stills/{item}/{k if isinstance(k, str) else f'{item}_s{k}'}.png")
+
+
 def review_grid(item, paths):
     ims = [Image.open(p).convert("RGB") for p in paths]
     w = 960; h = round(w * ims[0].height / ims[0].width)
@@ -95,29 +100,30 @@ def main():
     for item in items:
         spec = CFG["items"][item]
         prompt = spec["subject"] + ", " + CFG["style"]
-        (PROMPTS / f"{item}.txt").write_text(prompt + "\n")
+        stem = item if spec.get("v", 1) == 1 else f"{item}_v{spec['v']}"   # a revised prompt keeps earlier takes
+        (PROMPTS / f"{stem}.txt").write_text(prompt + "\n")
         w, h = spec["size"]
         refs = []
         for r in spec.get("refs", []):
             if r not in kept:
                 raise SystemExit(f"{item}: reference {r} not picked yet")
-            refs.append(cc.upload_image(Path(f"takes/stills/{r}/{r}_s{kept[r]}.png")))
+            refs.append(cc.upload_image(kept_path(r, kept[r])))
         paths = []
         for seed in seeds:
-            dest = OUT / item / f"{item}_s{seed}.png"
+            dest = OUT / item / f"{stem}_s{seed}.png"
             if dest.exists():
                 paths.append(dest)
                 continue
-            outputs, secs = cc.run(graph(prompt, seed, w, h, f"bim/{item}_s{seed}", refs))
+            outputs, secs = cc.run(graph(prompt, seed, w, h, f"bim/{stem}_s{seed}", refs))
             cc.download(outputs["9"]["images"][0], dest)
             paths.append(dest)
             when = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
             with open(LOG, "a") as f:
                 via = f" (refs: {', '.join(spec['refs'])})" if spec.get("refs") else ""
-                f.write(f"| {item}{via} | {seed} | {w}×{h} | `{dest}` | {secs:.1f} | {when} | pending pick |\n")
+                f.write(f"| {stem}{via} | {seed} | {w}×{h} | `{dest}` | {secs:.1f} | {when} | pending pick |\n")
             print(f"{item} seed {seed}: {dest} ({secs:.1f} s)", flush=True)
         if len(paths) >= 2:
-            print("review:", review_grid(item, paths[:4]), flush=True)
+            print("review:", review_grid(stem, paths[:4]), flush=True)
 
 
 if __name__ == "__main__":

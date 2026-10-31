@@ -11,8 +11,8 @@ from pathlib import Path
 
 PUB = Path("public")
 dst = PUB / "media/picks"; dst.mkdir(parents=True, exist_ok=True)
-for item, seed in json.load(open("config/stills.json")).get("kept", {}).items():
-    src = Path(f"takes/stills/{item}/{item}_s{seed}.png")
+for item, k in json.load(open("config/stills.json")).get("kept", {}).items():
+    src = Path(f"takes/stills/{item}/{k if isinstance(k, str) else f'{item}_s{k}'}.png")   # seed, or a file stem
     if src.exists():
         shutil.copy2(src, dst / f"{item}.png")
 clips = Path("config/clips.json")
