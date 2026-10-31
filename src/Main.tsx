@@ -9,6 +9,7 @@ import {CARDS, FPS, PIC_H, PIC_W} from './config';
 import {FilmLayer} from './film/FilmLayer';
 import {Burn, Card, Clip, Frame, Iris, Leader, Still} from './film/devices';
 import {Fonts} from './Fonts';
+import {SilhouetteBand, SilhouetteCrowd} from './film/Silhouettes';
 
 /**
  * M4/M5: the whole video. Timing from timing/shot_times.json (M1), content from config/edit.json, media under
@@ -111,22 +112,6 @@ const Needle: React.FC<{x?: number; y?: number; r?: number}> = ({x = 0.62, y = 0
   );
 };
 
-/** Silhouette placeholders for the code shots (N23 band, N28 crowd); jointed cut-outs are built in M4. */
-const Silhouettes: React.FC<{kind: 'band' | 'crowd'}> = ({kind}) => {
-  const frame = useCurrentFrame();
-  const n = kind === 'band' ? 6 : 14;
-  return (
-    <AbsoluteFill style={{background: '#e9e4d8'}}>
-      {Array.from({length: n}, (_, i) => {
-        const x = kind === 'crowd' ? ((i * 160 + frame * 14) % (PIC_W + 300)) - 150 : 140 + i * 210;
-        const bob = Math.abs(Math.sin((frame + i * 5) / 4)) * 30;
-        return <div key={i} style={{position: 'absolute', left: x, bottom: 160 + bob, width: 90, height: 300,
-          background: '#0b0b0b', borderRadius: '45px 45px 10px 10px'}} />;
-      })}
-    </AbsoluteFill>
-  );
-};
-
 const Credits: React.FC = () => <Card text={CARDS.N34.text} variant="body" />;
 
 /** Montage of clips cut on beats; 'beat_accel' over-cranks and shortens the cuts towards the end. */
@@ -217,9 +202,9 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
     case 'insert':
       return has(e.src) ? <Img src={staticFile(e.src)} style={{width: PIC_W, height: PIC_H, objectFit: 'cover'}} /> : <Placeholder id={id} what="insert" />;
     case 'silhouette_band':
-      return <Silhouettes kind="band" />;
+      return <SilhouetteBand startS={s.start} />;
     case 'silhouette_crowd':
-      return <Silhouettes kind="crowd" />;
+      return <SilhouetteCrowd />;
     case 'freeze_burn':
       return (
         <AbsoluteFill>

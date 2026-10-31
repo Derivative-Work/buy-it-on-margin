@@ -121,3 +121,7 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - Fixed in `Still`: images were forced to 4:3 with object-fit cover, cropping the wide (N06, N14, N15) and tall (N07, N11) stills so pans and tilts had nothing to travel over. Images now keep their aspect, filling the frame's short side. Overlays (N24 needle, N06 bulb) are drawn inside the still's moving frame, so they track pushes.
 - N24 needle placed on the gauge found in the pick (largest bright disc: centre 0.646, 0.451; radius 0.169 of width). Tilts and pans held to the 5%/s limit: N11 ±0.07, N07 ±0.08, N06 ±0.07.
 - Spot-checked 12 frames at half size (N02, N03, N05, N07, N11, N14, N16, N17, N22, N24, N31c, N32): all placed as intended.
+
+## 19. 2026-10-31 — K silhouettes (N23, N28)
+
+- `src/film/Silhouettes.tsx`: jointed paper-cutout figures (hinged shoulder, elbow, hip, knee; hats, skirts, horns), poses locked to the band's beat grid. N23: clarinet and trumpet trade the break every two bars on a riser over a six-figure Charleston kick line. N28: 16 seeded figures run left to right at mixed speeds. v1 had arms hinged upward and merged legs; fixed and checked on 5 frames. Also the brief's fallback for any dance clip that comes out mushy.
