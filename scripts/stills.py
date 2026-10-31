@@ -50,7 +50,8 @@ def graph(prompt, seed, w, h, prefix, refs=()):
     for i, name in enumerate(refs):
         g[f"ref{i}_load"] = {"class_type": "LoadImage", "inputs": {"image": name}}
         g[f"ref{i}_scale"] = {"class_type": "ImageScaleToTotalPixels",
-                              "inputs": {"image": [f"ref{i}_load", 0], "upscale_method": "lanczos", "megapixels": 1.0}}
+                              "inputs": {"image": [f"ref{i}_load", 0], "upscale_method": "area", "megapixels": 1.0,
+                                         "resolution_steps": 1}}
         g[f"ref{i}_enc"] = {"class_type": "VAEEncode", "inputs": {"pixels": [f"ref{i}_scale", 0], "vae": ["10", 0]}}
         g[f"ref{i}"] = {"class_type": "ReferenceLatent", "inputs": {"conditioning": cond, "latent": [f"ref{i}_enc", 0]}}
         cond = [f"ref{i}", 0]

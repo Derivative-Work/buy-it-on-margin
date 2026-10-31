@@ -8,7 +8,8 @@ import {hash} from './rand';
 export type Frame = {scale: number; x: number; y: number}; // x, y: centre offset as a fraction of the picture width/height
 
 /** Brief: never faster than ~5% of frame width per second (except the final chorus: pass allowFast). */
-export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: boolean}> = ({src, from, to, allowFast}) => {
+export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: boolean; children?: React.ReactNode}> =
+  ({src, from, to, allowFast, children}) => {
   const frame = useCurrentFrame();
   const {durationInFrames, fps} = useVideoConfig();
   const k = interpolate(frame, [0, Math.max(1, durationInFrames - 1)], [0, 1], {
@@ -24,8 +25,12 @@ export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: b
   }
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
-      <Img src={staticFile(src)} style={{position: 'absolute', width: PIC_W, height: PIC_H, objectFit: 'cover',
-        transform: `translate(${-x * PIC_W}px, ${-y * PIC_H}px) scale(${s})`, transformOrigin: 'center'}} />
+      {/* children (overlays such as a needle or a bulb) move with the image: coordinates are image fractions */}
+      <div style={{position: 'absolute', width: PIC_W, height: PIC_H,
+        transform: `translate(${-x * PIC_W}px, ${-y * PIC_H}px) scale(${s})`, transformOrigin: 'center'}}>
+        <Img src={staticFile(src)} style={{position: 'absolute', width: PIC_W, height: PIC_H, objectFit: 'cover'}} />
+        {children}
+      </div>
     </AbsoluteFill>
   );
 };

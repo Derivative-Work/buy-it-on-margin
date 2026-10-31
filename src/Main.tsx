@@ -34,8 +34,8 @@ const Placeholder: React.FC<{id: string; what: string}> = ({id, what}) => (
   </AbsoluteFill>
 );
 
-const StillOr: React.FC<{id: string; s: any}> = ({id, s}) =>
-  has(s.src) ? <Still src={s.src} from={s.from} to={s.to} allowFast={s.allowFast} /> : <Placeholder id={id} what={`still ${s.src}`} />;
+const StillOr: React.FC<{id: string; s: any; children?: React.ReactNode}> = ({id, s, children}) =>
+  has(s.src) ? <Still src={s.src} from={s.from} to={s.to} allowFast={s.allowFast}>{children}</Still> : <Placeholder id={id} what={`still ${s.src}`} />;
 
 /** Clip if generated, else its keyframe still with a slow push, else a placeholder. */
 const ClipOr: React.FC<{id: string; src: string; fallback?: string; rate?: number; startFrom?: number}> =
@@ -155,10 +155,11 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
     case 'still': {
       const body = (
         <AbsoluteFill>
-          <StillOr id={id} s={e} />
+          <StillOr id={id} s={e}>
+            {e.overlay === 'bulb' && <Bulb {...(e.overlay_pos ?? {})} />}
+            {e.overlay === 'dial' && <Needle {...(e.overlay_pos ?? {})} />}
+          </StillOr>
           {e.caption && <CornerCaption text={CARDS[e.caption].text} />}
-          {e.overlay === 'bulb' && <Bulb {...(e.overlay_pos ?? {})} />}
-          {e.overlay === 'dial' && <Needle {...(e.overlay_pos ?? {})} />}
         </AbsoluteFill>
       );
       return e.iris_open_frames ? <Iris mode="open" durationFrames={e.iris_open_frames}>{body}</Iris> : body;
