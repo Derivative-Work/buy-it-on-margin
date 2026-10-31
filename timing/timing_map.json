@@ -3107,7 +3107,7 @@
   },
   {
    "name": "Final chorus",
-   "note": "group; ends on one \"Buy—\" hit, the band rings out to the cut",
+   "note": "group; \"mar—\" is quiet under the band, which rings out to the cut",
    "lines": [
     {
      "text": "Buy it on margin, sugar, buy it on margin!",
@@ -3237,20 +3237,39 @@
      ]
     },
     {
-     "text": "Buy—",
+     "text": "Buy it on mar—",
      "start": 150.751,
-     "end": 151.18,
+     "end": 151.7,
      "window": [
       150.65,
       151.884
      ],
      "words": [
       {
-       "w": "Buy—",
+       "w": "Buy",
        "start": 150.751,
-       "end": 151.18,
-       "score": 0.747,
-       "end_aligner": 151.136
+       "end": 150.974,
+       "score": 0.718
+      },
+      {
+       "w": "it",
+       "start": 150.994,
+       "end": 151.075,
+       "score": 0.288
+      },
+      {
+       "w": "on",
+       "start": 151.115,
+       "end": 151.216,
+       "score": 0.794
+      },
+      {
+       "w": "mar—",
+       "start": 151.32,
+       "end": 151.7,
+       "score": 0.876,
+       "start_aligner": 151.297,
+       "end_aligner": 151.641
       }
      ]
     }

@@ -2,6 +2,9 @@
  "generated_by": "scripts/shot_times.py",
  "fps": 24,
  "picture_fps": 18,
+ "music_end": 185.834,
+ "video_end": 202.167,
+ "video_end_frame": 4852,
  "master_sha256": "d2f9028739d033bccb87f9076f1aed2f70e36403783de1b092f25f9ed8a399f9",
  "shots": {
   "N01": {
@@ -273,22 +276,22 @@
   },
   "N29": {
    "start": 143.499,
-   "end": 150.751,
-   "duration": 7.252,
+   "end": 151.32,
+   "duration": 7.821,
    "start_frame": 3444,
-   "end_frame": 3618,
+   "end_frame": 3632,
    "cue": "'Buy' (Final chorus 0.0)",
    "snapped_ms": -82
   },
   "N30": {
-   "start": 150.751,
+   "start": 151.32,
    "end": 151.884,
-   "duration": 1.133,
-   "start_frame": 3618,
+   "duration": 0.564,
+   "start_frame": 3632,
    "end_frame": 3645,
-   "cue": "'Buy—' (Final chorus 2.0)",
+   "cue": "'mar—' (Final chorus 2.3)",
    "snapped_ms": 0,
-   "note": "freeze mid-kick on the last 'Buy—' hit; burn runs through the ring-out to black at the cut"
+   "note": "freeze mid-kick on 'mar—'; film burn through the ring-out to black at the cut (151.884)"
   },
   "N31a": {
    "start": 151.884,
@@ -354,14 +357,14 @@
   },
   "N34": {
    "start": 181.0,
-   "end": 185.834,
-   "duration": 4.834,
+   "end": 202.167,
+   "duration": 21.167,
    "start_frame": 4344,
-   "end_frame": 4460,
+   "end_frame": 4852,
    "cue": "t:181.0",
    "snapped_ms": 0,
    "card_hold_needed_s": 21.17,
-   "note": "credits; run past the music on crackle (see hold check)"
+   "note": "credits; run past the music over crackle (human, 2026-10-31). End = start + hold rule for the disclosure card; fact cards and 'Derived from' added at M4"
   }
  },
  "hold_problems": [
@@ -370,7 +373,6 @@
   "N20: 1.08 s < hold 2.50 s (3 words)",
   "N31a: 2.00 s < hold 2.83 s (4 words)",
   "N31b: 2.00 s < hold 2.83 s (4 words)",
-  "N31c: 5.64 s < hold 6.50 s (15 words)",
-  "N34: 4.83 s < hold 21.17 s (59 words)"
+  "N31c: 5.64 s < hold 6.50 s (15 words)"
  ]
 }

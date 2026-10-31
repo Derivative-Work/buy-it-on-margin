@@ -71,3 +71,10 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - Cause: Whisper's word times for "Why, 1930 / Sometime after 2030 / Same difference" (lead transcript, the line-window anchors) were compressed into 103.6–106.3 s. The lead and backing guides show the bursts later, and the backing transcript had "same difference" at 108.65 s.
 - Forced alignment of the break text over one window (102.6–110.5 s, lead and full vocals guides agree): "nineteen thirty" 104.18–105.35, "Sometime after twenty thirty" 105.51–107.35, "Same difference" 108.69–109.52 (scores 0.62–0.95). Windows for Break lines 2–4 added to `config/timing.json`; timing map, shot times and review video rebuilt.
 - Result: Break 100.10–109.60 s, Instrumental 109.60–126.53 s (was 106.90). N21 now runs 102.63–109.63 s; N22's insert on "Sometime" moves to 105.49 s; N23 starts 109.63 s.
+
+## 12. 2026-10-31 — M1 closed
+
+- `lyrics/as_sung.txt`: final chorus line 3 back to "Buy it on mar—" (human's ear). Window `Final chorus|2` = 150.65–151.884 s. Aligned: Buy 150.75, it 150.99, on 151.12, mar— 151.32–151.70 s (score 0.88).
+- N30 now starts on "mar—" (151.32 s, the brief's cue): freeze, burn, black at the cut, 0.56 s.
+- N34 ends on its hold rule (`"end": "hold"`): credits 181.00–202.17 s, 16.3 s past the music. The final mux pads the master with the seeded crackle bed for that tail (M5); the locked master is unchanged.
+- Timing map, shot times and review video rebuilt. Card-hold exceptions kept as defaults: N05 (corner caption), N19/N20 (break cards, 1.1–1.6 s), N31a/b (dates 2.0 s each in the silence), N31c (5.6 s, over the coda's first line).

@@ -40,15 +40,15 @@ Dialogue: 1,0:02:10.72,0:02:15.05,Shot,,0,0,0,,{\b1}N25{\b0}  [K]  Card\N{\c&H66
 Dialogue: 1,0:02:15.05,0:02:17.49,Shot,,0,0,0,,{\b1}N26{\b0}  [S]  Man proudly holding a rising sales chart; banknotes stream from his back pocket
 Dialogue: 1,0:02:17.49,0:02:19.11,Shot,,0,0,0,,{\b1}N27{\b0}  [S]  Same man, pie in the face. Hard cut on the beat
 Dialogue: 1,0:02:19.11,0:02:23.50,Shot,,0,0,0,,{\b1}N28{\b0}  [K]  Silhouette crowd running across frame
-Dialogue: 1,0:02:23.50,0:02:30.75,Shot,,0,0,0,,{\b1}N29{\b0}  [C1, C2 + K]  Over-cranked dance montage, speeding up
-Dialogue: 1,0:02:30.75,0:02:31.88,Shot,,0,0,0,,{\b1}N30{\b0}  [K]  Freeze mid-kick, then film burn to black
+Dialogue: 1,0:02:23.50,0:02:31.32,Shot,,0,0,0,,{\b1}N29{\b0}  [C1, C2 + K]  Over-cranked dance montage, speeding up
+Dialogue: 1,0:02:31.32,0:02:31.88,Shot,,0,0,0,,{\b1}N30{\b0}  [K]  Freeze mid-kick, then film burn to black
 Dialogue: 1,0:02:31.88,0:02:33.88,Shot,,0,0,0,,{\b1}N31a{\b0}  [K]  Card (silence, ticker)\N{\c&H66CCFF&}CARD: TUESDAY, OCTOBER 29, 1929
 Dialogue: 1,0:02:33.88,0:02:35.88,Shot,,0,0,0,,{\b1}N31b{\b0}  [K]  Card (silence, ticker)\N{\c&H66CCFF&}CARD: THURSDAY, OCTOBER 29, 2026
 Dialogue: 1,0:02:35.88,0:02:41.52,Shot,,0,0,0,,{\b1}N31c{\b0}  [K]  Card (silence, ticker)\N{\c&H66CCFF&}CARD: One of these began the Great Depression. The other was two bad days, so far.
 Dialogue: 1,0:02:41.52,0:02:52.13,Shot,,0,0,0,,{\b1}N32{\b0}  [S]  Iris opens on a crooner with a megaphone at a piano, one spotlight, empty hall knee-deep in tape. Slow pull back
 Dialogue: 1,0:02:52.13,0:02:57.46,Shot,,0,0,0,,{\b1}B01{\b0}  [K]  Zoom out from the newsreel to the planning chat (moved from the opening)
 Dialogue: 1,0:02:57.46,0:03:01.00,Shot,,0,0,0,,{\b1}N33{\b0}  [K]  Iris closes; card\N{\c&H66CCFF&}CARD: The End?
-Dialogue: 1,0:03:01.00,0:03:05.83,Shot,,0,0,0,,{\b1}N34{\b0}  [K]  Credits: disclosure card, fact cards, 'Derived from'\N{\c&H66CCFF&}CARD: Lyrics drafted by Claude, an AI model made by Anthropic, PBC. Anthropic filed to go public on October 26, 2026. Its filing reports a first-half 2026 net loss of $80.7 billion, of which $72.4 billion is a non-cash accounting charge that grew with its valuation, and $518 billion in committed future infrastructure spending. This is satire, not investment advice.
+Dialogue: 1,0:03:01.00,0:03:22.17,Shot,,0,0,0,,{\b1}N34{\b0}  [K]  Credits: disclosure card, fact cards, 'Derived from'\N{\c&H66CCFF&}CARD: Lyrics drafted by Claude, an AI model made by Anthropic, PBC. Anthropic filed to go public on October 26, 2026. Its filing reports a first-half 2026 net loss of $80.7 billion, of which $72.4 billion is a non-cash accounting charge that grew with its valuation, and $518 billion in committed future infrastructure spending. This is satire, not investment advice.
 Dialogue: 0,0:00:02.33,0:00:02.75,Lyric,,0,0,0,,{\fs20}Intro\N{\fs30}{\c&H00FFFF&}Ladies{\c&HFFFFFF&} and gentlemen, from the trading floor to your front parlor:
 Dialogue: 0,0:00:02.75,0:00:02.89,Lyric,,0,0,0,,{\fs20}Intro\N{\fs30}Ladies {\c&H00FFFF&}and{\c&HFFFFFF&} gentlemen, from the trading floor to your front parlor:
 Dialogue: 0,0:00:02.89,0:00:04.18,Lyric,,0,0,0,,{\fs20}Intro\N{\fs30}Ladies and {\c&H00FFFF&}gentlemen,{\c&HFFFFFF&} from the trading floor to your front parlor:
@@ -375,7 +375,10 @@ Dialogue: 0,0:02:29.63,0:02:29.69,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Ten 
 Dialogue: 0,0:02:29.69,0:02:30.22,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Ten cents down and a {\c&H00FFFF&}promise{\c&HFFFFFF&} for the—
 Dialogue: 0,0:02:30.22,0:02:30.41,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Ten cents down and a promise {\c&H00FFFF&}for{\c&HFFFFFF&} the—
 Dialogue: 0,0:02:30.41,0:02:30.71,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Ten cents down and a promise for {\c&H00FFFF&}the—{\c&HFFFFFF&}
-Dialogue: 0,0:02:30.75,0:02:31.18,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}{\c&H00FFFF&}Buy—{\c&HFFFFFF&}
+Dialogue: 0,0:02:30.75,0:02:30.99,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}{\c&H00FFFF&}Buy{\c&HFFFFFF&} it on mar—
+Dialogue: 0,0:02:30.99,0:02:31.12,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Buy {\c&H00FFFF&}it{\c&HFFFFFF&} on mar—
+Dialogue: 0,0:02:31.12,0:02:31.32,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Buy it {\c&H00FFFF&}on{\c&HFFFFFF&} mar—
+Dialogue: 0,0:02:31.32,0:02:31.70,Lyric,,0,0,0,,{\fs20}Final chorus\N{\fs30}Buy it on {\c&H00FFFF&}mar—{\c&HFFFFFF&}
 Dialogue: 0,0:02:31.88,0:02:35.88,Lyric,,0,0,0,,{\fs20}Silence
 Dialogue: 0,0:02:36.49,0:02:36.75,Lyric,,0,0,0,,{\fs20}Coda\N{\fs30}{\c&H00FFFF&}I{\c&HFFFFFF&} bought it on margin, darling,
 Dialogue: 0,0:02:36.75,0:02:37.17,Lyric,,0,0,0,,{\fs20}Coda\N{\fs30}I {\c&H00FFFF&}bought{\c&HFFFFFF&} it on margin, darling,

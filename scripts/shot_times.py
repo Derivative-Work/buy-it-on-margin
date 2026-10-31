@@ -4,6 +4,7 @@ Cues as in Folks Like Us ("Section|line|word", "end:…", "mid:…", "t:<s>", "s
 - snap: move the start onto a band beat: the beat at or just before the word if within 200 ms (sung onsets lag
   the beat by ~80-130 ms), else the nearest within half a beat (cards and cuts land on a beat);
 - insert_picture_frames: a one-frame insert (1/18 s per picture frame) that returns to the previous shot;
+- end: "hold": end at the card's hold time, even past the music (credits over crackle);
 - card: checks the brief's hold rule (>= 1.5 s + 1 s per 3 words) and reports shots that are too short.
 Frames at 24 fps; frame = round(t * 24). Usage: python3 -I scripts/shot_times.py
 """
@@ -53,6 +54,8 @@ def main():
     out, problems = {}, []
     for i, r in enumerate(main_rows):
         end = main_rows[i + 1]["t"] if i + 1 < len(main_rows) else end_music
+        if r.get("end") == "hold":                    # e.g. credits that run past the music
+            end = r["t"] + 1.5 + len(cards[r["card"]]["text"].split()) / 3
         out[r["id"]] = {"start": round(r["t"], 3), "end": round(end, 3), "duration": round(end - r["t"], 3),
                         "start_frame": round(r["t"] * FPS), "end_frame": round(end * FPS), "cue": r["label"],
                         "snapped_ms": round((r["t"] - r["raw"]) * 1000)}
@@ -71,13 +74,16 @@ def main():
                             "start_frame": round(r["t"] * FPS), "end_frame": round((r["t"] + d) * FPS),
                             "cue": r["label"], "insert_over": "previous shot", "note": r.get("note")}
     order = sorted(out, key=lambda k: out[k]["start"])
+    video_end = max(s["end"] for s in out.values())
     json.dump({"generated_by": "scripts/shot_times.py", "fps": FPS, "picture_fps": PICTURE_FPS,
+               "music_end": end_music, "video_end": round(video_end, 3), "video_end_frame": round(video_end * FPS),
                "master_sha256": tm["audio"]["sha256"], "shots": {k: out[k] for k in order},
                "hold_problems": problems}, open(OUT, "w"), indent=1, ensure_ascii=False)
     for k in order:
         s = out[k]
         print(f"{k:5s} {s['start']:7.2f}-{s['end']:7.2f} ({s['duration']:5.2f} s, f{s['start_frame']}-{s['end_frame']})"
               f" snap {s.get('snapped_ms', 0):+4d}ms  {s['cue']}")
+    print(f"music ends {end_music:.2f} s; video ends {video_end:.2f} s")
     print("HOLD PROBLEMS:", *problems, sep="\n  ")
 
 

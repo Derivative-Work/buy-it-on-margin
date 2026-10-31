@@ -36,3 +36,8 @@ Append-only. Every human action: when, what, and why.
 ## 5. 2026-10-31 — M1 review: break out of sync
 
 - **What:** "N20/N21: the spoken 1930/2030/"same difference" fall out of sync." (from `timing/check/m1_review.mp4`)
+
+## 6. 2026-10-31 — M1 gate answers (M1 approved)
+
+- **What:** "1. I hear "buy it on mar--" 2. these are correct 3. you correctly found 1 4. let the credits run past the music over crackle"
+- **Effect:** the final chorus is sung as written (the agent's "Buy—" reading was wrong); "float a loan", "forecasts", "sell stock" are sung as written; bar phase 3 is beat 1; credits run past the music over crackle. The break-card and N31 proposals got no objection and stand as defaults until the M4 animatic.
