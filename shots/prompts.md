@@ -25,3 +25,4 @@ Model `flux2_dev_fp8mixed.safetensors`, text encoder `mistral_3_small_flux2_fp4_
 | N04 | 1931 | 1664×1248 | `takes/stills/N04/N04_s1931.png` | 59.7 | 2026-10-31T13:42:38-04:00 | pending pick |
 | N04 | 1932 | 1664×1248 | `takes/stills/N04/N04_s1932.png` | 60.3 | 2026-10-31T13:43:38-04:00 | pending pick |
 | N05 | 1929 | 1664×1248 | `takes/stills/N05/N05_s1929.png` | 55.6 | 2026-10-31T13:44:35-04:00 | pending pick |
+| N05 | 1930 | 1664×1248 | `takes/stills/N05/N05_s1930.png` | 50.1 | 2026-10-31T13:45:25-04:00 | pending pick |

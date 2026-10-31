@@ -167,6 +167,61 @@
    ],
    "subject": "close-up of two men's hands in 1920s suit cuffs passing a crumpled paper banknote from one hand to the other, a dance hall softly out of focus behind",
    "note": "keyframe for clip C3; the crumpled dollar callback"
+  },
+  "N06": {
+   "size": [
+    2208,
+    1248
+   ],
+   "refs": [
+    "ref_machine"
+   ],
+   "subject": "the brass cabinet machine from the reference image, strapped upright to a two-wheeled hand truck, wheeled along a 1920s city sidewalk past a shop window by a delivery man in a cap, passers-by in hats",
+   "note": "pan; bulb blinks (K overlay); batch 2, conditioned on the machine reference"
+  },
+  "N08": {
+   "size": [
+    1664,
+    1248
+   ],
+   "refs": [
+    "ref_customer"
+   ],
+   "subject": "the man from the reference image sitting in a 1920s barber chair, a white barber cape over him and his face half covered in shaving lather, signing a paper slip on a clipboard held out by a broker in a suit standing beside the chair",
+   "note": "after the 'Ten per cent down.' card; batch 2, conditioned on the customer reference"
+  },
+  "N26": {
+   "size": [
+    1664,
+    1248
+   ],
+   "refs": [
+    "ref_customer"
+   ],
+   "subject": "the man from the reference image standing proudly in a 1920s office, holding up a large hand-drawn chart with one line rising steeply, while paper banknotes stream out of his back trouser pocket and flutter to the floor behind him",
+   "note": "batch 2, conditioned on the customer reference; N27 is made from the pick"
+  },
+  "N15": {
+   "size": [
+    2208,
+    1248
+   ],
+   "refs": [
+    "N14"
+   ],
+   "subject": "the same night scene as the reference image, the same windowless glowing building in the same cornfield from the same dirt road, now with a large power plant with tall smokestacks standing right beside the building, smoke rising",
+   "note": "dissolve target from N14; batch 2, conditioned on the N14 pick"
+  },
+  "N27": {
+   "size": [
+    1664,
+    1248
+   ],
+   "refs": [
+    "N26"
+   ],
+   "subject": "the same man in the same office and pose as the reference image, but his face is covered in a cream pie that has just hit him, cream splattered on his collar, still holding the chart",
+   "note": "hard cut from N26; batch 2, conditioned on the N26 pick"
   }
  },
  "kept": {}
