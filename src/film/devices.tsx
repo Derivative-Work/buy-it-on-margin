@@ -8,12 +8,16 @@ import {hash} from './rand';
 export type Frame = {scale: number; x: number; y: number}; // x, y: centre offset as a fraction of the picture width/height
 
 /** Brief: never faster than ~5% of frame width per second (except the final chorus: pass allowFast). */
-export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: boolean; children?: React.ReactNode}> =
-  ({src, from, to, allowFast, children}) => {
+/** aspect: the image's width/height. A wider or taller image than 4:3 keeps its shape (fills the frame's short side),
+ * so pans and tilts have room to travel; x, y offsets are fractions of the picture width/height. */
+export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: boolean; aspect?: number; children?: React.ReactNode}> =
+  ({src, from, to, allowFast, aspect = PIC_W / PIC_H, children}) => {
   const frame = useCurrentFrame();
   const {durationInFrames, fps} = useVideoConfig();
   const k = interpolate(frame, [0, Math.max(1, durationInFrames - 1)], [0, 1], {
     easing: Easing.inOut(Easing.sin), extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const iw = aspect >= PIC_W / PIC_H ? PIC_H * aspect : PIC_W;
+  const ih = aspect >= PIC_W / PIC_H ? PIC_H : PIC_W / aspect;
   const s = from.scale + (to.scale - from.scale) * k;
   const x = from.x + (to.x - from.x) * k;
   const y = from.y + (to.y - from.y) * k;
@@ -26,9 +30,9 @@ export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: b
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
       {/* children (overlays such as a needle or a bulb) move with the image: coordinates are image fractions */}
-      <div style={{position: 'absolute', width: PIC_W, height: PIC_H,
+      <div style={{position: 'absolute', width: iw, height: ih, left: (PIC_W - iw) / 2, top: (PIC_H - ih) / 2,
         transform: `translate(${-x * PIC_W}px, ${-y * PIC_H}px) scale(${s})`, transformOrigin: 'center'}}>
-        <Img src={staticFile(src)} style={{position: 'absolute', width: PIC_W, height: PIC_H, objectFit: 'cover'}} />
+        <Img src={staticFile(src)} style={{position: 'absolute', width: iw, height: ih}} />
         {children}
       </div>
     </AbsoluteFill>

@@ -114,3 +114,10 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - `scripts/stills.py` now versions revised prompts (`"v": 2` → `<item>_v2_s<seed>.png`; v1 takes stay); "kept" accepts a seed or a file stem. `stills.py N24 N14` with v2 subjects (blank gauge face, no hands; blank concrete walls, no windows, glow from the roof edge).
 - v2 done (N24 50 s, N14 70 s per take): N24 blank gauge face in all four; N14 windowless concrete block with roof glow in all four. Contact sheet rebuilt with both versions.
 - Batch 2 first try failed: ComfyUI 0.42 rejects ImageScaleToTotalPixels without `resolution_steps` (HTTP 400, required_input_missing). Added `resolution_steps: 1` and `area` scaling, as in Folks Like Us' keyframes.py; nothing had been generated.
+
+## 18. 2026-10-31 — Animatic with the picked stills
+
+- `scripts/publish_picks.py` → 19 picks in `public/media/picks/`, manifest with image sizes.
+- Fixed in `Still`: images were forced to 4:3 with object-fit cover, cropping the wide (N06, N14, N15) and tall (N07, N11) stills so pans and tilts had nothing to travel over. Images now keep their aspect, filling the frame's short side. Overlays (N24 needle, N06 bulb) are drawn inside the still's moving frame, so they track pushes.
+- N24 needle placed on the gauge found in the pick (largest bright disc: centre 0.646, 0.451; radius 0.169 of width). Tilts and pans held to the 5%/s limit: N11 ±0.07, N07 ±0.08, N06 ±0.07.
+- Spot-checked 12 frames at half size (N02, N03, N05, N07, N11, N14, N16, N17, N22, N24, N31c, N32): all placed as intended.

@@ -24,6 +24,8 @@ export const MAIN_FRAMES = (times as any).video_end_frame as number;
 const BEATS: number[] = (tmap as any).beats.band.beats;
 
 const has = (src?: string) => !!src && HAVE.has(src);
+const SIZES = ((picks as any).sizes ?? {}) as Record<string, [number, number]>;
+const aspect = (src: string) => (SIZES[src] ? SIZES[src][0] / SIZES[src][1] : undefined);
 
 const Placeholder: React.FC<{id: string; what: string}> = ({id, what}) => (
   <AbsoluteFill style={{background: '#2a2a2a', alignItems: 'center', justifyContent: 'center', padding: 120}}>
@@ -35,13 +37,13 @@ const Placeholder: React.FC<{id: string; what: string}> = ({id, what}) => (
 );
 
 const StillOr: React.FC<{id: string; s: any; children?: React.ReactNode}> = ({id, s, children}) =>
-  has(s.src) ? <Still src={s.src} from={s.from} to={s.to} allowFast={s.allowFast}>{children}</Still> : <Placeholder id={id} what={`still ${s.src}`} />;
+  has(s.src) ? <Still src={s.src} from={s.from} to={s.to} allowFast={s.allowFast} aspect={aspect(s.src)}>{children}</Still> : <Placeholder id={id} what={`still ${s.src}`} />;
 
 /** Clip if generated, else its keyframe still with a slow push, else a placeholder. */
 const ClipOr: React.FC<{id: string; src: string; fallback?: string; rate?: number; startFrom?: number}> =
   ({id, src, fallback, rate, startFrom}) => {
     if (has(src)) return <Clip src={src} rate={rate} startFrom={startFrom} />;
-    if (has(fallback)) return <Still src={fallback!} from={{scale: 1, x: 0, y: 0}} to={{scale: 1.06, x: 0, y: 0}} />;
+    if (has(fallback)) return <Still src={fallback!} aspect={aspect(fallback!)} from={{scale: 1, x: 0, y: 0}} to={{scale: 1.06, x: 0, y: 0}} />;
     return <Placeholder id={id} what={`clip ${src}`} />;
   };
 
@@ -191,9 +193,9 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
       const df = Math.round(e.dissolve_s * FPS);
       return (
         <AbsoluteFill>
-          {has(e.a) ? <Still src={e.a} from={e.from} to={e.to} /> : <Placeholder id={id} what={`still ${e.a}`} />}
+          {has(e.a) ? <Still src={e.a} from={e.from} to={e.to} aspect={aspect(e.a)} /> : <Placeholder id={id} what={`still ${e.a}`} />}
           <Sequence from={Math.max(0, Math.round(dur * 0.35))} durationInFrames={dur}>
-            <Fade frames={df}>{has(e.b) ? <Still src={e.b} from={e.from} to={e.to} /> : <Placeholder id={id} what={`still ${e.b}`} />}</Fade>
+            <Fade frames={df}>{has(e.b) ? <Still src={e.b} from={e.from} to={e.to} aspect={aspect(e.b)} /> : <Placeholder id={id} what={`still ${e.b}`} />}</Fade>
           </Sequence>
         </AbsoluteFill>
       );
