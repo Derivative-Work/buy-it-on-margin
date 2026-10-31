@@ -40,3 +40,10 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - `../folks-like-us/.venv/bin/python -I scripts/build_master.py raw` → `audio/master/master_raw.wav` (185.834 s, peak −1.69 dBFS), `listen_raw.wav` (master 143.9–165.9 s: 8 s before the cut, the gap, 10 s of coda), `master_raw.json`.
 - Ticker: source 1.0 s on, mono, normalised to −26 dBFS RMS, enters 0.6 s into the gap, 150 ms fade-out into the coda. Crackle as in step 4.
 - Superseded: `scripts/master_candidates.py` and its outputs moved to `archive/`.
+
+## 7. 2026-10-31 — Post-filter (music-deslop M6f 10k) and post-filtered master
+
+- On the human's instruction, the agent ran it. music-deslop at commit `68441e2` (clean tree; the same chain as the 2026-10-18 batch, per the human it hasn't changed), default release chain with fallback:
+  `cd ~/Code/music-deslop && uv run python -m postfilter.infer --in <src> --out audio/postfilter/{v1,v2}_postfilter.wav --ckpt ~/Code/music-deslop-data/release/m6f_10k.safetensors --source suno` (strength 1.0, null latent). About 20 s and 5.7 GB RAM per track on the 5090 box.
+- Checks: same length, 0-sample lag against the source; change −35.1 dB (v1) and −35.8 dB (v2) below the music, −31 to −40 dB in every 2 s window. No passage falls back to the input, so `--no-fallback` would give the same result.
+- `../folks-like-us/.venv/bin/python -I scripts/build_master.py postfilter` → `audio/master/master_postfilter.wav` (+ `listen_postfilter.wav`, `.json`), same edit list as `master_raw`.

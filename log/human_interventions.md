@@ -24,3 +24,7 @@ Append-only. Every human action: when, what, and why.
 - **Bookend:** "no B01 bookend -- let's do it at the end instead with a zoom-out to the planning chat on "its maker just filed to sell stock"."
 - **Planning chat:** made public; captured (below).
 - **Why:** Suno and the take choices are the human's; the cut needs ears.
+
+## 3. 2026-10-31 — Agent runs the post-filter
+
+- **What:** "go ahead and run the post-filter yourself." In earlier videos the human ran it (R4); here the agent did, on the human's instruction.
