@@ -101,3 +101,8 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - `scripts/capture_chat.mjs` → `public/media/chat/planning_chat.png` (2560×1920, light mode) with the coda line "its maker just filed to sell stock" centred; its box in `config/chat_capture.json`. B01 shrinks the filmed coda still away while the chat scales from 2.6× to 1× about that line.
 - `scripts/pad_master.py` → `public/audio/master_padded.wav`: locked master + 16.33 s seeded crackle (seed 1930) to the video end, 202.167 s. `scripts/publish_picks.py` copies kept takes into `public/media/picks/` and writes the manifest.
 - Draft render (`--scale=0.5`): 202.18 s in 55 s. Fixed: card text now sizes to fit the box (the disclosure card overflowed).
+
+## 16. 2026-10-31 — M3 batch 2 prep (clips)
+
+- `comfy/templates/video_ltx2_3_i2v.json` (ComfyUI workflow templates package) → `comfy/api/video_ltx2_3_i2v.api.json` via `node scripts/comfy_ui_to_api.mjs` (from Folks Like Us; 51 nodes).
+- `config/clips.json` + `scripts/clips.py`: C1a, C1b, C2, C3 from the picked keyframes, two seeds each, prompt = motion + the brief's clip style, prompt enhancer off. 4 s at 24 fps, 960×720. Deviation: the brief says 480p; the template renders at half size and upscales ×2, so 960×720 costs the same first pass as 480×360 and gives a cleaner 4:3 frame. Logged in decisions.

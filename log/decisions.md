@@ -20,3 +20,7 @@ No opening screen capture. The coda's last line, "Why, its maker just filed to s
 - N27 (pie) starts on "cash"; N17 (hatbox) on "with the IOUs"; N30 freezes on the last "Buy—" hit and burns through the ring-out to black at the cut.
 - N31: the 4 s silence can't hold three cards under the hold rule (2.8 + 2.8 + 6.5 s). Proposed: the two dates at 2.0 s each in the silence; the third card over the coda's first line (155.9–161.5 s); N32's iris opens at "Ten cents down". The Done-when keeps the silence at 4 s, so the master isn't changed.
 - N34 credits: the disclosure card alone needs ~21 s; the music ends 4.8 s after the credits start. Proposed: the credits run past the music on the crackle bed.
+
+## 5. 2026-10-31 — Clips at 960×720, not 480p
+
+The LTX-2.3 i2v template samples at half size, then upscales ×2. Asking for 960×720 runs the main pass at 480×360, so it stays fast. The film layer softens it to match the stills anyway.
