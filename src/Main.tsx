@@ -94,7 +94,8 @@ const TapePile: React.FC<{level: number}> = ({level}) => {
 const Bulb: React.FC<{x?: number; y?: number}> = ({x = 0.5, y = 0.2}) => {
   const frame = useCurrentFrame();
   const on = Math.floor(frame / 9) % 2 === 0;
-  return <div style={{position: 'absolute', left: x * PIC_W - 40, top: y * PIC_H - 40, width: 80, height: 80, borderRadius: '50%',
+  // x, y: fractions of the image (drawn inside the Still's image box, which may be wider or taller than 4:3)
+  return <div style={{position: 'absolute', left: `calc(${x * 100}% - 40px)`, top: `calc(${y * 100}% - 40px)`, width: 80, height: 80, borderRadius: '50%',
     background: 'radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 70%)', opacity: on ? 1 : 0.1}} />;
 };
 

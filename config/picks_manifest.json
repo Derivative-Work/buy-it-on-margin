@@ -6,15 +6,19 @@
   "media/picks/N02.png",
   "media/picks/N04.png",
   "media/picks/N05.png",
+  "media/picks/N06.png",
   "media/picks/N07.png",
+  "media/picks/N08.png",
   "media/picks/N11.png",
   "media/picks/N14.png",
+  "media/picks/N15.png",
   "media/picks/N16a.png",
   "media/picks/N16b.png",
   "media/picks/N16c.png",
   "media/picks/N17.png",
   "media/picks/N22.png",
   "media/picks/N24.png",
+  "media/picks/N26.png",
   "media/picks/N32.png",
   "media/picks/kf_C1a.png",
   "media/picks/kf_C1b.png",
@@ -40,15 +44,27 @@
    1664,
    1248
   ],
+  "media/picks/N06.png": [
+   2208,
+   1248
+  ],
   "media/picks/N07.png": [
    1248,
    1872
+  ],
+  "media/picks/N08.png": [
+   1664,
+   1248
   ],
   "media/picks/N11.png": [
    1248,
    2016
   ],
   "media/picks/N14.png": [
+   2208,
+   1248
+  ],
+  "media/picks/N15.png": [
    2208,
    1248
   ],
@@ -73,6 +89,10 @@
    1248
   ],
   "media/picks/N24.png": [
+   1664,
+   1248
+  ],
+  "media/picks/N26.png": [
    1664,
    1248
   ],

@@ -131,3 +131,8 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - `scripts/batch2.sh`: N06 (ref_machine), N08 and N26 (ref_customer), N15 (N14 v2) ×4 seeds at ~100 s each (reference conditioning roughly doubles FLUX.2's time), then N27 from each N26 take with the matching seed (~78 s each). All 20 takes in `takes/stills/`, rows in `shots/prompts.md`.
 - The clip stage (`scripts/clips.py`) never produced a take: Claude Code stopped the batch for low system memory as the LTX-2.3 stage began. ComfyUI was holding ~33 GB of RAM (FLUX.2 staged for dynamic VRAM loading) with 4 GB free of 38 GB. Not restarted by the agent; waits for the human. Suggested before rerunning: free ComfyUI's models (`POST /free`, as `comfy_client.free()`), or restart ComfyUI, so LTX-2.3 and Gemma load into empty RAM.
 - `config/stills.json` "kept" came back clean (the temporary N26 pick was removed before the stop).
+
+## 21. 2026-10-31 — Batch 2b started; N06 bulb placed
+
+- `scripts/batch2b.sh`: frees ComfyUI's models before each stage (`comfy_client.free()`): RAM went from 33 GB used / 4 GB free to 5 GB used / 30 GB free. Then N27 v2 (4 seeds, conditioned on N26 1930), free, clips (C1a, C1b, C2, C3 ×2 seeds), contact sheet.
+- N06 bulb overlay at (0.507, 0.243) of the image, located on a gridded view of the pick. The bulb and needle overlays now position by image percentage, so they work on wide images. Checked on one frame.
