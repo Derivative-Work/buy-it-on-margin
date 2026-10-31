@@ -67,8 +67,12 @@ const DecoBorder: React.FC = () => {
 /** variant "display": short Deco line (Limelight). "body": longer fact text (Old Standard). Auto-sized to fit. */
 export const Card: React.FC<{text: string; variant?: 'display' | 'body'}> = ({text, variant}) => {
   const v = variant ?? (text.split(/\s+/).length > 8 ? 'body' : 'display');
-  const words = text.length;
-  const size = v === 'display' ? Math.min(118, Math.max(54, 1500 / Math.sqrt(words + 4))) : Math.min(84, 1900 / Math.sqrt(words + 20));
+  // Fit the text box (~1100 x 780 px): lines x line-height <= height, with average glyph width ~0.5 em (Old Standard)
+  // or ~0.62 em (Limelight). size <= sqrt(W * H / (glyph * lineHeight * chars)), with a 10% margin.
+  const chars = text.length;
+  const glyph = v === 'display' ? 0.62 : 0.5, lh = v === 'display' ? 1.15 : 1.32;
+  const fit = 0.9 * Math.sqrt((1100 * 780) / (glyph * lh * chars));
+  const size = Math.min(v === 'display' ? 118 : 84, fit);
   return (
     <AbsoluteFill style={{background: '#050505'}}>
       <DecoBorder />

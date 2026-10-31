@@ -93,3 +93,11 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - Burn v1 merged into a white blob by 40% of its length; v2 grows each hole as rmax·u^p and draws rims under cores so merged holes read as one burn.
 - `src/M2Test.tsx`: leader → iris open on a pushed still → N03 card → pan → placeholder clip → freeze + burn → N31a date card → N31c fact card → iris close; master audio 0–25 s. Placeholders: N04 s1929, ref_customer s1929, and a 640×480 zoompan clip made from N04 by ffmpeg.
 - `npx remotion render src/index.ts M2Test out/m2/m2_filmtest.mp4 --codec=h264 --crf=18`: 600 frames at 1080p in 15 s.
+
+## 15. 2026-10-31 — M4 groundwork while batch 1 runs
+
+- `config/edit.json`: every shot's content (kind, media, moves, overlays, cards), from the brief's shot list. Kinds: leader, still (iris, caption, bulb/needle overlays), card, card_then_still, clip (keyframe-still fallback), clip_montage (cut per bar or accelerating on beats, over-crank), dissolve (N15), zoom_through (N16), freeze_card (N19–N21), insert (N22), silhouettes (N23, N28: placeholders for the cut-outs), freeze_burn (N30), chat_zoom (B01), credits.
+- `src/Main.tsx`: the whole video from `timing/shot_times.json` + `config/edit.json`; one FilmLayer for everything before B01 and one after. Media not in `config/picks_manifest.json` renders as a labelled placeholder. Tape piles (N12 ankle, N18 knee) are code.
+- `scripts/capture_chat.mjs` → `public/media/chat/planning_chat.png` (2560×1920, light mode) with the coda line "its maker just filed to sell stock" centred; its box in `config/chat_capture.json`. B01 shrinks the filmed coda still away while the chat scales from 2.6× to 1× about that line.
+- `scripts/pad_master.py` → `public/audio/master_padded.wav`: locked master + 16.33 s seeded crackle (seed 1930) to the video end, 202.167 s. `scripts/publish_picks.py` copies kept takes into `public/media/picks/` and writes the manifest.
+- Draft render (`--scale=0.5`): 202.18 s in 55 s. Fixed: card text now sizes to fit the box (the disclosure card overflowed).

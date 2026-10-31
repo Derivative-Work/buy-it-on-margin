@@ -1,0 +1,338 @@
+{
+ "_doc": "M4 edit list: what each shot shows. Timing comes from timing/shot_times.json; media paths are under public/ (picked takes are copied to public/media/picks/<item>.png by scripts/publish_picks.py). A missing file renders as a labelled placeholder. Moves: scale and centre offset (fraction of the picture); the Still device warns past 5% of width per second.",
+ "shots": {
+  "N01": {
+   "kind": "leader"
+  },
+  "N02": {
+   "kind": "still",
+   "src": "media/picks/N02.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.1,
+    "x": 0.03,
+    "y": 0.02
+   },
+   "iris_open_frames": 30
+  },
+  "N03": {
+   "kind": "card",
+   "card": "N03"
+  },
+  "N04": {
+   "kind": "still",
+   "src": "media/picks/N04.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.08,
+    "x": 0.04,
+    "y": -0.02
+   }
+  },
+  "N05": {
+   "kind": "still",
+   "src": "media/picks/N05.png",
+   "from": {
+    "scale": 1.05,
+    "x": -0.02,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.1,
+    "x": 0.0,
+    "y": 0
+   },
+   "caption": "N05"
+  },
+  "N06": {
+   "kind": "still",
+   "src": "media/picks/N06.png",
+   "from": {
+    "scale": 1.0,
+    "x": -0.08,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0.08,
+    "y": 0
+   },
+   "overlay": "bulb"
+  },
+  "N07": {
+   "kind": "still",
+   "src": "media/picks/N07.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0.12
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0,
+    "y": -0.12
+   }
+  },
+  "N08": {
+   "kind": "card_then_still",
+   "card": "N08",
+   "card_s": 2.6,
+   "still": {
+    "kind": "still",
+    "src": "media/picks/N08.png",
+    "from": {
+     "scale": 1.05,
+     "x": 0,
+     "y": 0
+    },
+    "to": {
+     "scale": 1.12,
+     "x": 0.02,
+     "y": 0.0
+    }
+   }
+  },
+  "N09": {
+   "kind": "clip",
+   "src": "media/picks/C1a.mp4",
+   "fallback_still": "media/picks/kf_C1a.png",
+   "swap_to_k": true
+  },
+  "N10": {
+   "kind": "clip",
+   "src": "media/picks/C2.mp4",
+   "fallback_still": "media/picks/kf_C2.png"
+  },
+  "N11": {
+   "kind": "still",
+   "src": "media/picks/N11.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0.15
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0,
+    "y": -0.15
+   }
+  },
+  "N12": {
+   "kind": "clip",
+   "src": "media/picks/C1b.mp4",
+   "fallback_still": "media/picks/kf_C1b.png",
+   "overlay": "tape_ankle",
+   "swap_to_k": true
+  },
+  "N13": {
+   "kind": "clip",
+   "src": "media/picks/C3.mp4",
+   "fallback_still": "media/picks/kf_C3.png"
+  },
+  "N14": {
+   "kind": "still",
+   "src": "media/picks/N14.png",
+   "from": {
+    "scale": 1.0,
+    "x": -0.1,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0.0,
+    "y": 0
+   }
+  },
+  "N15": {
+   "kind": "dissolve",
+   "a": "media/picks/N14.png",
+   "b": "media/picks/N15.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0.0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0.05,
+    "y": 0
+   },
+   "dissolve_s": 1.5
+  },
+  "N16": {
+   "kind": "zoom_through",
+   "srcs": [
+    "media/picks/N16a.png",
+    "media/picks/N16b.png",
+    "media/picks/N16c.png"
+   ],
+   "overlay_card": "N16"
+  },
+  "N17": {
+   "kind": "still",
+   "src": "media/picks/N17.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.08,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "N18": {
+   "kind": "clip_montage",
+   "srcs": [
+    "media/picks/C1a.mp4",
+    "media/picks/C2.mp4",
+    "media/picks/C1b.mp4"
+   ],
+   "cut": "bar",
+   "rate": 1.15,
+   "overlay": "tape_knee",
+   "swap_to_k": true
+  },
+  "N19": {
+   "kind": "freeze_card",
+   "src": "media/picks/C1a.mp4",
+   "freeze_at_s": 1.0,
+   "card": "N19"
+  },
+  "N20": {
+   "kind": "freeze_card",
+   "src": "media/picks/C1b.mp4",
+   "freeze_at_s": 1.5,
+   "card": "N20"
+  },
+  "N21": {
+   "kind": "freeze_card",
+   "src": "media/picks/C1a.mp4",
+   "freeze_at_s": 2.5,
+   "card": "N21"
+  },
+  "N22": {
+   "kind": "insert",
+   "src": "media/picks/N22.png"
+  },
+  "N23": {
+   "kind": "silhouette_band"
+  },
+  "N24": {
+   "kind": "still",
+   "src": "media/picks/N24.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.06,
+    "x": 0,
+    "y": 0
+   },
+   "overlay": "dial"
+  },
+  "N25": {
+   "kind": "card",
+   "card": "N25"
+  },
+  "N26": {
+   "kind": "still",
+   "src": "media/picks/N26.png",
+   "from": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.06,
+    "x": 0,
+    "y": -0.02
+   }
+  },
+  "N27": {
+   "kind": "still",
+   "src": "media/picks/N27.png",
+   "from": {
+    "scale": 1.06,
+    "x": 0,
+    "y": -0.02
+   },
+   "to": {
+    "scale": 1.1,
+    "x": 0,
+    "y": -0.02
+   }
+  },
+  "N28": {
+   "kind": "silhouette_crowd"
+  },
+  "N29": {
+   "kind": "clip_montage",
+   "srcs": [
+    "media/picks/C1a.mp4",
+    "media/picks/C1b.mp4",
+    "media/picks/C2.mp4"
+   ],
+   "cut": "beat_accel",
+   "rate_from": 1.2,
+   "rate_to": 2.5,
+   "swap_to_k": true
+  },
+  "N30": {
+   "kind": "freeze_burn",
+   "src": "media/picks/C1b.mp4",
+   "freeze_at_s": 2.0
+  },
+  "N31a": {
+   "kind": "card",
+   "card": "N31a"
+  },
+  "N31b": {
+   "kind": "card",
+   "card": "N31b"
+  },
+  "N31c": {
+   "kind": "card",
+   "card": "N31c"
+  },
+  "N32": {
+   "kind": "still",
+   "src": "media/picks/N32.png",
+   "from": {
+    "scale": 2.0,
+    "x": 0,
+    "y": 0
+   },
+   "to": {
+    "scale": 1.0,
+    "x": 0,
+    "y": 0
+   },
+   "iris_open_frames": 30
+  },
+  "B01": {
+   "kind": "chat_zoom",
+   "still_src": "media/picks/N32.png",
+   "chat_src": "media/chat/planning_chat.png"
+  },
+  "N33": {
+   "kind": "card",
+   "card": "N33",
+   "iris_close_before_frames": 24
+  },
+  "N34": {
+   "kind": "credits"
+  }
+ }
+}
