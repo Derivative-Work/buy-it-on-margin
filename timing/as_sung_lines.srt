@@ -107,23 +107,23 @@ A dime on the dollar, and the moon's your own!
 What's it make? (Tomorrow!)
 
 28
-00:01:41,505 --> 00:01:42,785
+00:01:41,505 --> 00:01:42,660
 What's it cost? (Today!)
 
 29
-00:01:42,745 --> 00:01:44,447
+00:01:42,800 --> 00:01:45,309
 When's it pay? (Why, nineteen-thirty!)
 
 30
-00:01:44,188 --> 00:01:45,488
+00:01:45,490 --> 00:01:46,900
 (…Sometime after twenty-thirty.)
 
 31
-00:01:45,487 --> 00:01:46,900
+00:01:48,642 --> 00:01:49,600
 (Same difference!)
 
 32
-00:02:06,525 --> 00:02:10,440
+00:02:06,526 --> 00:02:10,440
 Now the banker's raisin' interest, says the money's gettin' dear,
 
 33

@@ -32,9 +32,9 @@ Dialogue: 1,0:01:13.72,0:01:15.60,Shot,,0,0,0,,{\b1}N17{\b0}  [S]  Hatbox on a d
 Dialogue: 1,0:01:15.60,0:01:39.94,Shot,,0,0,0,,{\b1}N18{\b0}  [C1, C2 →K]  Dance hall faster, cut on every bar; tape
 Dialogue: 1,0:01:39.94,0:01:41.55,Shot,,0,0,0,,{\b1}N19{\b0}  [K]  Freeze frame of a C1 dancer\N{\c&H66CCFF&}CARD: WHAT'S IT MAKE?
 Dialogue: 1,0:01:41.55,0:01:42.63,Shot,,0,0,0,,{\b1}N20{\b0}  [K]  Freeze, different dancer\N{\c&H66CCFF&}CARD: WHAT'S IT COST?
-Dialogue: 1,0:01:42.63,0:01:46.95,Shot,,0,0,0,,{\b1}N21{\b0}  [K]  Freeze\N{\c&H66CCFF&}CARD: WHEN'S IT PAY?
-Dialogue: 1,0:01:44.19,0:01:44.79,Insert,,0,0,0,,{\b1}N22{\b0}  [S]  One-frame insert: a dancer in modern clothes
-Dialogue: 1,0:01:46.95,0:02:06.41,Shot,,0,0,0,,{\b1}N23{\b0}  [K]  Silhouette band: clarinet and trumpet trading, a kick line below
+Dialogue: 1,0:01:42.63,0:01:49.63,Shot,,0,0,0,,{\b1}N21{\b0}  [K]  Freeze\N{\c&H66CCFF&}CARD: WHEN'S IT PAY?
+Dialogue: 1,0:01:45.49,0:01:46.09,Insert,,0,0,0,,{\b1}N22{\b0}  [S]  One-frame insert: a dancer in modern clothes
+Dialogue: 1,0:01:49.63,0:02:06.41,Shot,,0,0,0,,{\b1}N23{\b0}  [K]  Silhouette band: clarinet and trumpet trading, a kick line below
 Dialogue: 1,0:02:06.41,0:02:10.72,Shot,,0,0,0,,{\b1}N24{\b0}  [S + K]  Banker at a big rate dial; the needle climbs (K overlay)
 Dialogue: 1,0:02:10.72,0:02:15.05,Shot,,0,0,0,,{\b1}N25{\b0}  [K]  Card\N{\c&H66CCFF&}CARD: TECH STOCKS: $1,000,000,000,000 GONE IN A DAY
 Dialogue: 1,0:02:15.05,0:02:17.49,Shot,,0,0,0,,{\b1}N26{\b0}  [S]  Man proudly holding a rising sales chart; banknotes stream from his back pocket
@@ -304,28 +304,28 @@ Dialogue: 0,0:01:40.45,0:01:40.84,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it {
 Dialogue: 0,0:01:40.84,0:01:41.46,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it make? {\c&H00FFFF&}(Tomorrow!){\c&HFFFFFF&}
 Dialogue: 0,0:01:41.50,0:01:41.75,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}What's{\c&HFFFFFF&} it cost? (Today!)
 Dialogue: 0,0:01:41.75,0:01:41.87,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's {\c&H00FFFF&}it{\c&HFFFFFF&} cost? (Today!)
-Dialogue: 0,0:01:41.87,0:01:42.18,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it {\c&H00FFFF&}cost?{\c&HFFFFFF&} (Today!)
-Dialogue: 0,0:01:42.18,0:01:42.78,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it cost? {\c&H00FFFF&}(Today!){\c&HFFFFFF&}
-Dialogue: 0,0:01:42.74,0:01:43.03,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}When's{\c&HFFFFFF&} it pay? (Why, nineteen-thirty!)
-Dialogue: 0,0:01:43.03,0:01:43.15,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's {\c&H00FFFF&}it{\c&HFFFFFF&} pay? (Why, nineteen-thirty!)
-Dialogue: 0,0:01:43.15,0:01:43.54,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it {\c&H00FFFF&}pay?{\c&HFFFFFF&} (Why, nineteen-thirty!)
-Dialogue: 0,0:01:43.54,0:01:44.04,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it pay? {\c&H00FFFF&}(Why,{\c&HFFFFFF&} nineteen-thirty!)
-Dialogue: 0,0:01:44.04,0:01:44.45,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it pay? (Why, {\c&H00FFFF&}nineteen-thirty!){\c&HFFFFFF&}
-Dialogue: 0,0:01:44.19,0:01:44.90,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}(…Sometime{\c&HFFFFFF&} after twenty-thirty.)
-Dialogue: 0,0:01:44.90,0:01:45.08,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(…Sometime {\c&H00FFFF&}after{\c&HFFFFFF&} twenty-thirty.)
-Dialogue: 0,0:01:45.08,0:01:45.49,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(…Sometime after {\c&H00FFFF&}twenty-thirty.){\c&HFFFFFF&}
-Dialogue: 0,0:01:45.49,0:01:45.73,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}(Same{\c&HFFFFFF&} difference!)
-Dialogue: 0,0:01:45.73,0:01:46.90,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(Same {\c&H00FFFF&}difference!){\c&HFFFFFF&}
-Dialogue: 0,0:01:46.90,0:02:06.52,Lyric,,0,0,0,,{\fs20}Instrumental
-Dialogue: 0,0:02:06.52,0:02:06.78,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}{\c&H00FFFF&}Now{\c&HFFFFFF&} the banker's raisin' interest, says the money's gettin' dear,
-Dialogue: 0,0:02:06.78,0:02:06.90,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now {\c&H00FFFF&}the{\c&HFFFFFF&} banker's raisin' interest, says the money's gettin' dear,
-Dialogue: 0,0:02:06.90,0:02:07.44,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the {\c&H00FFFF&}banker's{\c&HFFFFFF&} raisin' interest, says the money's gettin' dear,
-Dialogue: 0,0:02:07.44,0:02:07.99,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's {\c&H00FFFF&}raisin'{\c&HFFFFFF&} interest, says the money's gettin' dear,
-Dialogue: 0,0:02:07.99,0:02:08.52,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' {\c&H00FFFF&}interest,{\c&HFFFFFF&} says the money's gettin' dear,
-Dialogue: 0,0:02:08.52,0:02:08.83,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, {\c&H00FFFF&}says{\c&HFFFFFF&} the money's gettin' dear,
-Dialogue: 0,0:02:08.83,0:02:09.07,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says {\c&H00FFFF&}the{\c&HFFFFFF&} money's gettin' dear,
-Dialogue: 0,0:02:09.07,0:02:09.61,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says the {\c&H00FFFF&}money's{\c&HFFFFFF&} gettin' dear,
-Dialogue: 0,0:02:09.61,0:02:10.03,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says the money's {\c&H00FFFF&}gettin'{\c&HFFFFFF&} dear,
+Dialogue: 0,0:01:41.87,0:01:42.19,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it {\c&H00FFFF&}cost?{\c&HFFFFFF&} (Today!)
+Dialogue: 0,0:01:42.19,0:01:42.66,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}What's it cost? {\c&H00FFFF&}(Today!){\c&HFFFFFF&}
+Dialogue: 0,0:01:42.80,0:01:43.04,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}When's{\c&HFFFFFF&} it pay? (Why, nineteen-thirty!)
+Dialogue: 0,0:01:43.04,0:01:43.16,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's {\c&H00FFFF&}it{\c&HFFFFFF&} pay? (Why, nineteen-thirty!)
+Dialogue: 0,0:01:43.16,0:01:43.54,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it {\c&H00FFFF&}pay?{\c&HFFFFFF&} (Why, nineteen-thirty!)
+Dialogue: 0,0:01:43.54,0:01:44.18,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it pay? {\c&H00FFFF&}(Why,{\c&HFFFFFF&} nineteen-thirty!)
+Dialogue: 0,0:01:44.18,0:01:45.31,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}When's it pay? (Why, {\c&H00FFFF&}nineteen-thirty!){\c&HFFFFFF&}
+Dialogue: 0,0:01:45.49,0:01:46.18,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}(…Sometime{\c&HFFFFFF&} after twenty-thirty.)
+Dialogue: 0,0:01:46.18,0:01:46.64,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(…Sometime {\c&H00FFFF&}after{\c&HFFFFFF&} twenty-thirty.)
+Dialogue: 0,0:01:46.64,0:01:46.94,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(…Sometime after {\c&H00FFFF&}twenty-thirty.){\c&HFFFFFF&}
+Dialogue: 0,0:01:48.64,0:01:49.07,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}{\c&H00FFFF&}(Same{\c&HFFFFFF&} difference!)
+Dialogue: 0,0:01:49.07,0:01:49.60,Lyric,,0,0,0,,{\fs20}Break\N{\fs30}(Same {\c&H00FFFF&}difference!){\c&HFFFFFF&}
+Dialogue: 0,0:01:49.60,0:02:06.53,Lyric,,0,0,0,,{\fs20}Instrumental
+Dialogue: 0,0:02:06.53,0:02:06.79,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}{\c&H00FFFF&}Now{\c&HFFFFFF&} the banker's raisin' interest, says the money's gettin' dear,
+Dialogue: 0,0:02:06.79,0:02:06.91,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now {\c&H00FFFF&}the{\c&HFFFFFF&} banker's raisin' interest, says the money's gettin' dear,
+Dialogue: 0,0:02:06.91,0:02:07.45,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the {\c&H00FFFF&}banker's{\c&HFFFFFF&} raisin' interest, says the money's gettin' dear,
+Dialogue: 0,0:02:07.45,0:02:07.97,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's {\c&H00FFFF&}raisin'{\c&HFFFFFF&} interest, says the money's gettin' dear,
+Dialogue: 0,0:02:07.97,0:02:08.52,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' {\c&H00FFFF&}interest,{\c&HFFFFFF&} says the money's gettin' dear,
+Dialogue: 0,0:02:08.52,0:02:08.81,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, {\c&H00FFFF&}says{\c&HFFFFFF&} the money's gettin' dear,
+Dialogue: 0,0:02:08.81,0:02:09.05,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says {\c&H00FFFF&}the{\c&HFFFFFF&} money's gettin' dear,
+Dialogue: 0,0:02:09.05,0:02:09.59,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says the {\c&H00FFFF&}money's{\c&HFFFFFF&} gettin' dear,
+Dialogue: 0,0:02:09.59,0:02:10.03,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says the money's {\c&H00FFFF&}gettin'{\c&HFFFFFF&} dear,
 Dialogue: 0,0:02:10.03,0:02:10.44,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}Now the banker's raisin' interest, says the money's gettin' {\c&H00FFFF&}dear,{\c&HFFFFFF&}
 Dialogue: 0,0:02:10.83,0:02:10.97,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}{\c&H00FFFF&}And{\c&HFFFFFF&} the fella with the cloud boom got a sock right in the ear:
 Dialogue: 0,0:02:10.97,0:02:11.22,Lyric,,0,0,0,,{\fs20}Verse 3\N{\fs30}And {\c&H00FFFF&}the{\c&HFFFFFF&} fella with the cloud boom got a sock right in the ear:

@@ -65,3 +65,9 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - Sections (master s): Intro 0–12.58, Verse 1 16.57–33.15, Chorus 1 33.25–57.72, Verse 2 58.98–75.34, Chorus 2 75.69–100.02, Break 100.10–106.90, Instrumental 106.90–126.53, Verse 3 126.53–141.82, Final chorus 143.58–151.884, Silence 151.884–155.884, Coda 156.49–185.834 (last word ends 177.46; band tag after).
 - `scripts/shot_times.py` → `timing/shot_times.json` from `config/shot_cues.json`: 37 entries (N01–N34, N31 split a/b/c, N22 as a one-picture-frame insert, B01 in the coda). Starts snap to the beat at or before the word (sung onsets trail the beat by 80–130 ms). Card texts in `config/cards.json`; the hold rule flags N05, N19, N20, N31a–c and N34.
 - `scripts/m1_review.py` → `timing/check/m1_review.mp4` (shot ID, picture and card on top, as-sung lyric with the current word lit, bar.beat counter; master + beat click, high on downbeats) and `master_click.wav`. Frames checked at 19.0, 104.2 and 152.5 s.
+
+## 11. 2026-10-31 — M1 fix: the break's spoken tail
+
+- Cause: Whisper's word times for "Why, 1930 / Sometime after 2030 / Same difference" (lead transcript, the line-window anchors) were compressed into 103.6–106.3 s. The lead and backing guides show the bursts later, and the backing transcript had "same difference" at 108.65 s.
+- Forced alignment of the break text over one window (102.6–110.5 s, lead and full vocals guides agree): "nineteen thirty" 104.18–105.35, "Sometime after twenty thirty" 105.51–107.35, "Same difference" 108.69–109.52 (scores 0.62–0.95). Windows for Break lines 2–4 added to `config/timing.json`; timing map, shot times and review video rebuilt.
+- Result: Break 100.10–109.60 s, Instrumental 109.60–126.53 s (was 106.90). N21 now runs 102.63–109.63 s; N22's insert on "Sometime" moves to 105.49 s; N23 starts 109.63 s.

@@ -2658,143 +2658,145 @@
     {
      "text": "What's it cost? (Today!)",
      "start": 101.505,
-     "end": 102.785,
+     "end": 102.66,
      "window": [
       101.464,
-      102.785
+      102.68
      ],
      "words": [
       {
        "w": "What's",
        "start": 101.505,
-       "end": 101.688,
-       "score": 0.352
+       "end": 101.687,
+       "score": 0.466
       },
       {
        "w": "it",
-       "start": 101.749,
-       "end": 101.85,
-       "score": 0.671
+       "start": 101.748,
+       "end": 101.849,
+       "score": 0.651
       },
       {
        "w": "cost?",
-       "start": 101.87,
-       "end": 102.155,
-       "score": 0.595
+       "start": 101.869,
+       "end": 102.173,
+       "score": 0.669
       },
       {
        "w": "(Today!)",
-       "start": 102.175,
-       "end": 102.785,
-       "score": 0.897
+       "start": 102.194,
+       "end": 102.66,
+       "score": 0.703
       }
      ]
     },
     {
      "text": "When's it pay? (Why, nineteen-thirty!)",
-     "start": 102.745,
-     "end": 104.447,
+     "start": 102.8,
+     "end": 105.309,
      "window": [
-      102.745,
-      104.447
+      102.7,
+      105.45
      ],
      "words": [
       {
        "w": "When's",
-       "start": 102.745,
-       "end": 102.968,
-       "score": 0.352
+       "start": 102.8,
+       "end": 102.961,
+       "score": 0.258
       },
       {
        "w": "it",
-       "start": 103.029,
-       "end": 103.089,
-       "score": 0.464
+       "start": 103.041,
+       "end": 103.101,
+       "score": 0.654
       },
       {
        "w": "pay?",
-       "start": 103.15,
-       "end": 103.515,
-       "score": 0.875
+       "start": 103.162,
+       "end": 103.523,
+       "score": 0.953
       },
       {
        "w": "(Why,",
-       "start": 103.535,
-       "end": 104.022,
-       "score": 0.72
+       "start": 103.543,
+       "end": 104.085,
+       "score": 0.859
       },
       {
        "w": "nineteen-thirty!)",
-       "start": 104.042,
-       "end": 104.447,
-       "score": 0.185
+       "start": 104.185,
+       "end": 105.309,
+       "score": 0.886
       }
      ]
     },
     {
      "text": "(…Sometime after twenty-thirty.)",
-     "start": 104.188,
-     "end": 105.488,
+     "start": 105.49,
+     "end": 106.9,
      "window": [
-      104.086,
-      105.508
+      105.45,
+      107.6
      ],
      "words": [
       {
        "w": "(…Sometime",
-       "start": 104.188,
-       "end": 104.756,
-       "score": 0.587
+       "start": 105.49,
+       "end": 105.972,
+       "score": 0.796
       },
       {
        "w": "after",
-       "start": 104.9,
-       "end": 105.02,
-       "score": 0.59,
-       "start_aligner": 104.777
+       "start": 106.18,
+       "end": 106.374,
+       "score": 0.739,
+       "start_aligner": 106.053
       },
       {
        "w": "twenty-thirty.)",
-       "start": 105.081,
-       "end": 105.488,
-       "score": 0.227
+       "start": 106.64,
+       "end": 106.9,
+       "score": 0.902,
+       "start_aligner": 106.595,
+       "end_aligner": 107.339
       }
      ]
     },
     {
      "text": "(Same difference!)",
-     "start": 105.487,
-     "end": 106.9,
+     "start": 108.642,
+     "end": 109.6,
      "window": [
-      105.307,
-      126.502
+      108.5,
+      109.8
      ],
      "words": [
       {
        "w": "(Same",
-       "start": 105.487,
-       "end": 105.687,
-       "score": 0.892
+       "start": 108.642,
+       "end": 109.048,
+       "score": 0.558
       },
       {
        "w": "difference!)",
-       "start": 105.727,
-       "end": 106.9,
-       "score": 0.599,
-       "end_aligner": 106.268
+       "start": 109.069,
+       "end": 109.6,
+       "score": 0.462,
+       "end_aligner": 109.536
       }
      ]
     }
    ],
    "start": 100.104,
-   "end": 106.9
+   "end": 109.6
   },
   {
    "name": "Instrumental",
    "note": null,
    "lines": [],
-   "start": 106.9,
-   "end": 126.525
+   "start": 109.6,
+   "end": 126.526
   },
   {
    "name": "Verse 3",
@@ -2802,74 +2804,74 @@
    "lines": [
     {
      "text": "Now the banker's raisin' interest, says the money's gettin' dear,",
-     "start": 126.525,
+     "start": 126.526,
      "end": 130.44,
      "window": [
-      106.288,
+      109.82,
       130.808
      ],
      "words": [
       {
        "w": "Now",
-       "start": 126.525,
-       "end": 126.745,
-       "score": 0.913
+       "start": 126.526,
+       "end": 126.726,
+       "score": 0.915
       },
       {
        "w": "the",
-       "start": 126.785,
-       "end": 126.885,
-       "score": 0.694
+       "start": 126.786,
+       "end": 126.866,
+       "score": 0.833
       },
       {
        "w": "banker's",
-       "start": 126.905,
-       "end": 127.365,
-       "score": 0.821
+       "start": 126.907,
+       "end": 127.367,
+       "score": 0.78
       },
       {
        "w": "raisin'",
-       "start": 127.445,
-       "end": 127.906,
-       "score": 0.83
+       "start": 127.447,
+       "end": 127.887,
+       "score": 0.863
       },
       {
        "w": "interest,",
-       "start": 127.986,
-       "end": 128.426,
-       "score": 0.843
+       "start": 127.967,
+       "end": 128.427,
+       "score": 0.878
       },
       {
        "w": "says",
        "start": 128.52,
-       "end": 128.766,
-       "score": 0.862,
-       "start_aligner": 128.486
+       "end": 128.767,
+       "score": 0.828,
+       "start_aligner": 128.487
       },
       {
        "w": "the",
-       "start": 128.826,
-       "end": 128.946,
-       "score": 0.832
+       "start": 128.807,
+       "end": 128.927,
+       "score": 0.646
       },
       {
        "w": "money's",
-       "start": 129.067,
-       "end": 129.547,
-       "score": 0.806
+       "start": 129.047,
+       "end": 129.528,
+       "score": 0.819
       },
       {
        "w": "gettin'",
-       "start": 129.607,
-       "end": 129.987,
+       "start": 129.588,
+       "end": 129.968,
        "score": 0.893
       },
       {
        "w": "dear,",
-       "start": 130.027,
+       "start": 130.028,
        "end": 130.44,
-       "score": 0.837,
-       "end_aligner": 130.388
+       "score": 0.894,
+       "end_aligner": 130.368
       }
      ]
     },
@@ -3100,7 +3102,7 @@
      ]
     }
    ],
-   "start": 126.525,
+   "start": 126.526,
    "end": 141.82
   },
   {

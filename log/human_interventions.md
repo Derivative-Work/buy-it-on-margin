@@ -32,3 +32,7 @@ Append-only. Every human action: when, what, and why.
 ## 4. 2026-10-31 — Master locked
 
 - **What:** "lock the post-filtered master and start M1." `audio/master/buy_it_on_margin_master.wav` = `master_postfilter.wav`, 185.834 s, sha256 `d2f9028739d033bc…` (in `config/master.json` → `locked`).
+
+## 5. 2026-10-31 — M1 review: break out of sync
+
+- **What:** "N20/N21: the spoken 1930/2030/"same difference" fall out of sync." (from `timing/check/m1_review.mp4`)

@@ -196,32 +196,32 @@
   },
   "N21": {
    "start": 102.632,
-   "end": 106.951,
-   "duration": 4.319,
+   "end": 109.633,
+   "duration": 7.001,
    "start_frame": 2463,
-   "end_frame": 2567,
+   "end_frame": 2631,
    "cue": "\"When's\" (Break 2.0)",
-   "snapped_ms": -113,
+   "snapped_ms": -168,
    "card_hold_needed_s": 2.5
   },
   "N22": {
-   "start": 104.188,
-   "end": 104.244,
+   "start": 105.49,
+   "end": 105.546,
    "duration": 0.056,
-   "start_frame": 2501,
-   "end_frame": 2502,
+   "start_frame": 2532,
+   "end_frame": 2533,
    "cue": "'(…Sometime' (Break 3.0)",
    "insert_over": "previous shot",
    "note": "one picture frame (1/18 s) of the modern dancer on 'Sometime', then back to N21"
   },
   "N23": {
-   "start": 106.951,
+   "start": 109.633,
    "end": 126.409,
-   "duration": 19.458,
-   "start_frame": 2567,
+   "duration": 16.776,
+   "start_frame": 2631,
    "end_frame": 3034,
    "cue": "section:Instrumental",
-   "snapped_ms": 51
+   "snapped_ms": 33
   },
   "N24": {
    "start": 126.409,
@@ -230,7 +230,7 @@
    "start_frame": 3034,
    "end_frame": 3137,
    "cue": "'Now' (Verse 3 0.0)",
-   "snapped_ms": -116
+   "snapped_ms": -117
   },
   "N25": {
    "start": 130.717,
