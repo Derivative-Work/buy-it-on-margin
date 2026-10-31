@@ -41,3 +41,7 @@ Append-only. Every human action: when, what, and why.
 
 - **What:** "1. I hear "buy it on mar--" 2. these are correct 3. you correctly found 1 4. let the credits run past the music over crackle"
 - **Effect:** the final chorus is sung as written (the agent's "Buy—" reading was wrong); "float a loan", "forecasts", "sell stock" are sung as written; bar phase 3 is beat 1; credits run past the music over crackle. The break-card and N31 proposals got no objection and stand as defaults until the M4 animatic.
+
+## 7. 2026-10-31 — M2 gate: look approved
+
+- **What:** "the look is approved, keep the warm tint. M2 is good." (`out/m2/m2_filmtest.mp4`, `config/film.json` as of commit cc0aafa.)

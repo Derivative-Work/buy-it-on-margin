@@ -15,3 +15,7 @@ Model `flux2_dev_fp8mixed.safetensors`, text encoder `mistral_3_small_flux2_fp4_
 | ref_customer | 1932 | 1664×1248 | `takes/stills/ref_customer/ref_customer_s1932.png` | 55.9 | 2026-10-31T13:33:47-04:00 | pending pick |
 | ref_machine | 1929 | 1664×1248 | `takes/stills/ref_machine/ref_machine_s1929.png` | 58.3 | 2026-10-31T13:34:46-04:00 | pending pick |
 | ref_machine | 1930 | 1664×1248 | `takes/stills/ref_machine/ref_machine_s1930.png` | 56.4 | 2026-10-31T13:35:42-04:00 | pending pick |
+| ref_machine | 1931 | 1664×1248 | `takes/stills/ref_machine/ref_machine_s1931.png` | 50.1 | 2026-10-31T13:36:32-04:00 | pending pick |
+| ref_machine | 1932 | 1664×1248 | `takes/stills/ref_machine/ref_machine_s1932.png` | 50.1 | 2026-10-31T13:37:23-04:00 | pending pick |
+| N02 | 1929 | 1664×1248 | `takes/stills/N02/N02_s1929.png` | 51.1 | 2026-10-31T13:38:15-04:00 | pending pick |
+| N02 | 1930 | 1664×1248 | `takes/stills/N02/N02_s1930.png` | 50.1 | 2026-10-31T13:39:05-04:00 | pending pick |
