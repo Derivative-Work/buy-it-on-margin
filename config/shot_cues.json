@@ -1,5 +1,5 @@
 {
- "_doc": "Start cue of every shot (brief rev 10 shot list). 'Section|line|word' = the word's start; 'end:…' its end; 't:<s>' a master time; 'section:<name>' its start. Indices from 0 as in lyrics/as_sung.txt. A shot ends where the next starts. 'snap': move onto a band beat (see scripts/shot_times.py). 'insert_picture_frames': a one-frame insert that returns to the previous shot. 'card': key in config/cards.json, checked against the hold rule. 'end': 'hold' sets the shot's end from the card's hold rule instead of the next shot (may run past the music).",
+ "_doc": "Start cue of every shot (brief rev 10 shot list). 'Section|line|word' = the word's start; 'end:…' its end; 't:<s>' a master time; 'section:<name>' its start. Indices from 0 as in lyrics/as_sung.txt. A shot ends where the next starts. 'snap': move onto a band beat (see scripts/shot_times.py). 'insert_picture_frames': a one-frame insert that returns to the previous shot. 'card': key in config/cards.json, checked against the hold rule. 'end': 'hold' sets the shot's end from the card's hold rule instead of the next shot (may run past the music). 'chain': start where the previous card's hold ends.",
  "shots": [
   {
    "id": "N01",
@@ -198,10 +198,25 @@
    "note": "iris closes; card over the band tag"
   },
   {
-   "id": "N34",
+   "id": "N34a",
    "cue": "t:181.0",
-   "card": "N34",
-   "note": "credits; run past the music over crackle (human, 2026-10-31). End = start + hold rule for the disclosure card; fact cards and 'Derived from' added at M4",
+   "card": "N34a",
+   "note": "disclosure; credits run past the music over crackle (human, 2026-10-31)"
+  },
+  {
+   "id": "N34b",
+   "cue": "chain",
+   "card": "N34b"
+  },
+  {
+   "id": "N34c",
+   "cue": "chain",
+   "card": "N34c"
+  },
+  {
+   "id": "N34d",
+   "cue": "chain",
+   "card": "N34d",
    "end": "hold"
   }
  ]

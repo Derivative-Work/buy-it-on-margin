@@ -10,6 +10,7 @@ import {FilmLayer} from './film/FilmLayer';
 import {Burn, Card, Clip, Frame, Iris, Leader, Still} from './film/devices';
 import {Fonts} from './Fonts';
 import {SilhouetteBand, SilhouetteCrowd} from './film/Silhouettes';
+import {Captions} from './Captions';
 
 /**
  * M4/M5: the whole video. Timing from timing/shot_times.json (M1), content from config/edit.json, media under
@@ -327,14 +328,14 @@ const DraftLabel: React.FC = () => {
   );
 };
 
-export const Main: React.FC<{draft?: boolean}> = ({draft}) => {
+export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolean}> = ({draft, captions = true, audio = true}) => {
   const order = Object.keys(SHOTS).filter((k) => !SHOTS[k].insert_over && k !== 'B01');
   const inserts = Object.keys(SHOTS).filter((k) => SHOTS[k].insert_over);
   const b = SHOTS.B01;
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Fonts />
-      <Audio src={staticFile('audio/master_padded.wav')} />
+      {audio && <Audio src={staticFile('audio/master_padded.wav')} />}
       <Sequence durationInFrames={b.start_frame}>
         <FilmLayer>
           {order.filter((k) => SHOTS[k].start_frame < b.start_frame).map((k) => (
@@ -361,6 +362,7 @@ export const Main: React.FC<{draft?: boolean}> = ({draft}) => {
           ))}
         </FilmLayer>
       </Sequence>
+      {captions && <Captions />}
       {draft && <DraftLabel />}
     </AbsoluteFill>
   );

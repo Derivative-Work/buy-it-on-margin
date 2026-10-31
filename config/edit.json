@@ -350,8 +350,21 @@
    "card": "N33",
    "iris_close_before_frames": 24
   },
-  "N34": {
-   "kind": "credits"
+  "N34a": {
+   "kind": "card",
+   "card": "N34a"
+  },
+  "N34b": {
+   "kind": "card",
+   "card": "N34b"
+  },
+  "N34c": {
+   "kind": "card",
+   "card": "N34c"
+  },
+  "N34d": {
+   "kind": "card",
+   "card": "N34d"
   }
  }
 }

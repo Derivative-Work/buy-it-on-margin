@@ -1,0 +1,5 @@
+{
+ "_doc": "Caption timing rule, shared by the burned-in captions (src/Captions.tsx) and the SRT (scripts/export_srt.py). Lines are the lyrics as sung (timing/timing_map.json). A line shows from its first word to the next line's start, capped at tail_s after its last word, at least min_s.",
+ "tail_s": 1.0,
+ "min_s": 1.0
+}

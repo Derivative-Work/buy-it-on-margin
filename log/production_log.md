@@ -152,3 +152,13 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - **N24:** needle redrawn as a period gauge hand: blackened spade-tipped pointer with counterweight tail, drop shadow, domed brass cap with a rivet; eased climb.
 - **N17 v2:** conditioned on the v1 pick (`kept_v1`), RAM sticks and graphics cards with fans in the hatbox and on the desk, unbranded. Kept D 1932 (B had no hardware).
 - `npx remotion render … out/m4/animatic_v2.mp4 --scale=0.5 --props='{"draft":true}'` (53 s). Checked frames at the N22 edges, N17, N23, N24, N28.
+
+## 24. 2026-10-31 — M5: finals
+
+- **Credits:** N34 split into four cards chained by the hold rule (`cue: "chain"`): disclosure (song doc), two "Where 1929 doesn't fit" cards (Scale; Leverage + Who's spending, song doc), and the series credit line with the repo URL. Credits 181.00–232.33 s (51 s, 46.5 s past the music); `scripts/pad_master.py` re-run (crackle to 232.333 s).
+- **Captions:** one rule (`config/captions.json`: line start to the next line's start, capped at 1 s after its last word, at least 1 s) used by `src/Captions.tsx` (burned in) and `scripts/export_srt.py` → `deliverables/buy_it_on_margin.en.srt` (42 cues). Same data, so the burned-in captions sit within one frame of the timing map.
+- **Short:** `src/Shorts.tsx`, 1080×1920: title "BUY IT ON MARGIN / 1929, again" above, the film-layered picture (the main edit scaled 0.75, cropped to 4:3) in the middle, captions below. "A cautionary tale of borrowed money. Not investment advice." card (4.5 s), then N08–N13 (29.18–58.87 s) with 0.25 s/0.5 s audio fades. Fixed: the offset edit covered the intro card (now nested after it).
+- **Thumbnails:** `scripts/thumbnail.py` from the N30 freeze (1080p, captions off): `deliverables/buy_it_on_margin_thumbnail.jpg` (1280×720, title over a top fade) and `…_short_thumbnail.jpg` (1080×1920, with the cautionary line).
+- **Renders:** `npx remotion render src/index.ts Main deliverables/buy_it_on_margin.mp4 --crf=17 --audio-bitrate=320k` (232.34 s, 1920×1080, 24 fps, 1 min 30 s); `… Shorts deliverables/buy_it_on_margin_short.mp4` (34.22 s, 1080×1920, 12 s).
+- **Checks:** audio offset vs the padded master 0.0 ms at 10, 100, 151 and 170 s (Short: 0.4 ms). Loudness −16.8 LUFS integrated, −1.7 dBFS peak (master −16.7 / −1.6); Short −16.0 / −3.4.
+- **M6 prep:** `docs/m6_fact_check_prompt.md`, a self-contained prompt for another lab's model: every on-screen text with its time, the song doc's fact card with links, the lyrics as sung.

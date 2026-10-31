@@ -58,3 +58,7 @@ Append-only. Every human action: when, what, and why.
 
 - **What:** "N18: can visually confirm that the ticker tape piles need to be redone · the one-frame modern dancer timing is correct, but let's keep it on screen longer so the joke is more visible · N23: this whole part is not reading right -- can you try to make a video mask from generated dancing instead so the dancing looks better · N24: the clock hands need to be redone -- the simple stick-and-dot reads too modern for this era · N28: same as N23, see about making a video mask from generated running"
 - Mid-turn: "N17: I think the joke can be enhanced if the hat box or the desk also has visible RAM sticks and GPUs"
+
+## 11. 2026-10-31 — M4 approved
+
+- **What:** "this is great, keep going" (animatic v2). Taken as M4 approval, including the provisional picks: N27 v2 1932, C1a 1930, C1b 1929, C2 1929, C3 1929, S23band 1930, S23kick 1929, S28run 1929, N17 v2 1932, the shadow-play keyframes and tape pile 1929.

@@ -136,10 +136,6 @@
   "type": "K",
   "picture": "Iris closes; card"
  },
- "N34": {
-  "type": "K",
-  "picture": "Credits: disclosure card, fact cards, 'Derived from'"
- },
  "N31a": {
   "type": "K",
   "picture": "Card (silence, ticker)"
@@ -151,5 +147,21 @@
  "N31c": {
   "type": "K",
   "picture": "Card (silence, ticker)"
+ },
+ "N34a": {
+  "type": "K",
+  "picture": "Credits card"
+ },
+ "N34b": {
+  "type": "K",
+  "picture": "Credits card"
+ },
+ "N34c": {
+  "type": "K",
+  "picture": "Credits card"
+ },
+ "N34d": {
+  "type": "K",
+  "picture": "Credits card"
  }
 }

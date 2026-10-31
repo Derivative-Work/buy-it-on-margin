@@ -3,8 +3,8 @@
  "fps": 24,
  "picture_fps": 18,
  "music_end": 185.834,
- "video_end": 202.167,
- "video_end_frame": 4852,
+ "video_end": 232.333,
+ "video_end_frame": 5576,
  "master_sha256": "d2f9028739d033bccb87f9076f1aed2f70e36403783de1b092f25f9ed8a399f9",
  "shots": {
   "N01": {
@@ -355,7 +355,7 @@
    "card_hold_needed_s": 2.17,
    "note": "iris closes; card over the band tag"
   },
-  "N34": {
+  "N34a": {
    "start": 181.0,
    "end": 202.167,
    "duration": 21.167,
@@ -364,7 +364,37 @@
    "cue": "t:181.0",
    "snapped_ms": 0,
    "card_hold_needed_s": 21.17,
-   "note": "credits; run past the music over crackle (human, 2026-10-31). End = start + hold rule for the disclosure card; fact cards and 'Derived from' added at M4"
+   "note": "disclosure; credits run past the music over crackle (human, 2026-10-31)"
+  },
+  "N34b": {
+   "start": 202.167,
+   "end": 213.667,
+   "duration": 11.5,
+   "start_frame": 4852,
+   "end_frame": 5128,
+   "cue": "after N34a's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 11.5
+  },
+  "N34c": {
+   "start": 213.667,
+   "end": 225.833,
+   "duration": 12.167,
+   "start_frame": 5128,
+   "end_frame": 5420,
+   "cue": "after N34b's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 12.17
+  },
+  "N34d": {
+   "start": 225.833,
+   "end": 232.333,
+   "duration": 6.5,
+   "start_frame": 5420,
+   "end_frame": 5576,
+   "cue": "after N34c's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 6.5
   }
  },
  "hold_problems": [

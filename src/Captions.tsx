@@ -1,0 +1,29 @@
+import React from 'react';
+import {useCurrentFrame} from 'remotion';
+import rule from '../config/captions.json';
+import tmap from '../timing/timing_map.json';
+import {FPS} from './config';
+
+/** Burned-in captions: the lyrics as sung, by the same rule as scripts/export_srt.py (config/captions.json). */
+type Cue = {a: number; b: number; text: string};
+export const CUES: Cue[] = (() => {
+  const lines = (tmap as any).sections.flatMap((s: any) => s.lines) as {start: number; end: number; text: string}[];
+  return lines.map((l, i) => {
+    const nxt = i + 1 < lines.length ? lines[i + 1].start : 1e9;
+    return {a: l.start, b: Math.max(l.start + rule.min_s, Math.min(nxt, l.end + rule.tail_s)), text: l.text};
+  });
+})();
+
+export const Captions: React.FC<{offsetS?: number; size?: number; bottom?: number; width?: number}> =
+  ({offsetS = 0, size = 44, bottom, width = 1300}) => {
+    const t = useCurrentFrame() / FPS + offsetS;
+    if (bottom === undefined && offsetS === 0) bottom = 46;
+    const cue = CUES.find((c) => t >= c.a && t < c.b);
+    if (!cue) return null;
+    return (
+      <div style={{position: 'absolute', left: 0, right: 0, ...(bottom === undefined ? {top: 0} : {bottom}), display: 'flex', justifyContent: 'center'}}>
+        <div style={{maxWidth: width, padding: '8px 22px', background: 'rgba(0,0,0,0.72)', color: '#f3efe6',
+          fontFamily: 'Old Standard TT', fontSize: size, lineHeight: 1.25, textAlign: 'center'}}>{cue.text}</div>
+      </div>
+    );
+  };

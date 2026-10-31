@@ -4,6 +4,7 @@ Cues as in Folks Like Us ("Section|line|word", "end:…", "mid:…", "t:<s>", "s
 - snap: move the start onto a band beat: the beat at or just before the word if within 200 ms (sung onsets lag
   the beat by ~80-130 ms), else the nearest within half a beat (cards and cuts land on a beat);
 - insert_picture_frames: a one-frame insert (1/18 s per picture frame) that returns to the previous shot;
+- cue "chain": start when the previous card's hold ends (credit cards in sequence);
 - end: "hold": end at the card's hold time, even past the music (credits over crackle);
 - card: checks the brief's hold rule (>= 1.5 s + 1 s per 3 words) and reports shots that are too short.
 Frames at 24 fps; frame = round(t * 24). Usage: python3 -I scripts/shot_times.py
@@ -35,7 +36,11 @@ def main():
     end_music = tm["audio"]["duration_s"]
     rows = []
     for s in json.load(open(CUES))["shots"]:
-        t, label = resolve(s["cue"], tm)
+        if s["cue"] == "chain":                       # credits: start when the previous card's hold ends
+            prev = rows[-1]
+            t, label = prev["t"] + 1.5 + len(cards[prev["card"]]["text"].split()) / 3, f"after {prev['id']}'s hold"
+        else:
+            t, label = resolve(s["cue"], tm)
         raw = t
         if s.get("snap"):
             # Sung onsets land ~80-130 ms after their beat, so take the beat at (or just after) the word's onset
