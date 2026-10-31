@@ -1,0 +1,17 @@
+{
+  "_doc": "Edit list for the locked master. scripts/build_master.py reads this. Times in seconds on each source's own timeline.",
+  "variants": {
+    "raw":        {"head": "audio/track/Buy It On Margin.wav",       "coda": "audio/track_v2/Buy It On Margin v2.wav"},
+    "postfilter": {"head": "audio/postfilter/v1_postfilter.wav",     "coda": "audio/postfilter/v2_postfilter.wav"}
+  },
+  "head_end": 151.884,
+  "head_end_note": "Human's cut point (2026-10-31): a few samples before v1's drums re-enter (151.886-151.888 s). v1 timeline.",
+  "head_fade_ms": 3,
+  "gap_s": 4.0,
+  "crackle": {"seed": 1929, "hiss_dbfs": -42.0, "pops_per_s": 9},
+  "ticker": {"src": "audio/sfx/freesound_community-daisy_wheel_word_processor-29353.mp3",
+             "src_in": 1.0, "starts_at_gap_s": 0.6, "rms_dbfs": -26.0, "fade_in_ms": 40, "fade_out_ms": 150},
+  "coda_in": 169.85,
+  "coda_in_note": "v2 (concat clip 3cdd3864) timeline: coda vocal onset, just after the extend's band stops (drums ~-45 dB, brass tail ~-31 dB under the voice).",
+  "coda_fade_in_ms": 20
+}

@@ -35,7 +35,11 @@ timing/failure_clips/
 audio/master/preview_stops.wav
 
 # The production archive (scripts/archive.sh), published as a release.
-archive/
+archive/*.wav
 
 # Puppeteer page dumps (regenerate with scripts/fetch_*.mjs)
 docs/suno/rsc.txt
+docs/suno*/resp_*.json
+docs/suno*/page.html
+docs/planning_chat/*.html
+docs/planning_chat/*.txt

@@ -27,3 +27,16 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - Each = take[0:cut] with a 3 ms fade + 4.0 s seeded synthetic crackle (seed 1929, hiss −42 dBFS, ~9 pops/s) + take[169.20 s:] with a 10 ms fade-in. Drops the 17.5 s instrumental tail.
 - Cuts: A 150.80 s, B 150.88 s, C 150.96 s (50/130/210 ms into "mar—"). Masters run 174.8–175.0 s.
 - No ticker yet (human supplies it). Crackle is synthetic because the take has no clean room-tone passage; swap for real room tone if preferred.
+
+## 5. 2026-10-31 — v2 inputs, planning chat
+
+- `node scripts/fetch_share.mjs https://claude.ai/share/6c3c88fb-d879-4878-a42b-e9bf95a87456 docs/planning_chat/planning_chat` (now public) → `planning_chat.json`; `python3 -I scripts/chat_snapshot_to_md.py … > planning_chat.md`. Snapshot "Song: Buy It On Margin (AI market downturn)", 2026-10-31T16:32:35Z, 18 messages. Message 13 holds the Gemini and ChatGPT audits.
+- `node scripts/fetch_suno.mjs <url> docs/suno_v2_{full,extend}`; `python3 -I scripts/suno_clip.py <dir> <clip id>` (new: generalises step 1's extraction) → `clip.json`, `lyrics.txt` in each.
+- v2 vs v1: sample-identical on [0, 151.0) s; Suno's join is within 151.0–151.68 s. The extend: band 152–169.8 s, coda vocal from 169.85 s ("I" at 170.45 s), "sell stock" ends ~191.5 s, then a short band tag 191–197 s to the end.
+- v2 stems don't sum to the v2 mix (−7 dB residual over 165–195 s), so the coda is cut from the mix, not rebuilt from stems.
+
+## 6. 2026-10-31 — Master (raw), for the human's ear
+
+- `../folks-like-us/.venv/bin/python -I scripts/build_master.py raw` → `audio/master/master_raw.wav` (185.834 s, peak −1.69 dBFS), `listen_raw.wav` (master 143.9–165.9 s: 8 s before the cut, the gap, 10 s of coda), `master_raw.json`.
+- Ticker: source 1.0 s on, mono, normalised to −26 dBFS RMS, enters 0.6 s into the gap, 150 ms fade-out into the coda. Crackle as in step 4.
+- Superseded: `scripts/master_candidates.py` and its outputs moved to `archive/`.
