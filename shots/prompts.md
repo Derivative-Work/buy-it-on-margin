@@ -119,3 +119,15 @@ ComfyUI template `video_ltx2_3_i2v` (`ltx-2.3-22b-dev-fp8` + distilled LoRA 0.5,
 
 | Clip | Keyframe | Seed | Output | Seconds | When | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| N27_v2 (refs: N26) | 1929 | 1664×1248 | `takes/stills/N27/N27_v2_s1929.png` | 98.6 | 2026-10-31T15:45:02-04:00 | pending pick |
+| N27_v2 (refs: N26) | 1930 | 1664×1248 | `takes/stills/N27/N27_v2_s1930.png` | 78.2 | 2026-10-31T15:46:21-04:00 | pending pick |
+| N27_v2 (refs: N26) | 1931 | 1664×1248 | `takes/stills/N27/N27_v2_s1931.png` | 78.1 | 2026-10-31T15:47:39-04:00 | pending pick |
+| N27_v2 (refs: N26) | 1932 | 1664×1248 | `takes/stills/N27/N27_v2_s1932.png` | 78.1 | 2026-10-31T15:48:57-04:00 | pending pick |
+| C1a | `takes/stills/kf_C1a/kf_C1a_s1930.png` | 1929 | `takes/clips/C1a/C1a_s1929.mp4` | 33.1 | 2026-10-31T15:49:36-04:00 | pending pick |
+| C1a | `takes/stills/kf_C1a/kf_C1a_s1930.png` | 1930 | `takes/clips/C1a/C1a_s1930.mp4` | 11.4 | 2026-10-31T15:49:47-04:00 | pending pick |
+| C1b | `takes/stills/kf_C1b/kf_C1b_s1931.png` | 1929 | `takes/clips/C1b/C1b_s1929.mp4` | 15.0 | 2026-10-31T15:50:02-04:00 | pending pick |
+| C1b | `takes/stills/kf_C1b/kf_C1b_s1931.png` | 1930 | `takes/clips/C1b/C1b_s1930.mp4` | 12.0 | 2026-10-31T15:50:14-04:00 | pending pick |
+| C2 | `takes/stills/kf_C2/kf_C2_s1929.png` | 1929 | `takes/clips/C2/C2_s1929.mp4` | 14.1 | 2026-10-31T15:50:28-04:00 | pending pick |
+| C2 | `takes/stills/kf_C2/kf_C2_s1929.png` | 1930 | `takes/clips/C2/C2_s1930.mp4` | 11.1 | 2026-10-31T15:50:40-04:00 | pending pick |
+| C3 | `takes/stills/kf_C3/kf_C3_s1930.png` | 1929 | `takes/clips/C3/C3_s1929.mp4` | 14.0 | 2026-10-31T15:50:54-04:00 | pending pick |
+| C3 | `takes/stills/kf_C3/kf_C3_s1930.png` | 1930 | `takes/clips/C3/C3_s1930.mp4` | 11.0 | 2026-10-31T15:51:05-04:00 | pending pick |

@@ -254,6 +254,23 @@ const ChatZoom: React.FC<{dur: number}> = ({dur}) => {
   );
 };
 
+/** Draft overlay for reviews: shot ID and timecode in the left pillarbox, outside the picture. */
+const DraftLabel: React.FC = () => {
+  const frame = useCurrentFrame();
+  const t = frame / FPS;
+  const id = Object.keys(SHOTS).filter((k) => !SHOTS[k].insert_over).find((k) => frame >= SHOTS[k].start_frame && frame < SHOTS[k].end_frame) ?? '';
+  const ins = Object.keys(SHOTS).find((k) => SHOTS[k].insert_over && frame >= SHOTS[k].start_frame && frame < SHOTS[k].end_frame);
+  const mm = Math.floor(t / 60), ss = (t % 60).toFixed(2).padStart(5, '0');
+  return (
+    <div style={{position: 'absolute', left: 0, top: 0, width: 240, height: 1080, color: '#9a9a9a', fontFamily: 'monospace',
+      fontSize: 34, padding: 24, lineHeight: 1.5}}>
+      <div style={{color: '#e8e4da', fontSize: 52}}>{ins ?? id}</div>
+      <div>{mm}:{ss}</div>
+      <div style={{fontSize: 24}}>f{frame}</div>
+    </div>
+  );
+};
+
 export const Main: React.FC<{draft?: boolean}> = ({draft}) => {
   const order = Object.keys(SHOTS).filter((k) => !SHOTS[k].insert_over && k !== 'B01');
   const inserts = Object.keys(SHOTS).filter((k) => SHOTS[k].insert_over);
@@ -288,6 +305,7 @@ export const Main: React.FC<{draft?: boolean}> = ({draft}) => {
           ))}
         </FilmLayer>
       </Sequence>
+      {draft && <DraftLabel />}
     </AbsoluteFill>
   );
 };

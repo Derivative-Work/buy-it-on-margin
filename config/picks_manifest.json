@@ -3,6 +3,10 @@
  "files": [
   "media/chat/planning_chat.json",
   "media/chat/planning_chat.png",
+  "media/picks/C1a.mp4",
+  "media/picks/C1b.mp4",
+  "media/picks/C2.mp4",
+  "media/picks/C3.mp4",
   "media/picks/N02.png",
   "media/picks/N04.png",
   "media/picks/N05.png",
@@ -19,6 +23,7 @@
   "media/picks/N22.png",
   "media/picks/N24.png",
   "media/picks/N26.png",
+  "media/picks/N27.png",
   "media/picks/N32.png",
   "media/picks/kf_C1a.png",
   "media/picks/kf_C1b.png",
@@ -93,6 +98,10 @@
    1248
   ],
   "media/picks/N26.png": [
+   1664,
+   1248
+  ],
+  "media/picks/N27.png": [
    1664,
    1248
   ],

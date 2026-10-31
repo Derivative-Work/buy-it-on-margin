@@ -1,12 +1,39 @@
 {
  "_doc": "M3 batch 2: LTX-2.3 image-to-video from the picked keyframes (scripts/clips.py, ComfyUI template video_ltx2_3_i2v, converted with scripts/comfy_ui_to_api.mjs). Prompt = motion + the brief's shared clip style. 4 s at 24 fps, 960x720 (4:3; the template's two-stage half-res + 2x upscale). Two seeds per clip. Picks go in 'kept' as {clip: path}.",
  "style": "1920s black-and-white newsreel footage, static camera, period clothing, soft light, smooth motion, no text, no logos",
- "size": [960, 720], "fps": 24, "seconds": 4, "seeds": [1929, 1930],
+ "size": [
+  960,
+  720
+ ],
+ "fps": 24,
+ "seconds": 4,
+ "seeds": [
+  1929,
+  1930
+ ],
  "clips": {
-  "C1a": {"keyframe": "kf_C1a", "motion": "the couples dance the Charleston energetically, kicking their heels and swinging their arms in time, skirts swirling"},
-  "C1b": {"keyframe": "kf_C1b", "motion": "the couples on the floor dance the Charleston, kicking heels in unison, the band plays on the stage behind them"},
-  "C2": {"keyframe": "kf_C2", "motion": "long strips of paper ticker tape stream and flutter down from the ceiling onto the dancers, who keep dancing"},
-  "C3": {"keyframe": "kf_C3", "motion": "one hand passes the crumpled banknote to the other hand, which closes around it and pulls away"}
+  "C1a": {
+   "keyframe": "kf_C1a",
+   "motion": "the couples dance the Charleston energetically, kicking their heels and swinging their arms in time, skirts swirling"
+  },
+  "C1b": {
+   "keyframe": "kf_C1b",
+   "motion": "the couples on the floor dance the Charleston, kicking heels in unison, the band plays on the stage behind them"
+  },
+  "C2": {
+   "keyframe": "kf_C2",
+   "motion": "long strips of paper ticker tape stream and flutter down from the ceiling onto the dancers, who keep dancing"
+  },
+  "C3": {
+   "keyframe": "kf_C3",
+   "motion": "one hand passes the crumpled banknote to the other hand, which closes around it and pulls away"
+  }
  },
- "kept": {}
+ "kept": {
+  "C1a": "takes/clips/C1a/C1a_s1930.mp4",
+  "C1b": "takes/clips/C1b/C1b_s1929.mp4",
+  "C2": "takes/clips/C2/C2_s1929.mp4",
+  "C3": "takes/clips/C3/C3_s1929.mp4"
+ },
+ "_kept_status": "provisional (agent's suggestion, 2026-10-31), for the human to confirm in the M4 animatic"
 }

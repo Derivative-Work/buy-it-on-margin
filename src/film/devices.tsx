@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Easing, Img, interpolate, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {FILM, PIC_H, PIC_W, SEED} from '../config';
 import {hash} from './rand';
 
@@ -41,12 +41,24 @@ export const Still: React.FC<{src: string; from: Frame; to: Frame; allowFast?: b
 
 /* ---------- Clip: generated video, optionally over-cranked ---------- */
 
-export const Clip: React.FC<{src: string; rate?: number; startFrom?: number}> = ({src, rate = 1, startFrom = 0}) => (
-  <AbsoluteFill style={{background: '#000'}}>
-    <OffthreadVideo src={staticFile(src)} playbackRate={rate} startFrom={startFrom} muted
-      style={{width: PIC_W, height: PIC_H, objectFit: 'cover'}} />
-  </AbsoluteFill>
-);
+/** Clips are 4 s; a longer shot loops it (brief: loop or re-cut rather than generate more), mirrored on every
+ * other pass so the repeat reads as a new angle rather than a jump. */
+export const CLIP_FRAMES = 97;
+export const Clip: React.FC<{src: string; rate?: number; startFrom?: number}> = ({src, rate = 1, startFrom = 0}) => {
+  const frame = useCurrentFrame();
+  const pass = Math.floor((CLIP_FRAMES - startFrom) / rate);
+  const k = Math.floor(frame / Math.max(1, pass));
+  return (
+    <AbsoluteFill style={{background: '#000'}}>
+      <Loop durationInFrames={Math.max(1, pass)}>
+        <AbsoluteFill style={{transform: k % 2 ? 'scaleX(-1)' : undefined}}>
+          <OffthreadVideo src={staticFile(src)} playbackRate={rate} startFrom={startFrom} muted
+            style={{width: PIC_W, height: PIC_H, objectFit: 'cover'}} />
+        </AbsoluteFill>
+      </Loop>
+    </AbsoluteFill>
+  );
+};
 
 /* ---------- Intertitle card: white on black, thin Art Deco border ---------- */
 

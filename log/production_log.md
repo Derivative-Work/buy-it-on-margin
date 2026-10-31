@@ -136,3 +136,10 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 
 - `scripts/batch2b.sh`: frees ComfyUI's models before each stage (`comfy_client.free()`): RAM went from 33 GB used / 4 GB free to 5 GB used / 30 GB free. Then N27 v2 (4 seeds, conditioned on N26 1930), free, clips (C1a, C1b, C2, C3 ×2 seeds), contact sheet.
 - N06 bulb overlay at (0.507, 0.243) of the image, located on a gridded view of the pick. The bulb and needle overlays now position by image percentage, so they work on wide images. Checked on one frame.
+
+## 22. 2026-10-31 — Batch 2b done; M4 animatic v1
+
+- N27 v2: 4 takes at ~78 s; the pie now reads in all four (C has two tins). Clips: 8 takes (C1a, C1b, C2, C3 × seeds 1929/1930), 11–33 s each, 97 frames at 24 fps, 960×704 (the template rounds height to a multiple of 32). RAM stayed under 5 GB used at each stage boundary.
+- Provisional picks (agent's suggestion, for the human to confirm in the animatic): N27 v2 1932; C1a 1930, C1b 1929, C2 1929, C3 1929 (`config/clips.json` → `kept`).
+- `Clip` loops a 4 s clip for longer shots (N09 9.0 s, N12 8.2 s), mirrored on every other pass (brief: loop or re-cut rather than generate more). Draft mode (`--props='{"draft":true}'`) prints shot ID, timecode and frame in the left pillarbox.
+- `npx remotion render src/index.ts Main out/m4/animatic_v1.mp4 --scale=0.5 --crf=22 --props='{"draft":true}'`: 202.18 s at 960×540, rendered in 50 s. Checked 17 frames across the edit. Known weak spot: the code tape piles (N12, N18) read as stiff sticks over a flat band, not paper tape; to redo.
