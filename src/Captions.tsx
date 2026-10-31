@@ -18,7 +18,8 @@ export const Captions: React.FC<{offsetS?: number; size?: number; bottom?: numbe
   ({offsetS = 0, size = 44, bottom, width = 1300}) => {
     const t = useCurrentFrame() / FPS + offsetS;
     if (bottom === undefined && offsetS === 0) bottom = 46;
-    const cue = CUES.find((c) => t >= c.a && t < c.b);
+    // in an excerpt (offsetS > 0) a cue must start inside it: no clipped tail of the line before the cut
+    const cue = CUES.find((c) => t >= c.a && t < c.b && c.a >= offsetS);
     if (!cue) return null;
     return (
       <div style={{position: 'absolute', left: 0, right: 0, ...(bottom === undefined ? {top: 0} : {bottom}), display: 'flex', justifyContent: 'center'}}>
