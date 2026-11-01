@@ -66,6 +66,7 @@ Anthropic's S-1 was not yet effective on November 1, 2026. If it becomes effecti
 - [`src/`](src/): the Remotion project: the film layer, the devices, the edit, the Short.
 - [`scripts/`](scripts/): one script per step. Each one documents itself at the top.
 - [`docs/planning_chat/`](docs/planning_chat/): the planning chat, as Markdown and as the raw share snapshot. [`docs/suno*/`](docs/): the Suno take records and the lyrics as submitted.
+- [`METADATA.md`](METADATA.md): the YouTube title, description, tags and settings for both uploads.
 - [`deliverables/`](deliverables/): the upload's captions (the lyrics as sung) and the thumbnails for the video and the Short.
 
 ## Reproducing it

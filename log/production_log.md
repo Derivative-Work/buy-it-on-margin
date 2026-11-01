@@ -280,3 +280,15 @@ Timing:
 
 - `scripts/manifest.sh` (246 files), then `scripts/archive.sh` rebuilt on the final content (main video 301.18 s). The rebuild check from that archive passed: the SRTs, thumbnails and Short identical; the main video's audio identical; main picture worst frame 42.79 dB PSNR.
 - The human approved: "that's it, go ahead and push". `git push -u origin main`, then `scripts/archive.sh --upload` → release `archive-2026-11-01`. The repo stays private until the human makes it public.
+
+## 33. 2026-11-01 — Song doc fact card; METADATA.md
+
+- **Song doc** (rev 37 → 43):
+  - "holdin' company" row: Insull's 1932 collapse plus Nvidia's circular financing ($30B in OpenAI, up to $10B in Anthropic, up to $105B lease guarantee), with EBSCO, The Conversation and Data Center Knowledge links;
+  - loan row: "mostly bonds, not margin", ~$200B from the five hyperscalers;
+  - IOUs row: "high-yield bonds and leveraged loans";
+  - Alphabet row: the 8-K earnings release added as a source;
+  - after the disclosure card: a "Lyric reference cards" paragraph with the three card texts, word for word.
+- **METADATA.md**, in the format of Not Yet and Sandbox Rhapsody: a pre-upload checklist (repo public, IPO re-check, intervention count, the Short's link), then for each upload the title, description, tags and settings.
+  - Main video: description 4,649 of 5,000 characters; chapters from the timing map plus the 5.17 s opening card, each over 10 s; facts and sources from the end cards; credits.
+  - Short: its own title, description and tags.
