@@ -61,6 +61,24 @@
    "source": "song doc, 'Disclosure end card'",
    "m6": "revised after the M6 audits (log/audits/2026-10-31_m6_*.md, log/decisions.md 6)"
   },
+  "N34r1": {
+   "kind": "credits",
+   "text": "“Who needs a dollar when the bank’ll float a loan?” Today the borrowing is mostly bonds, not margin: about $500 billion of AI-related debt was issued in 2026 by October, some $200 billion of it by Amazon, Alphabet, Meta, Microsoft and Oracle, and at least 18 data center deals priced at double-digit yields.",
+   "source": "Bloomberg via Crypto Briefing (Oct 10, 2026) and CRE Daily (Oct 28, 2026)",
+   "note": "lyric references (human request 2026-11-01): the specific facts behind lines of the lyrics; company names only in the credits (brief)"
+  },
+  "N34r2": {
+   "kind": "credits",
+   "text": "“A holdin’ company holds ’em”: Samuel Insull’s 1920s utility empire was a pyramid of leveraged holding companies owning one another’s shares, and it collapsed in 1932. Today the money circles: Nvidia has invested $30 billion in OpenAI and up to $10 billion in Anthropic, which both run on its chips, and guaranteed up to $105 billion for an OpenAI data center.",
+   "source": "EBSCO Research Starters (Insull); The Conversation via Phys.org (Oct 18, 2026); Data Center Knowledge (Aug 19, 2026)",
+   "note": "lyric references (human request 2026-11-01): the specific facts behind lines of the lyrics; company names only in the credits (brief)"
+  },
+  "N34r3": {
+   "kind": "credits",
+   "text": "“The fella with the cloud boom” is Alphabet. On October 28, Google Cloud revenue was up 103% to $30.7 billion, but free cash flow was negative $9.1 billion after $51.4 billion of capital spending. Its shares fell almost 13% the next day.",
+   "source": "Alphabet Q3 2026 earnings release (8-K, Oct 28, 2026); Fortune (Oct 30, 2026)",
+   "note": "lyric references (human request 2026-11-01): the specific facts behind lines of the lyrics; company names only in the credits (brief)"
+  },
   "N34b": {
    "kind": "credits",
    "text": "Where 1929 doesn't fit: by 1932 the Dow was down about 89% from its peak, and it took until 1954 to regain that peak. This week was two bad days, so far.",

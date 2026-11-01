@@ -8,8 +8,8 @@
   "frames": 124
  },
  "music_end": 185.834,
- "video_end": 242.294,
- "video_end_frame": 5815,
+ "video_end": 296.014,
+ "video_end_frame": 7104,
  "master_sha256": "d2f9028739d033bccb87f9076f1aed2f70e36403783de1b092f25f9ed8a399f9",
  "shots": {
   "N01": {
@@ -371,32 +371,62 @@
    "card_hold_needed_s": 25.17,
    "note": "disclosure; credits run past the music over crackle (human, 2026-10-31)"
   },
-  "N34b": {
+  "N34r1": {
    "start": 206.167,
-   "end": 218.333,
-   "duration": 12.167,
+   "end": 225.333,
+   "duration": 19.167,
    "start_frame": 4948,
-   "end_frame": 5240,
+   "end_frame": 5408,
    "cue": "after N34a's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 19.17
+  },
+  "N34r2": {
+   "start": 225.333,
+   "end": 247.167,
+   "duration": 21.833,
+   "start_frame": 5408,
+   "end_frame": 5932,
+   "cue": "after N34r1's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 21.83
+  },
+  "N34r3": {
+   "start": 247.167,
+   "end": 262.667,
+   "duration": 15.5,
+   "start_frame": 5932,
+   "end_frame": 6304,
+   "cue": "after N34r2's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 15.5
+  },
+  "N34b": {
+   "start": 262.667,
+   "end": 274.833,
+   "duration": 12.167,
+   "start_frame": 6304,
+   "end_frame": 6596,
+   "cue": "after N34r3's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 12.17
   },
   "N34c": {
-   "start": 218.333,
-   "end": 232.5,
+   "start": 274.833,
+   "end": 289.0,
    "duration": 14.167,
-   "start_frame": 5240,
-   "end_frame": 5580,
+   "start_frame": 6596,
+   "end_frame": 6936,
    "cue": "after N34b's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 14.17
   },
   "N34d": {
-   "start": 232.5,
-   "end": 242.294,
-   "duration": 9.794,
-   "start_frame": 5580,
-   "end_frame": 5815,
+   "start": 289.0,
+   "end": 296.014,
+   "duration": 7.014,
+   "start_frame": 6936,
+   "end_frame": 7104,
    "cue": "after N34c's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 6.5

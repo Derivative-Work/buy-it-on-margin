@@ -365,6 +365,18 @@
   "N34d": {
    "kind": "card",
    "card": "N34d"
+  },
+  "N34r1": {
+   "kind": "card",
+   "card": "N34r1"
+  },
+  "N34r2": {
+   "kind": "card",
+   "card": "N34r2"
+  },
+  "N34r3": {
+   "kind": "card",
+   "card": "N34r3"
   }
  }
 }

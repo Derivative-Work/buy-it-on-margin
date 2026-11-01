@@ -87,3 +87,7 @@ Append-only. Every human action: when, what, and why.
 ## 17. 2026-11-01 — Repo created
 
 - **What:** "I created the repo on GitHub and gave you access, get it ready". `Derivative-Work/buy-it-on-margin`, created empty and private by the human; Claude Code has admin access.
+
+## 18. 2026-11-01 — Lyric-reference cards
+
+- **What:** "don't upload the release yet, I have some more (minor) comments that will change the content of the video", then: "the fact cards are great disclaimers on the message as a whole but don't cite the specific references in the lyrics (i.e. "holding companies" regarding circular financing involving NVIDIA in particular, the modern day's use bonds instead of pure margin, Google as the "fella with the cloud boom")"

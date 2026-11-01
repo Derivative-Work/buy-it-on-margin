@@ -252,3 +252,26 @@ Modelled on Folks Like Us (published).
 - **MANIFEST.sha256:** `scripts/manifest.sh` (audio, takes, picks, chat, deliverables; 246 files).
 - Deliverables: the main and Short SRTs from entry 28 committed (they had been regenerated but not committed); thumbnails regenerated, byte-identical.
 - Rebuild test from the local archive (`PY=../folks-like-us/.venv/bin/python scripts/rebuild.sh`): the SRTs, thumbnails and Short came out identical, and the main video's audio identical; main picture worst frame 42.81 dB PSNR (pass). The release is not uploaded yet: the human has more comments that change the video (2026-11-01), so the archive will be rebuilt afterwards.
+
+## 31. 2026-11-01 — Lyric-reference cards (N34r1–r3)
+
+Three credit cards after the disclosure, in lyric order. They carry real company names, which the brief allows only in the credits' fact cards. Every figure was checked on the page cited in the README (Sources, item 7):
+- **N34r1, "Who needs a dollar when the bank'll float a loan?":** the borrowing is bonds, not margin.
+  - ~$500B of AI-related debt in 2026 by October, ~$200B of it from the five hyperscalers (Crypto Briefing, citing Bloomberg, Oct 10).
+  - ≥18 data center high-yield deals at double-digit yields (CRE Daily, citing Bloomberg, Oct 28).
+- **N34r2, "A holdin' company holds 'em":** Insull's leveraged pyramid, collapsed 1932 (EBSCO). Today the circular financing:
+  - Nvidia's $30B in OpenAI and up to $10B in Anthropic (The Conversation, Oct 18);
+  - its up to $105B lease guarantee for OpenAI's Ohio campus (Data Center Knowledge, Aug 19; Nvidia 8-K Aug 17).
+
+  Anthropic's S-1 lists NVIDIA GPUs.
+- **N34r3, "The fella with the cloud boom":** Alphabet. Checked against its 8-K exhibit 99.1 (Oct 28):
+  - Cloud $30,709M, +103%;
+  - capex $51,355M;
+  - free cash flow −$9,065M.
+
+  The −13% drop is from Fortune. "−$9.1 billion" → "negative $9.1 billion": the minus sign wrapped to a line start and read as a dash.
+
+Timing:
+- The credits now run 181.00–296.01 s.
+- The credits cover's `src_in` moved 89.64 → 35.92 s, the downbeat of the phrase at ~36.0 s (phrases at 36.0, 53.9, 71.8, 89.7 s), so the piano still ends on its own final chord (at 294.4 s) under the last card.
+- Release re-rendered: 301.18 s. A/V offset 0.0 ms at 100, 170, 200 and 250 s (290 s: 0.02 ms). The SRTs are unchanged. The Short has no credits and is unchanged.
