@@ -62,3 +62,8 @@ Append-only. Every human action: when, what, and why.
 ## 11. 2026-10-31 — M4 approved
 
 - **What:** "this is great, keep going" (animatic v2). Taken as M4 approval, including the provisional picks: N27 v2 1932, C1a 1930, C1b 1929, C2 1929, C3 1929, S23band 1930, S23kick 1929, S28run 1929, N17 v2 1932, the shadow-play keyframes and tape pile 1929.
+
+## 12. 2026-10-31 — M6 audits run
+
+- **What:** ran `docs/m6_fact_check_prompt.md` on ChatGPT and Gemini (model versions not recorded in the files) and saved both responses: "audits are in ~/Downloads/buy-it-on-margin-*-m6-audit.md". Copied verbatim to `log/audits/2026-10-31_m6_chatgpt.md` and `log/audits/2026-10-31_m6_gemini.md`.
+- Also: "Encode a small copy you can send me to preview here" (480p preview, before the audits).

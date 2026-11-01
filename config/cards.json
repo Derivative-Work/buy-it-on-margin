@@ -43,7 +43,8 @@
   },
   "N31c": {
    "kind": "card",
-   "text": "One of these began the Great Depression. The other was two bad days, so far."
+   "text": "One of these helped start the Great Depression. The other was two bad days, so far.",
+   "m6": "revised after the M6 audits (log/audits/2026-10-31_m6_*.md, log/decisions.md 6)"
   },
   "N33": {
    "kind": "card",
@@ -51,18 +52,21 @@
   },
   "N34a": {
    "kind": "credits",
-   "text": "Lyrics drafted by Claude, an AI model made by Anthropic, PBC. Anthropic filed to go public on October 26, 2026. Its filing reports a first-half 2026 net loss of $80.7 billion, of which $72.4 billion is a non-cash accounting charge that grew with its valuation, and $518 billion in committed future infrastructure spending. This is satire, not investment advice.",
-   "source": "song doc, 'Disclosure end card'"
+   "text": "Lyrics drafted by Claude, an AI model made by Anthropic, PBC. Anthropic filed to go public on October 26, 2026. Its filing reports a first-half 2026 net loss of $80.7 billion, of which $72.4 billion is a non-cash charge on its convertible notes and SAFEs that grew with its valuation. Reuters, citing a draft of the filing, reported $518 billion in committed future infrastructure spending. This is satire, not investment advice.",
+   "source": "song doc, 'Disclosure end card'",
+   "m6": "revised after the M6 audits (log/audits/2026-10-31_m6_*.md, log/decisions.md 6)"
   },
   "N34b": {
    "kind": "credits",
-   "text": "Where 1929 doesn't fit: by 1932 the Dow was down about 89% from its peak, and it took until 1954 to recover. This week was two bad days, so far.",
-   "source": "song doc, 'Where 1929 doesn't fit' (Scale)"
+   "text": "Where 1929 doesn't fit: by 1932 the Dow was down about 89% from its peak, and it took until 1954 to regain that peak. This week was two bad days, so far.",
+   "source": "song doc, 'Where 1929 doesn't fit' (Scale)",
+   "m6": "revised after the M6 audits (log/audits/2026-10-31_m6_*.md, log/decisions.md 6)"
   },
   "N34c": {
    "kind": "credits",
-   "text": "In 1929, buyers put about 10% down; today's US rules require 50% for most margin purchases. And much of today's AI spending comes from very profitable companies, not small investors on credit.",
-   "source": "song doc, 'Where 1929 doesn't fit' (Leverage, Who's spending)"
+   "text": "In 1929, buyers put about 10% down; today's US rules (Regulation T) require 50% up front for most stock bought on margin. And much of today's AI spending comes from large, profitable companies, not small investors on credit.",
+   "source": "song doc, 'Where 1929 doesn't fit' (Leverage, Who's spending)",
+   "m6": "revised after the M6 audits (log/audits/2026-10-31_m6_*.md, log/decisions.md 6)"
   },
   "N34d": {
    "kind": "credits",

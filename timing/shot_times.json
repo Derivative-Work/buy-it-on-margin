@@ -3,8 +3,8 @@
  "fps": 24,
  "picture_fps": 18,
  "music_end": 185.834,
- "video_end": 232.333,
- "video_end_frame": 5576,
+ "video_end": 239.0,
+ "video_end_frame": 5736,
  "master_sha256": "d2f9028739d033bccb87f9076f1aed2f70e36403783de1b092f25f9ed8a399f9",
  "shots": {
   "N01": {
@@ -321,7 +321,7 @@
    "end_frame": 3876,
    "cue": "t:155.884",
    "snapped_ms": 0,
-   "card_hold_needed_s": 6.5,
+   "card_hold_needed_s": 6.83,
    "note": "PROPOSED: the third card runs over the coda's first line; the 4 s silence holds only the two dates"
   },
   "N32": {
@@ -357,41 +357,41 @@
   },
   "N34a": {
    "start": 181.0,
-   "end": 202.167,
-   "duration": 21.167,
+   "end": 206.167,
+   "duration": 25.167,
    "start_frame": 4344,
-   "end_frame": 4852,
+   "end_frame": 4948,
    "cue": "t:181.0",
    "snapped_ms": 0,
-   "card_hold_needed_s": 21.17,
+   "card_hold_needed_s": 25.17,
    "note": "disclosure; credits run past the music over crackle (human, 2026-10-31)"
   },
   "N34b": {
-   "start": 202.167,
-   "end": 213.667,
-   "duration": 11.5,
-   "start_frame": 4852,
-   "end_frame": 5128,
-   "cue": "after N34a's hold",
-   "snapped_ms": 0,
-   "card_hold_needed_s": 11.5
-  },
-  "N34c": {
-   "start": 213.667,
-   "end": 225.833,
+   "start": 206.167,
+   "end": 218.333,
    "duration": 12.167,
-   "start_frame": 5128,
-   "end_frame": 5420,
-   "cue": "after N34b's hold",
+   "start_frame": 4948,
+   "end_frame": 5240,
+   "cue": "after N34a's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 12.17
   },
+  "N34c": {
+   "start": 218.333,
+   "end": 232.5,
+   "duration": 14.167,
+   "start_frame": 5240,
+   "end_frame": 5580,
+   "cue": "after N34b's hold",
+   "snapped_ms": 0,
+   "card_hold_needed_s": 14.17
+  },
   "N34d": {
-   "start": 225.833,
-   "end": 232.333,
+   "start": 232.5,
+   "end": 239.0,
    "duration": 6.5,
-   "start_frame": 5420,
-   "end_frame": 5576,
+   "start_frame": 5580,
+   "end_frame": 5736,
    "cue": "after N34c's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 6.5
@@ -403,6 +403,6 @@
   "N20: 1.08 s < hold 2.50 s (3 words)",
   "N31a: 2.00 s < hold 2.83 s (4 words)",
   "N31b: 2.00 s < hold 2.83 s (4 words)",
-  "N31c: 5.64 s < hold 6.50 s (15 words)"
+  "N31c: 5.64 s < hold 6.83 s (16 words)"
  ]
 }

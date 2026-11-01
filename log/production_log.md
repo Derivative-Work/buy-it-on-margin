@@ -162,3 +162,10 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - **Renders:** `npx remotion render src/index.ts Main deliverables/buy_it_on_margin.mp4 --crf=17 --audio-bitrate=320k` (232.34 s, 1920×1080, 24 fps, 1 min 30 s); `… Shorts deliverables/buy_it_on_margin_short.mp4` (34.22 s, 1080×1920, 12 s).
 - **Checks:** audio offset vs the padded master 0.0 ms at 10, 100, 151 and 170 s (Short: 0.4 ms). Loudness −16.8 LUFS integrated, −1.7 dBFS peak (master −16.7 / −1.6); Short −16.0 / −3.4.
 - **M6 prep:** `docs/m6_fact_check_prompt.md`, a self-contained prompt for another lab's model: every on-screen text with its time, the song doc's fact card with links, the lyrics as sung.
+
+## 25. 2026-10-31 — M6 fixes; finals re-rendered
+
+- Audits in `log/audits/`; resolutions in `log/decisions.md` 6. Primary check: the S-1 HTML from EDGAR (`https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm`), text-searched for the disclosure figures.
+- `config/cards.json`: N31c, N34a, N34b, N34c revised (N34c with a non-breaking space in "Regulation T" after it wrapped as "Regulation / T").
+- `scripts/shot_times.py` → credits 181.00–239.00 s (N34a 25.2 s, N34b 12.2 s, N34c 14.2 s, N34d 6.5 s); same pre-approved hold shortfalls (N05, N19, N20, N31a/b, N31c now 5.6 s for 16 words). `scripts/pad_master.py` (crackle to 239.0 s); `scripts/export_srt.py` (42 cues, unchanged).
+- `npx remotion render src/index.ts Main deliverables/buy_it_on_margin.mp4 --crf=17 --audio-bitrate=320k` (239.02 s). Checked frames of all four revised cards. The Short has no revised text and was not re-rendered.

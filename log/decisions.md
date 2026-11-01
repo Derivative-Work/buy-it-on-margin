@@ -24,3 +24,15 @@ No opening screen capture. The coda's last line, "Why, its maker just filed to s
 ## 5. 2026-10-31 — Clips at 960×720, not 480p
 
 The LTX-2.3 i2v template samples at half size, then upscales ×2. Asking for 960×720 runs the main pass at 480×360, so it stays fast. The film layer softens it to match the stills anyway.
+
+## 6. 2026-10-31 — M6: resolving the audit flags
+
+Verdicts: ChatGPT "HOLD FOR CORRECTIONS" (MISLEADING: N31c, N34a, N34c); Gemini all ACCURATE except N34d UNVERIFIABLE (repo not public yet). Each flag was checked against primary sources before changing a card.
+
+- **N34a: the $518B was misattributed.** The public S-1 (EDGAR, accession 0001628280-26-067168, filed 2026-10-26) confirms the six-month net loss of $80,748M and the $72,388M "change in fair value of convertible notes, derivative liabilities, and SAFEs", "primarily driven by … an increase in our enterprise valuation". But it leaves the aggregate commitment total blank ("aggregate committed spend of more than $ ,"); "518" appears nowhere in it. The figure is Reuters' report on a draft prospectus (~Oct 20). The card now attributes it to Reuters and the draft, and names the charge (convertible notes and SAFEs). Gemini's "ACCURATE, every figure matches the S-1" was wrong on this point.
+- **N31c:** "began" → "helped start" the Great Depression (the crash was one cause among several).
+- **N34b:** "to recover" → "to regain that peak" (the nominal Dow peak, not the economy or real returns).
+- **N34c:** names Regulation T and "50% up front" (initial margin), and "very profitable" → "large, profitable".
+- **Not changed:** N25 "$1,000,000,000,000 GONE IN A DAY" (both rated ACCURATE; "TECH STOCKS" already frames it as market value, and the headline is the joke). ChatGPT's persistent "SATIRE — NOT INVESTMENT ADVICE" caption over the choruses (out of period; SH00 and N34a carry the disclaimer; suggested for the video description instead).
+- **Gemini's fact-card claims checked and rejected:** "the S&P tech sector fell 4.2%, not more than 4.2%" — the cited NBC article says "more than 4.2%". "Goldman's figure was $489B" — unverified; but the cited CryptoBriefing page attributes "nearly $500 billion" to Bloomberg, not Goldman, so the fact card's attribution needs fixing either way.
+- **Open before release:** make `github.com/Derivative-Work/buy-it-on-margin` public (N34d); re-check the S-1's status (an S-1/A with a price range or effectiveness changes N34a); the song doc's fact card needs the matching edits (disclosure row, $518B attribution, the AI-debt source, Cloud vs total revenue).
