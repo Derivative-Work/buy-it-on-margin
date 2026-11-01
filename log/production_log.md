@@ -181,3 +181,10 @@ Edits to the song doc (https://claude.ai/artifact/2ss6PBcptViGh1xRQGYW1F, rev 24
   - AI debt: credited to Bloomberg, as the linked page does; Goldman's note is still to be linked.
   - "Every lab's got a forecast": the $518B is from a draft (Reuters); the public S-1 leaves that total blank. Sources are now Newsbytes, Let's Data Science citing Reuters, and the S-1 on EDGAR; the Bernama link was replaced because it credited the figure to the filing.
 - **Intro line:** notes the M6 audit and the EDGAR check.
+
+## 27. 2026-10-31 — Credits music: the player-piano cover
+
+- Source: `audio/credits_cover/buy-it-on-margin-instrumental.wav` (sha c478427a…, 48 kHz, 143.6 s, −17.3 LUFS); copied from ~/Downloads. Clip record: `node scripts/fetch_suno.mjs https://suno.com/s/DbAiN1YpFiQ1whef <dir>` + `scripts/suno_clip.py <dir> 7cc9fb84-8d74-46f7-8a2e-eaaeba70dcb4` → `docs/suno_credits_cover/`. Not post-filtered (human).
+- Excerpt: librosa beats (107.7 BPM) and segmentation put a section boundary at ~89.7 s. That 8-bar block repeats the section at 53.9 s, and the next boundary is 18.5 s later at 108.2 s. Downbeat onset 89.672 s; `src_in` 89.64 with a 30 ms fade-in. It runs to the cover's own ending (the final chord decays out by 143.55 s), 53.96 s.
+- `config/master.json` "credits_cover": 1.0 s of crackle after the coda, then the piano at −3 dB over the crackle bed, then 1.5 s of crackle after the last chord. `scripts/pad_master.py` mixes it; `scripts/shot_times.py` holds N34d until it ends. Credits music −20.2 LUFS (song −16.7); whole track peak −1.6 dBFS.
+- Video end 239.00 → 242.29 s (N34d 9.8 s). Re-rendered `deliverables/buy_it_on_margin.mp4` (242.30 s). A/V offset vs `public/audio/master_padded.wav`: 0.0 ms at 100, 170, 200, 235 and 240 s.

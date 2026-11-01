@@ -3,8 +3,8 @@
  "fps": 24,
  "picture_fps": 18,
  "music_end": 185.834,
- "video_end": 239.0,
- "video_end_frame": 5736,
+ "video_end": 242.294,
+ "video_end_frame": 5815,
  "master_sha256": "d2f9028739d033bccb87f9076f1aed2f70e36403783de1b092f25f9ed8a399f9",
  "shots": {
   "N01": {
@@ -388,10 +388,10 @@
   },
   "N34d": {
    "start": 232.5,
-   "end": 239.0,
-   "duration": 6.5,
+   "end": 242.294,
+   "duration": 9.794,
    "start_frame": 5580,
-   "end_frame": 5736,
+   "end_frame": 5815,
    "cue": "after N34c's hold",
    "snapped_ms": 0,
    "card_hold_needed_s": 6.5

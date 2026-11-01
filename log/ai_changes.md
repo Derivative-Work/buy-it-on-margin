@@ -11,3 +11,7 @@ What the generator did differently from the lyrics and plan as pasted. Candidate
 | 5 | Final chorus | Cut on "mar—" | Sung as written; "it on mar—" quiet under the band (151.0–151.7 s); the agent first misread it as a lone "Buy—" | Confirmed by the human |
 | 3 | Chorus, line 6 | "the bank'll float a loan" | Whisper: "the bank will float alone" | Mishearing; sung as written (human) |
 | 4 | Verse 1, line 3 | "the forecasts sure are grand" | Whisper: "the forecast sure are grand" | Mishearing; sung as written (human) |
+
+## 2026-10-31 — Credits cover (clip 7cc9fb84)
+
+Suno's cover task with lyrics removed and "make instrumental" on, style "1920s player piano". It keeps the song's structure at ~108 BPM, solo piano, 143.6 s, with its own ending. Record in `docs/suno_credits_cover/clip.json`.

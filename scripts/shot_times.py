@@ -61,6 +61,9 @@ def main():
         end = main_rows[i + 1]["t"] if i + 1 < len(main_rows) else end_music
         if r.get("end") == "hold":                    # e.g. credits that run past the music
             end = r["t"] + 1.5 + len(cards[r["card"]]["text"].split()) / 3
+            cc = json.load(open("config/master.json")).get("credits_cover")
+            if cc:                                    # hold the last card until the credits music ends
+                end = max(end, end_music + cc["gap_after_music_s"] + cc["src_out"] - cc["src_in"] + cc["tail_s"])
         out[r["id"]] = {"start": round(r["t"], 3), "end": round(end, 3), "duration": round(end - r["t"], 3),
                         "start_frame": round(r["t"] * FPS), "end_frame": round(end * FPS), "cue": r["label"],
                         "snapped_ms": round((r["t"] - r["raw"]) * 1000)}

@@ -71,3 +71,7 @@ Append-only. Every human action: when, what, and why.
 ## 13. 2026-10-31 — Song doc fact card update approved
 
 - **What:** "go ahead and update the song doc fact card". Claude Code edited the song doc (rev 24 → 37) to match the revised cards; details in `log/production_log.md` 26.
+
+## 14. 2026-10-31 — Credits music: player-piano cover
+
+- **What:** made a Suno cover of the song (lyrics removed, instrumental, style prompt "1920s player piano" only): https://suno.com/s/DbAiN1YpFiQ1whef (clip 7cc9fb84, chirp-hawk v6, 143.6 s). Saved the WAV to ~/Downloads (`buy-it-on-margin-instrumental.wav`). "Instead of using static for the entire duration … Don't bother with the post-filter on that one, it is supposed to sound like it came off an old record (unlike the main track, whose words need to be understandable for the satire)."
