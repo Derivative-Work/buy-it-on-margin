@@ -79,3 +79,7 @@ Append-only. Every human action: when, what, and why.
 ## 15. 2026-10-31 — Opening warning
 
 - **What:** "this could also use an era-appropriate "ai-generated satire, not investment advice" or similar warning right from the beginning too"
+
+## 16. 2026-11-01 — Caption overlaps
+
+- **What:** "the captions are overlapping the other text"

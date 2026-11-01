@@ -50,14 +50,14 @@ const ClipOr: React.FC<{id: string; src: string; fallback?: string; rate?: numbe
   };
 
 const CornerCaption: React.FC<{text: string}> = ({text}) => (
-  <div style={{position: 'absolute', right: 70, bottom: 60, padding: '10px 22px', background: 'rgba(0,0,0,0.78)',
+  <div style={{position: 'absolute', right: 70, top: 60, padding: '10px 22px', background: 'rgba(0,0,0,0.78)',
     border: '1.5px solid #e8e4da', color: '#efebe1', fontFamily: 'Old Standard TT', fontStyle: 'italic', fontSize: 40}}>
     {text}
   </div>
 );
 
 const OverlayCard: React.FC<{text: string}> = ({text}) => (
-  <AbsoluteFill style={{alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 90}}>
+  <AbsoluteFill style={{alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 150}}>
     <div style={{background: 'rgba(0,0,0,0.82)', border: '2px solid #e8e4da', padding: '18px 36px', color: '#efebe1',
       fontFamily: 'Limelight', fontSize: 44, textAlign: 'center', maxWidth: PIC_W - 240}}>{text}</div>
   </AbsoluteFill>
@@ -185,7 +185,7 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
     case 'leader':
       return <Leader />;
     case 'card':
-      return <Card text={CARDS[e.card].text} />;
+      return <Card text={CARDS[e.card].text} captionSafe />;
     case 'still': {
       const body = (
         <AbsoluteFill>
@@ -202,7 +202,7 @@ const ShotContent: React.FC<{id: string}> = ({id}) => {
       const cf = Math.round(e.card_s * FPS);
       return (
         <>
-          <Sequence durationInFrames={cf}><Card text={CARDS[e.card].text} /></Sequence>
+          <Sequence durationInFrames={cf}><Card text={CARDS[e.card].text} captionSafe /></Sequence>
           <Sequence from={cf}><StillOr id={id} s={e.still} /></Sequence>
         </>
       );
@@ -328,6 +328,14 @@ const DraftLabel: React.FC = () => {
   );
 };
 
+/** Frame ranges where a full-frame intertitle is up: captions rise inside its border there (Captions "raised"). */
+const CARD_FRAMES: [number, number][] = Object.keys(SHOTS).flatMap((k) => {
+  const e = EDIT[k], s = SHOTS[k];
+  if (e?.kind === 'card') return [[s.start_frame, s.end_frame] as [number, number]];
+  if (e?.kind === 'card_then_still') return [[s.start_frame, s.start_frame + Math.round(e.card_s * FPS)] as [number, number]];
+  return [];
+});
+
 export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolean}> = ({draft, captions = true, audio = true}) => {
   const order = Object.keys(SHOTS).filter((k) => !SHOTS[k].insert_over && k !== 'B01');
   const inserts = Object.keys(SHOTS).filter((k) => SHOTS[k].insert_over);
@@ -362,7 +370,7 @@ export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolea
           ))}
         </FilmLayer>
       </Sequence>
-      {captions && <Captions />}
+      {captions && <Captions raised={CARD_FRAMES} />}
       {draft && <DraftLabel />}
     </AbsoluteFill>
   );

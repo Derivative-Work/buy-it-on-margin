@@ -14,10 +14,13 @@ export const CUES: Cue[] = (() => {
   });
 })();
 
-export const Captions: React.FC<{offsetS?: number; size?: number; bottom?: number; width?: number}> =
-  ({offsetS = 0, size = 44, bottom, width = 1300}) => {
-    const t = useCurrentFrame() / FPS + offsetS;
-    if (bottom === undefined && offsetS === 0) bottom = 46;
+/** raised: frame ranges with a full-frame card up; the caption rises inside the card's border (inner line 60 px
+ * from the bottom) instead of sitting on it. Elsewhere it sits 46 px up; overlays keep 150 px clear. */
+export const Captions: React.FC<{offsetS?: number; size?: number; bottom?: number; width?: number; raised?: [number, number][]}> =
+  ({offsetS = 0, size = 44, bottom, width = 1300, raised = []}) => {
+    const f = useCurrentFrame();
+    const t = f / FPS + offsetS;
+    if (bottom === undefined && offsetS === 0) bottom = raised.some(([a, b]) => f >= a && f < b) ? 78 : 46;
     // in an excerpt (offsetS > 0) a cue must start inside it: no clipped tail of the line before the cut
     const cue = CUES.find((c) => t >= c.a && t < c.b && c.a >= offsetS);
     if (!cue) return null;

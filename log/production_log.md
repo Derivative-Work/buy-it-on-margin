@@ -195,3 +195,19 @@ Edits to the song doc (https://claude.ai/artifact/2ss6PBcptViGh1xRQGYW1F, rev 24
 - `src/Release.tsx`, new composition `Release`: OPEN through the film layer over its own crackle (`public/audio/intro_crackle.wav`, seed 1931, written by `scripts/pad_master.py`, 200 ms fade into the leader), then `Main` unchanged. `scripts/shot_times.py` writes `intro` (124 frames); `scripts/export_srt.py` offsets cues by it by default.
 - **The deliverable now renders from `Release`:** `npx remotion render src/index.ts Release deliverables/buy_it_on_margin.mp4 --crf=17 --audio-bitrate=320k` (247.47 s). `… Shorts deliverables/buy_it_on_margin_short.mp4 --crf=17 --audio-bitrate=320k` (34.55 s). SRTs re-exported: main 42 cues, +5.167 s; Short 9 cues, +0.333 s (`export_srt.py <out> -24.3333 29.1667 58.875`).
 - Checks: A/V offset vs the padded master (shifted by the card) 0.0 ms at 10, 100, 170 and 235 s. Frames of both opening cards and the leader checked. The thumbnail comes from Main's N30 frame and is unaffected.
+
+## 29. 2026-11-01 — Captions clear of on-screen text
+
+Collisions found by listing every caption cue that overlaps a text shot, then checking frames:
+- captions sat on the intertitles' bottom border (N03, N08, N25, N31, N33);
+- covered the N05 corner caption;
+- stacked against the N16 overlay and the N19–N21 freeze-card labels.
+
+Fixes:
+- `src/Captions.tsx`: `raised` frame ranges (full-frame cards, computed in `src/Main.tsx` as CARD_FRAMES). There the caption sits 78 px up, inside the border's inner line, instead of 46 px.
+- `src/film/devices.tsx` Card `captionSafe` (Main's card shots): 200 px bottom padding, so card text keeps clear of the raised caption.
+- `OverlayCard` (N16, N19–N21): 90 → 150 px from the bottom.
+- `CornerCaption` (N05 "according to legend"): bottom-right → top-right.
+- The B01 chat zoom still has the caption over screenshot text; it's incidental and the caption box stays readable, so it's left as is.
+
+Re-rendered `Release` → `deliverables/buy_it_on_margin.mp4` and `Shorts`. Checked frames at N03, N05, N08, N16, N19, N21, N25, N31c, N33 and B01. Timing is unchanged, so the SRTs are unchanged.

@@ -87,7 +87,8 @@ const DecoBorder: React.FC = () => {
 };
 
 /** variant "display": short Deco line (Limelight). "body": longer fact text (Old Standard). Auto-sized to fit. */
-export const Card: React.FC<{text: string; variant?: 'display' | 'body'}> = ({text, variant}) => {
+/** captionSafe: the text keeps clear of the burned-in caption, which rises inside the border on cards. */
+export const Card: React.FC<{text: string; variant?: 'display' | 'body'; captionSafe?: boolean}> = ({text, variant, captionSafe}) => {
   const v = variant ?? (text.split(/\s+/).length > 8 ? 'body' : 'display');
   // Fit the text box (~1100 x 780 px): lines x line-height <= height, with average glyph width ~0.5 em (Old Standard)
   // or ~0.62 em (Limelight). size <= sqrt(W * H / (glyph * lineHeight * chars)), with a 10% margin.
@@ -98,7 +99,7 @@ export const Card: React.FC<{text: string; variant?: 'display' | 'body'}> = ({te
   return (
     <AbsoluteFill style={{background: '#050505'}}>
       <DecoBorder />
-      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', padding: '150px 170px'}}>
+      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', padding: captionSafe ? '150px 170px 200px' : '150px 170px'}}>
         <div style={{color: '#efebe1', textAlign: 'center', lineHeight: v === 'display' ? 1.15 : 1.32,
           fontFamily: v === 'display' ? 'Limelight' : 'Old Standard TT', fontSize: size,
           letterSpacing: v === 'display' ? '0.03em' : 0}}>
