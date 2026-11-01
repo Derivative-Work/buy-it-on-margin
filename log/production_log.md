@@ -169,3 +169,15 @@ Per-stem RMS in 50 ms windows (ffmpeg to mono f32, Python RMS; summarised in the
 - `config/cards.json`: N31c, N34a, N34b, N34c revised (N34c with a non-breaking space in "Regulation T" after it wrapped as "Regulation / T").
 - `scripts/shot_times.py` → credits 181.00–239.00 s (N34a 25.2 s, N34b 12.2 s, N34c 14.2 s, N34d 6.5 s); same pre-approved hold shortfalls (N05, N19, N20, N31a/b, N31c now 5.6 s for 16 words). `scripts/pad_master.py` (crackle to 239.0 s); `scripts/export_srt.py` (42 cues, unchanged).
 - `npx remotion render src/index.ts Main deliverables/buy_it_on_margin.mp4 --crf=17 --audio-bitrate=320k` (239.02 s). Checked frames of all four revised cards. The Short has no revised text and was not re-rendered.
+
+## 26. 2026-10-31 — Song doc fact card brought in line with the M6 cards
+
+Edits to the song doc (https://claude.ai/artifact/2ss6PBcptViGh1xRQGYW1F, rev 24 → 37), one docs-tool update:
+- **Disclosure end card:** same wording as `config/cards.json` N34a ($518B credited to Reuters' report on a draft; the charge named as convertible notes and SAFEs).
+- **Where 1929 doesn't fit:** Scale "took until 1954 to regain that peak"; Leverage names Regulation T and "50% up front"; Who's spending "large, profitable companies".
+- **Video sketch, N31:** "helped start the Great Depression".
+- **Fact card rows:**
+  - Alphabet: total revenue +~25% to $127.6B vs the $127.8B consensus, and EPS missed "the analyst consensus" (both checked on the 24/7 Wall St. page). The unsourced "ads slightly missed" was dropped.
+  - AI debt: credited to Bloomberg, as the linked page does; Goldman's note is still to be linked.
+  - "Every lab's got a forecast": the $518B is from a draft (Reuters); the public S-1 leaves that total blank. Sources are now Newsbytes, Let's Data Science citing Reuters, and the S-1 on EDGAR; the Bernama link was replaced because it credited the figure to the filing.
+- **Intro line:** notes the M6 audit and the EDGAR check.

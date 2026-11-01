@@ -67,3 +67,7 @@ Append-only. Every human action: when, what, and why.
 
 - **What:** ran `docs/m6_fact_check_prompt.md` on ChatGPT and Gemini (model versions not recorded in the files) and saved both responses: "audits are in ~/Downloads/buy-it-on-margin-*-m6-audit.md". Copied verbatim to `log/audits/2026-10-31_m6_chatgpt.md` and `log/audits/2026-10-31_m6_gemini.md`.
 - Also: "Encode a small copy you can send me to preview here" (480p preview, before the audits).
+
+## 13. 2026-10-31 — Song doc fact card update approved
+
+- **What:** "go ahead and update the song doc fact card". Claude Code edited the song doc (rev 24 → 37) to match the revised cards; details in `log/production_log.md` 26.
