@@ -15,17 +15,18 @@ This repository is the production log the video's credits point to. Claude Code 
 | Song | Lyrics drafted with Claude and audited by two other labs' models. One Suno take, plus a regenerated coda joined on, edited into one master with four seconds of silence and a ticker; then a cleanup ("deslop") post-filter so the words stay clear | Suno v6, music-deslop M6f |
 | Credits music | A Suno cover of the song: instrumental, style "1920s player piano", deliberately not post-filtered | Suno v6 |
 | Timing | Lyrics aligned to the vocal stem, beats from the band stems; every shot cued to a word or a beat | WhisperX, librosa |
-| Stills | 1920s photographs of invented people and places, kept consistent with reference images | FLUX.2 [dev] in ComfyUI |
-| Clips | Four moving shots from picked stills; shadow-play dancers and runners, thresholded into mattes | LTX-2.3 image-to-video in ComfyUI, ffmpeg |
+| Stills | 1920s photographs of invented people and places, kept consistent with reference images | FLUX.2 [dev] in ComfyUI, on an NVIDIA GeForce RTX 5090 |
+| Clips | Four moving shots from picked stills; shadow-play dancers and runners, thresholded into mattes | LTX-2.3 image-to-video in ComfyUI on the same RTX 5090, ffmpeg |
 | Film layer | 18 fps picture cadence, tone curve and warm tint, gate weave, flicker, grain, dust, scratches, vignette, 4:3 pillarbox; every random choice seeded (1929) | Remotion 4 |
 | Code shots | Intertitles, film leader, iris, burn, the rate dial's needle, the ticker-tape piles, the planning-chat zoom-out, captions | Remotion 4, Puppeteer |
 | Checks | Two fact-check audits of every on-screen word (M6), then each flag checked against the primary source | ChatGPT, Gemini, the SEC's EDGAR |
 | Human | Milestone approvals, takes, the Suno generations, the cut point, the audits | a human |
 
-Three things come straight from the process rather than being staged:
+Four things come straight from the process rather than being staged:
 - **The coda line.** "Its maker just filed to sell stock" is about the model that drafted it, and the video ends on the chat where it did.
 - **The planning chat.** The zoom-out shows the real chat, captured from its public share.
 - **The disclosure figures.** They come from Anthropic's S-1 on EDGAR; one figure the press attributed to the S-1 turned out to be from a draft, and the card says so.
+- **The hardware.** Every still and clip was generated on an NVIDIA GeForce RTX 5090, a chip from the company whose investments in its own customers are the holding-company verse's modern counterpart.
 
 ## Sources
 
@@ -86,7 +87,7 @@ scripts/rebuild.sh --fetch        # download the archive, re-render the videos, 
 On the production machine, the rebuild gives byte-identical captions and thumbnails, and bit-identical audio. The pictures can differ in the last bit of a few panned stills (Chrome's compositing; worst frame 42.8 dB PSNR in the main video), so `rebuild.sh` checks each video to 40 dB.
 
 Regenerating the takes themselves from the models is a per-stage job. The commands are in the production log, and the picks in `config/` make the same choices again.
-- Every random process reads its seed from `config/`. Stills and clips with the same seed, weights and ComfyUI version should match on the same GPU; expect small differences elsewhere.
+- Every random process reads its seed from `config/`. Stills and clips with the same seed, weights and ComfyUI version should match on the same GPU (production used an NVIDIA GeForce RTX 5090, 32 GB); expect small differences elsewhere.
 - The songs can't be regenerated: Suno doesn't give the same song twice. The post-filter model is private for now.
 - The ticker sound isn't redistributed (see [`LICENSE-media.md`](LICENSE-media.md)). It is already in the master; to rebuild the master itself, download it from Pixabay into `audio/sfx/`.
 - The planning chat's share page is live and may change. The archive keeps the capture the video used.
