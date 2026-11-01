@@ -99,3 +99,7 @@ Append-only. Every human action: when, what, and why.
 ## 20. 2026-11-01 — Short freezes; two more Shorts
 
 - **What:** "reviewing the short it looks like it gets stuck on one frame. but let's also create more shorts from the verses: one centered around the labs' forecasts line, and one centered around the GPUs and RAM shot. for the shorts, keep the opening disclaimer but don't hold it for too long and start the music right away"
+
+## 21. 2026-11-01 — Main video uploaded
+
+- **What:** uploaded the main video to YouTube: "video URL is https://www.youtube.com/watch?v=2bp3_BMylKY". Added to the Shorts' footer in METADATA.md.

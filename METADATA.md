@@ -7,7 +7,7 @@ YouTube metadata for the main video and the three vertical Shorts, ready to past
 - **Re-check Anthropic's IPO status** the day before (EDGAR: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357). On 2026-11-01 the latest filing was the S-1 of October 26, not yet effective. An S-1/A with a price range, or effectiveness, dates the disclosure card (3:06) and the "filed to go public" line below.
 - **"Two bad days, so far"** (2:37 and 4:27) refers to October 29–30. If the selloff runs on or reverses before upload, the cards still read as dated satire, but the description should say "as of November 1, 2026" (it does).
 - **Intervention count.** Update the number in the main description (`grep -c '^## ' log/human_interventions.md`; 20 on 2026-11-01).
-- **The Shorts' footer** needs the main video's link once it's uploaded. In YouTube Studio, also set each Short's **Related video** to the main video.
+- **The main video's link** is in the Shorts' footer (https://www.youtube.com/watch?v=2bp3_BMylKY, uploaded by the human, 2026-11-01). In YouTube Studio, also set each Short's **Related video** to the main video.
 
 ---
 
@@ -138,7 +138,7 @@ Buy It on Margin, AI music video, AI generated, AI satire, 1929, Charleston, hot
 **Shared footer** (end of every description):
 
 ```
-Full video, facts and sources: <main video link>
+Full video, facts and sources: https://www.youtube.com/watch?v=2bp3_BMylKY
 Production log, with every prompt and every human intervention: https://github.com/Derivative-Work/buy-it-on-margin
 Music: Suno · Words: Claude · Video: Claude Code
 Video and assets CC BY-NC-SA 4.0. Satire; not affiliated with any company named.
