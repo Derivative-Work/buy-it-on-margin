@@ -29,13 +29,14 @@ models/
 *.safetensors
 *.gguf
 
-# Listening clips for [H]; regenerate with scripts/failure_map.py.
-timing/failure_clips/
-# Stop preview for [H]; regenerate with scripts/stop_map.py.
-audio/master/preview_stops.wav
-
-# The production archive (scripts/archive.sh), published as a release.
+# The production archive (scripts/archive.sh), published as a release. (archive/cut_candidates_v1 and
+# archive/master_candidates.py are tracked: the M0 cut-point candidates.)
 archive/*.wav
+archive/*.tar
+archive/*.mp4
+archive/*.srt
+archive/*.jpg
+archive/SHA256SUMS
 
 # Puppeteer page dumps (regenerate with scripts/fetch_*.mjs)
 docs/suno/rsc.txt

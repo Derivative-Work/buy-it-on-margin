@@ -1,36 +1,36 @@
 1
-00:00:04,604 --> 00:00:08,585
+00:00:04,938 --> 00:00:08,919
 So I borrowed from my broker on the ten-percent-down plan!
 
 2
-00:00:08,585 --> 00:00:13,372
+00:00:08,919 --> 00:00:13,706
 Buy it on margin, sugar, buy it on margin!
 
 3
-00:00:13,372 --> 00:00:16,993
+00:00:13,706 --> 00:00:17,327
 Ten cents down and a promise for the rest!
 
 4
-00:00:17,719 --> 00:00:19,706
+00:00:18,053 --> 00:00:20,040
 Up goes the ticker, up goes the building,
 
 5
-00:00:19,706 --> 00:00:22,049
+00:00:20,040 --> 00:00:22,383
 Profit comes later, and later is the best!
 
 6
-00:00:22,049 --> 00:00:23,967
+00:00:22,383 --> 00:00:24,301
 Everybody's in it, nobody's out of it,
 
 7
-00:00:23,967 --> 00:00:26,070
+00:00:24,301 --> 00:00:26,404
 Who needs a dollar when the bank'll float a loan?
 
 8
-00:00:26,070 --> 00:00:30,170
+00:00:26,404 --> 00:00:30,504
 Buy it on margin, sugar, buy it on margin:
 
 9
-00:00:30,170 --> 00:00:34,053
+00:00:30,504 --> 00:00:34,387
 A dime on the dollar, and the moon's your own!
 

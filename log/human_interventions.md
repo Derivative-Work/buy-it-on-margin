@@ -83,3 +83,7 @@ Append-only. Every human action: when, what, and why.
 ## 16. 2026-11-01 — Caption overlaps
 
 - **What:** "the captions are overlapping the other text"
+
+## 17. 2026-11-01 — Repo created
+
+- **What:** "I created the repo on GitHub and gave you access, get it ready". `Derivative-Work/buy-it-on-margin`, created empty and private by the human; Claude Code has admin access.

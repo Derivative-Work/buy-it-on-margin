@@ -211,3 +211,44 @@ Fixes:
 - The B01 chat zoom still has the caption over screenshot text; it's incidental and the caption box stays readable, so it's left as is.
 
 Re-rendered `Release` → `deliverables/buy_it_on_margin.mp4` and `Shorts`. Checked frames at N03, N05, N08, N16, N19, N21, N25, N31c, N33 and B01. Timing is unchanged, so the SRTs are unchanged.
+
+## 30. 2026-11-01 — Publishing: README, licences, environment, archive, rebuild
+
+Modelled on Folks Like Us (published).
+- **README.md:** what the video is, how it was made, sources for every factual card, where things are, reproducing it, licences, credits. Every linked page was opened on 2026-10-31 or 2026-11-01:
+  - Federal Reserve History (10% down; peak, 89% and 1954);
+  - Quote Investigator (1959);
+  - NBC News ($1T, >4.2%);
+  - Fortune (−13%, $500B);
+  - EDGAR S-1;
+  - Let's Data Science citing Reuters ($518B, draft);
+  - Cornell LII 12 CFR 220.12 (50%);
+  - Tech Insider citing Reuters ($600B capex);
+  - 24/7 Wall St. (Alphabet Q3).
+
+  EDGAR submissions for CIK 2130357 on 2026-11-01: latest filing is the S-1 of 2026-10-26 (no S-1/A, no effectiveness notice).
+- **LICENSE-media.md** (CC BY-NC-SA 4.0, legal code in `LICENSES/`). Code stays MIT. Listed exceptions:
+  - Remotion's own licence;
+  - the ComfyUI template (MIT, Comfy Org);
+  - the fonts (OFL);
+  - the Pixabay ticker sound;
+  - the claude.ai interface in the chat capture;
+  - the Suno records.
+- **Environment:**
+  - `pyproject.toml` + `uv.lock` (the Folks Like Us pins, which ran this production);
+  - `config/models.tsv` (FLUX.2 and LTX-2.3 i2v weights, same revisions);
+  - `scripts/setup_env.sh`: Node 24, `npm ci`, the Remotion browser, uv; ComfyUI v0.42.1 + custom nodes + weights unless `--no-comfy`;
+  - `scripts/hooks/pre-commit`: rejects files over 50 MiB.
+- **Archive:** `scripts/archive.sh`, release tag `archive-2026-11-01`:
+  - `inputs.tar`: the audio, 1.26 GB;
+  - `takes.tar`: takes, picks, mattes, chat capture, 0.70 GB;
+  - the six upload files and SHA256SUMS.
+
+  The Pixabay ticker sound is left out (its licence forbids standalone redistribution; it's in the master already).
+- **Rebuild:** `scripts/rebuild.sh` checks the archive, extracts it, then regenerates grain plates and the padded master, re-renders both videos, and regenerates the SRTs (`export_srt.py short` added for the Short) and thumbnails. It then compares against the release.
+  - Determinism, measured: two renders of the same commit give an identical Short, thumbnails and grain plates.
+  - The main video differs in 767 of 5,939 frames, all panned or zoomed stills (Chrome compositing): average 54.6 dB PSNR, worst 42.8 dB. Its audio is bit-identical.
+  - So the main video is checked as audio identical plus picture ≥ 40 dB.
+- **MANIFEST.sha256:** `scripts/manifest.sh` (audio, takes, picks, chat, deliverables; 246 files).
+- Deliverables: the main and Short SRTs from entry 28 committed (they had been regenerated but not committed); thumbnails regenerated, byte-identical.
+- Rebuild test from the local archive (`PY=../folks-like-us/.venv/bin/python scripts/rebuild.sh`): the SRTs, thumbnails and Short came out identical, and the main video's audio identical; main picture worst frame 42.81 dB PSNR (pass). The release is not uploaded yet: the human has more comments that change the video (2026-11-01), so the archive will be rebuilt afterwards.

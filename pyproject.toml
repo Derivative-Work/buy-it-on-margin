@@ -1,0 +1,31 @@
+[project]
+name = "buy-it-on-margin"
+version = "0.1.0"
+description = "Audio, timing, generation and publishing scripts for the Buy It on Margin video (the film layer is Remotion)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pillow",
+    "librosa",
+    "soundfile",
+    "torch==2.8.*",
+    "torchaudio==2.8.*",
+    "torchvision==0.23.*",
+    "whisperx==3.8.6",
+]
+
+[tool.uv]
+package = false
+
+# Same pins as Folks Like Us, whose venv ran this production's Python steps: whisperx 3.8.6 pins torch 2.8, and
+# cu128 is the first build with the RTX 5090's sm_120 kernels. ComfyUI has its own venv (scripts/setup_env.sh).
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

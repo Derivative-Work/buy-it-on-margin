@@ -1,168 +1,168 @@
 1
-00:00:02,329 --> 00:00:07,540
+00:00:07,496 --> 00:00:12,707
 Ladies and gentlemen, from the trading floor to your front parlor:
 
 2
-00:00:07,797 --> 00:00:13,580
+00:00:12,964 --> 00:00:18,747
 the music of tomorrow, on the installment plan!
 
 3
-00:00:16,572 --> 00:00:20,823
+00:00:21,739 --> 00:00:25,990
 Well, my barber's got a hot tip, and the shoeshine's got two:
 
 4
-00:00:20,823 --> 00:00:25,128
+00:00:25,990 --> 00:00:30,295
 There's a thinkin' machine a-comin', and it's gonna think for you!
 
 5
-00:00:25,128 --> 00:00:29,271
+00:00:30,295 --> 00:00:34,438
 Every lab's got a forecast, and the forecasts sure are grand,
 
 6
-00:00:29,271 --> 00:00:33,252
+00:00:34,438 --> 00:00:38,419
 So I borrowed from my broker on the ten-percent-down plan!
 
 7
-00:00:33,252 --> 00:00:38,039
+00:00:38,419 --> 00:00:43,206
 Buy it on margin, sugar, buy it on margin!
 
 8
-00:00:38,039 --> 00:00:41,660
+00:00:43,206 --> 00:00:46,827
 Ten cents down and a promise for the rest!
 
 9
-00:00:42,386 --> 00:00:44,373
+00:00:47,553 --> 00:00:49,540
 Up goes the ticker, up goes the building,
 
 10
-00:00:44,373 --> 00:00:46,716
+00:00:49,540 --> 00:00:51,883
 Profit comes later, and later is the best!
 
 11
-00:00:46,716 --> 00:00:48,634
+00:00:51,883 --> 00:00:53,801
 Everybody's in it, nobody's out of it,
 
 12
-00:00:48,634 --> 00:00:50,737
+00:00:53,801 --> 00:00:55,904
 Who needs a dollar when the bank'll float a loan?
 
 13
-00:00:50,737 --> 00:00:54,837
+00:00:55,904 --> 00:01:00,004
 Buy it on margin, sugar, buy it on margin:
 
 14
-00:00:54,837 --> 00:00:58,720
+00:01:00,004 --> 00:01:03,887
 A dime on the dollar, and the moon's your own!
 
 15
-00:00:58,980 --> 00:01:03,066
+00:01:04,147 --> 00:01:08,233
 They're buildin' in the cornfield, and it's hummin' day and night,
 
 16
-00:01:03,066 --> 00:01:07,440
+00:01:08,233 --> 00:01:12,607
 Takes a power plant to feed it, so they're buildin' one outright.
 
 17
-00:01:07,440 --> 00:01:11,632
+00:01:12,607 --> 00:01:16,799
 There's a company that owns it, and a company owns that,
 
 18
-00:01:11,632 --> 00:01:15,694
+00:01:16,799 --> 00:01:20,861
 And a holdin' company holds 'em, with the IOUs in its hat!
 
 19
-00:01:15,694 --> 00:01:20,300
+00:01:20,861 --> 00:01:25,467
 Buy it on margin, sugar, buy it on margin!
 
 20
-00:01:20,518 --> 00:01:23,980
+00:01:25,685 --> 00:01:29,147
 Ten cents down and a promise for the rest!
 
 21
-00:01:24,845 --> 00:01:26,892
+00:01:30,012 --> 00:01:32,059
 Up goes the ticker, up goes the building,
 
 22
-00:01:26,892 --> 00:01:29,255
+00:01:32,059 --> 00:01:34,422
 Profit comes later, and later is the best!
 
 23
-00:01:29,255 --> 00:01:31,235
+00:01:34,422 --> 00:01:36,402
 Everybody's in it, nobody's out of it,
 
 24
-00:01:31,235 --> 00:01:33,319
+00:01:36,402 --> 00:01:38,486
 Who needs a dollar when the bank'll float a loan?
 
 25
-00:01:33,319 --> 00:01:37,467
+00:01:38,486 --> 00:01:42,634
 Buy it on margin, sugar, buy it on margin:
 
 26
-00:01:37,467 --> 00:01:40,104
+00:01:42,634 --> 00:01:45,271
 A dime on the dollar, and the moon's your own!
 
 27
-00:01:40,104 --> 00:01:41,505
+00:01:45,271 --> 00:01:46,672
 What's it make? (Tomorrow!)
 
 28
-00:01:41,505 --> 00:01:42,800
+00:01:46,672 --> 00:01:47,967
 What's it cost? (Today!)
 
 29
-00:01:42,800 --> 00:01:45,490
+00:01:47,967 --> 00:01:50,657
 When's it pay? (Why, nineteen-thirty!)
 
 30
-00:01:45,490 --> 00:01:47,900
+00:01:50,657 --> 00:01:53,067
 (…Sometime after twenty-thirty.)
 
 31
-00:01:48,642 --> 00:01:50,600
+00:01:53,809 --> 00:01:55,767
 (Same difference!)
 
 32
-00:02:06,526 --> 00:02:10,829
+00:02:11,693 --> 00:02:15,996
 Now the banker's raisin' interest, says the money's gettin' dear,
 
 33
-00:02:10,829 --> 00:02:15,175
+00:02:15,996 --> 00:02:20,342
 And the fella with the cloud boom got a sock right in the ear:
 
 34
-00:02:15,175 --> 00:02:19,262
+00:02:20,342 --> 00:02:24,429
 His sales came in a-doublin', but his cash went out the door!
 
 35
-00:02:19,262 --> 00:02:22,820
+00:02:24,429 --> 00:02:27,987
 Hey, what's everybody runnin' for?
 
 36
-00:02:23,581 --> 00:02:28,280
+00:02:28,748 --> 00:02:33,447
 Buy it on margin, sugar, buy it on margin!
 
 37
-00:02:28,461 --> 00:02:30,751
+00:02:33,628 --> 00:02:35,918
 Ten cents down and a promise for the—
 
 38
-00:02:30,751 --> 00:02:32,700
+00:02:35,918 --> 00:02:37,867
 Buy it on mar—
 
 39
-00:02:36,492 --> 00:02:41,400
+00:02:41,659 --> 00:02:46,567
 I bought it on margin, darling,
 
 40
-00:02:41,520 --> 00:02:45,900
+00:02:46,687 --> 00:02:51,067
 Ten cents down, and I'm still in hock.
 
 41
-00:02:46,947 --> 00:02:51,400
+00:02:52,114 --> 00:02:56,567
 And the machine that wrote you this ditty?
 
 42
-00:02:52,132 --> 00:02:58,460
+00:02:57,299 --> 00:03:03,627
 Why, its maker just filed to sell stock.
 
