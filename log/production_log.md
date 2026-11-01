@@ -304,3 +304,10 @@ Timing:
 - **Opening:** SH00 is now "AI-generated satire. Not investment advice.", over the picture for 2.5 s. The music and picture run from frame 0, with a 4-frame fade-in and a 12-frame fade-out. In the chorus Short the card runs 2.6 s, exactly over N08's own card, so it cuts straight to the margin slip.
 - **Scripts:** `export_srt.py short <id>`; `thumbnail.py` writes a vertical thumbnail per Short (its frame and tagline from the config); `archive.sh` and `rebuild.sh` handle the three Shorts. The rebuild now checks every video as identical, or as identical audio plus ≥ 40 dB picture.
 - **Checks:** motion per second is non-zero throughout all three; the hold measures 1.5–2.1 (grain and weave). The cut from the disclaimer to the margin slip was checked frame by frame. METADATA.md has a section per Short; the forecast Short's figures ($856B, −$278B) were checked on Crypto Briefing (citing the FT, Sept 18).
+
+## 35. 2026-11-01 — Release replaced
+
+- The human approved: "this is great, go ahead and rebuild the archive etc". `scripts/archive.sh` rebuilt with the three Shorts (14 files). The rebuild check from it passed:
+  - the SRTs and thumbnails identical, and all three Shorts identical;
+  - the main video (re-rendered with the new `offset` code path at 0): audio identical, worst frame 42.80 dB PSNR.
+- Pushed. The old `archive-2026-11-01` release (with the frozen Short) was deleted with its tag, then recreated at the new HEAD with `scripts/archive.sh --upload`.
