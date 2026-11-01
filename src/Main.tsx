@@ -336,7 +336,21 @@ const CARD_FRAMES: [number, number][] = Object.keys(SHOTS).flatMap((k) => {
   return [];
 });
 
-export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolean}> = ({draft, captions = true, audio = true}) => {
+/** Shorts: from frame `at` on (local to the enclosing sequence), the shots hold on that frame; the film layer outside keeps
+ * running, so grain, dust and weave still move. */
+const HoldAfter: React.FC<{at?: number; children: React.ReactNode}> = ({at, children}) => {
+  const f = useCurrentFrame();
+  return at !== undefined && f >= at ? <Freeze frame={at}>{children}</Freeze> : <>{children}</>;
+};
+
+/**
+ * offset: start the edit this many frames in (the Shorts). Shifting the shots, instead of wrapping Main in a negative
+ * <Sequence from>, matters: Remotion clamps every Sequence to the composition's length counted from its own `from`, so
+ * in a 30 s composition a shot cued at frame 700 would never show.
+ */
+export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolean; holdFrom?: number; offset?: number}> =
+  ({draft, captions = true, audio = true, holdFrom, offset = 0}) => {
+  const o = offset;
   const order = Object.keys(SHOTS).filter((k) => !SHOTS[k].insert_over && k !== 'B01');
   const inserts = Object.keys(SHOTS).filter((k) => SHOTS[k].insert_over);
   const b = SHOTS.B01;
@@ -344,24 +358,24 @@ export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolea
     <AbsoluteFill style={{background: '#000'}}>
       <Fonts />
       {audio && <Audio src={staticFile('audio/master_padded.wav')} />}
-      <Sequence durationInFrames={b.start_frame}>
-        <FilmLayer>
+      {b.start_frame - o > 0 && <Sequence durationInFrames={b.start_frame - o}>
+        <FilmLayer frameOffset={o}><HoldAfter at={holdFrom !== undefined && holdFrom < b.start_frame ? holdFrom - o : undefined}>
           {order.filter((k) => SHOTS[k].start_frame < b.start_frame).map((k) => (
-            <Sequence key={k} from={SHOTS[k].start_frame} durationInFrames={SHOTS[k].end_frame - SHOTS[k].start_frame} name={k}>
+            <Sequence key={k} from={SHOTS[k].start_frame - o} durationInFrames={SHOTS[k].end_frame - SHOTS[k].start_frame} name={k}>
               <ShotContent id={k} />
             </Sequence>
           ))}
           {inserts.map((k) => (
-            <Sequence key={k} from={SHOTS[k].start_frame} durationInFrames={Math.max(1, SHOTS[k].end_frame - SHOTS[k].start_frame)} name={k}>
+            <Sequence key={k} from={SHOTS[k].start_frame - o} durationInFrames={Math.max(1, SHOTS[k].end_frame - SHOTS[k].start_frame)} name={k}>
               <ShotContent id={k} />
             </Sequence>
           ))}
-        </FilmLayer>
-      </Sequence>
-      <Sequence from={b.start_frame} durationInFrames={b.end_frame - b.start_frame} name="B01">
+        </HoldAfter></FilmLayer>
+      </Sequence>}
+      <Sequence from={b.start_frame - o} durationInFrames={b.end_frame - b.start_frame} name="B01">
         <ChatZoom dur={b.end_frame - b.start_frame} />
       </Sequence>
-      <Sequence from={b.end_frame} name="end">
+      <Sequence from={b.end_frame - o} name="end">
         <FilmLayer>
           {order.filter((k) => SHOTS[k].start_frame >= b.end_frame).map((k) => (
             <Sequence key={k} from={SHOTS[k].start_frame - b.end_frame} durationInFrames={SHOTS[k].end_frame - SHOTS[k].start_frame} name={k}>
@@ -370,7 +384,7 @@ export const Main: React.FC<{draft?: boolean; captions?: boolean; audio?: boolea
           ))}
         </FilmLayer>
       </Sequence>
-      {captions && <Captions raised={CARD_FRAMES} />}
+      {captions && o === 0 && <Captions raised={CARD_FRAMES} />}
       {draft && <DraftLabel />}
     </AbsoluteFill>
   );

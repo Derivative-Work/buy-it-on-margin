@@ -1,13 +1,13 @@
 # Upload metadata
 
-YouTube metadata for the main video and the vertical Short, ready to paste at upload. Written by the agent; the human uploads.
+YouTube metadata for the main video and the three vertical Shorts, ready to paste at upload. Written by the agent; the human uploads.
 
 **Before uploading:**
 - **Make the repository public.** The end credits and both descriptions link to https://github.com/Derivative-Work/buy-it-on-margin, which is private until then.
 - **Re-check Anthropic's IPO status** the day before (EDGAR: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357). On 2026-11-01 the latest filing was the S-1 of October 26, not yet effective. An S-1/A with a price range, or effectiveness, dates the disclosure card (3:06) and the "filed to go public" line below.
 - **"Two bad days, so far"** (2:37 and 4:27) refers to October 29–30. If the selloff runs on or reverses before upload, the cards still read as dated satire, but the description should say "as of November 1, 2026" (it does).
-- **Intervention count.** Update the number in the main description (`grep -c '^## ' log/human_interventions.md`; 19 on 2026-11-01).
-- **The Short's footer** needs the main video's link once it's uploaded. In YouTube Studio, also set the Short's **Related video** to the main video.
+- **Intervention count.** Update the number in the main description (`grep -c '^## ' log/human_interventions.md`; 20 on 2026-11-01).
+- **The Shorts' footer** needs the main video's link once it's uploaded. In YouTube Studio, also set each Short's **Related video** to the main video.
 
 ---
 
@@ -38,7 +38,7 @@ A hot-jazz Charleston, in the style of a 1929 newsreel, sells the thinking machi
 
 The song's last line is literal. The lyrics were drafted by Claude, made by Anthropic, which filed to go public on October 26, 2026. The end cards disclose it, say what the lyrics refer to, and say where the comparison with 1929 doesn't hold.
 
-Every frame, note and word was made by AI: the song by Suno, the words by Claude, the pictures by FLUX.2 and LTX-2.3, the film look and edit by Claude Code. A human approved each milestone, picked the takes and ran the fact checks. Each of those 19 interventions is logged, along with every prompt and production step:
+Every frame, note and word was made by AI: the song by Suno, the words by Claude, the pictures by FLUX.2 and LTX-2.3, the film look and edit by Claude Code. A human approved each milestone, picked the takes and ran the fact checks. Each of those 20 interventions is logged, along with every prompt and production step:
 https://github.com/Derivative-Work/buy-it-on-margin
 
 CHAPTERS
@@ -120,23 +120,24 @@ Buy It on Margin, AI music video, AI generated, AI satire, 1929 stock market cra
 
 ---
 
-## Vertical Short (9:16, 1080×1920)
+## Vertical Shorts (9:16, 1080×1920)
 
-**File:** `deliverables/buy_it_on_margin_short.mp4` (34.6 s). Captions: `deliverables/buy_it_on_margin_short.en.srt`. Thumbnail: `deliverables/buy_it_on_margin_short_thumbnail.jpg` (1080×1920; YouTube takes a custom Short thumbnail only through the mobile app's upload flow, where offered).
+Three Shorts, each built from a stretch of the main edit (`config/shorts.json`, `src/Shorts.tsx`). Upload them in song order: the forecast, the chorus, the hardware.
 
-It opens on the card "A cautionary tale, made with artificial intelligence. Not investment advice." (4.8 s), then verse 1's last line into the first chorus (N08–N13: "So I borrowed from my broker on the ten-percent-down plan!" through "A dime on the dollar, and the moon's your own!"), with the title above the picture and captions below. Settings as the main video; no chapters or end screen. Related video: the main video.
+**What they have in common:**
+- Title above the picture, captions below. The music and picture start on the first frame. The card "AI-generated satire. Not investment advice." covers the picture for the first 2.5 s (2.6 s in the chorus Short, exactly over its "Ten per cent down." card).
+- Each has its own SRT, timed from its first frame, and a thumbnail (1080×1920). YouTube takes a custom thumbnail for a Short only through the mobile app's upload flow, where the account offers it.
+- Settings as the main video: Music; not made for kids; altered/synthetic content: yes; English captions from the Short's SRT; Standard YouTube License. No chapters or end screen. Related video: the main video.
 
-### Title
-
-```
-"Buy it on margin, sugar!" A 1929 Charleston about the AI boom #Shorts
-```
-
-### Description
+**Shared tags** (paste for every Short):
 
 ```
-AI-generated satire. Not investment advice. In 1929, buyers typically put 10% down and borrowed the rest (Federal Reserve History). This week, AI stocks had two bad days. The first chorus of Buy It on Margin, an AI-made newsreel music video.
+Buy It on Margin, AI music video, AI generated, AI satire, 1929, Charleston, hot jazz, newsreel, AI bubble, buying on margin, stock market crash, Suno, Claude, shorts
+```
 
+**Shared footer** (end of every description):
+
+```
 Full video, facts and sources: <main video link>
 Production log, with every prompt and every human intervention: https://github.com/Derivative-Work/buy-it-on-margin
 Music: Suno · Words: Claude · Video: Claude Code
@@ -145,8 +146,44 @@ Video and assets CC BY-NC-SA 4.0. Satire; not affiliated with any company named.
 #AIgenerated #satire #Shorts
 ```
 
-### Tags
+### 1. Every lab's got a forecast (verse 1)
 
+16.45–37.60 s of the master, **21.1 s**. File `deliverables/buy_it_on_margin_short_forecast.mp4`, captions `…_short_forecast.en.srt`, thumbnail `…_short_forecast_thumbnail.jpg` (the wall of rising charts). The barber's hot tip, the shoeshine legend, the thinking machine wheeled down the street, the wall of charts on "Every lab's got a forecast", the margin slip, into the first "Buy it on margin, sugar, buy it on margin!"
+
+**Title:**
 ```
-Buy It on Margin, AI music video, AI generated, AI satire, 1929, Charleston, hot jazz, newsreel, AI bubble, buying on margin, stock market crash, Suno, Claude, shorts
+"Every lab's got a forecast, and the forecasts sure are grand" #Shorts
+```
+
+**Description** (then the footer):
+```
+AI-generated satire. Not investment advice. OpenAI projects about $856 billion in computing and infrastructure spending from 2026 through 2030, and negative free cash flow of $278 billion over the same years (Financial Times, via Crypto Briefing, September 2026). In 1929, buyers typically put 10% down and borrowed the rest (Federal Reserve History). Verse 1 of Buy It on Margin, an AI-made newsreel music video.
+```
+
+### 2. Buy it on margin (the first chorus)
+
+29.18–58.87 s, **29.7 s**. File `deliverables/buy_it_on_margin_short_chorus.mp4`, captions `…_short_chorus.en.srt`, thumbnail `…_short_chorus_thumbnail.jpg` (the N30 freeze mid-kick, as the main thumbnail). Verse 1's last line into the first chorus (N08–N13): "So I borrowed from my broker on the ten-percent-down plan!" through "A dime on the dollar, and the moon's your own!"
+
+**Title:**
+```
+"Buy it on margin, sugar!" A 1929 Charleston about the AI boom #Shorts
+```
+
+**Description** (then the footer):
+```
+AI-generated satire. Not investment advice. In 1929, buyers typically put 10% down and borrowed the rest; today's US rules require 50% for most stock bought on margin (Federal Reserve History; 12 CFR 220.12). On October 30, 2026, tech stocks lost more than $1 trillion in market value (NBC News). The first chorus of Buy It on Margin, an AI-made newsreel music video.
+```
+
+### 3. With the IOUs in its hat (verse 2)
+
+58.87–79.60 s, **20.7 s**. File `deliverables/buy_it_on_margin_short_hardware.mp4`, captions `…_short_hardware.en.srt`, thumbnail `…_short_hardware_thumbnail.jpg` (the hatbox). The data center in the cornfield, the power plant built beside it, the companies nested inside each other, then the hatbox of IOUs, RAM sticks and graphics cards on "with the IOUs in its hat", which holds through "Buy it on margin, sugar, buy it on margin!"
+
+**Title:**
+```
+"A holdin' company holds 'em, with the IOUs in its hat" #Shorts
+```
+
+**Description** (then the footer):
+```
+AI-generated satire. Not investment advice. In the 1920s, Samuel Insull's utility empire was a pyramid of leveraged holding companies; it collapsed in 1932 (EBSCO). Today the money circles: Nvidia has invested $30 billion in OpenAI and up to $10 billion in Anthropic, which both run on its chips (The Conversation, October 2026), and about $500 billion of AI-related debt was issued in 2026 by October (Bloomberg). Verse 2 of Buy It on Margin, an AI-made newsreel music video.
 ```

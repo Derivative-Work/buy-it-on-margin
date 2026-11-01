@@ -4,7 +4,7 @@ import {FILM} from './config';
 import {M2_FRAMES, M2Test} from './M2Test';
 import {Main, MAIN_FRAMES} from './Main';
 import {Release, RELEASE_FRAMES} from './Release';
-import {Shorts, SH_FRAMES} from './Shorts';
+import {Short, SHORT_IDS, shortSpec} from './Shorts';
 
 export const Root: React.FC = () => (
   <>
@@ -12,7 +12,10 @@ export const Root: React.FC = () => (
       width={FILM.frame.width} height={FILM.frame.height} />
     <Composition id="Release" component={Release} durationInFrames={RELEASE_FRAMES} fps={FILM.frame.fps}
       width={FILM.frame.width} height={FILM.frame.height} />
-    <Composition id="Shorts" component={Shorts} durationInFrames={SH_FRAMES} fps={FILM.frame.fps} width={1080} height={1920} />
+    {SHORT_IDS.map((id) => (
+      <Composition key={id} id={`Short-${id}`} component={Short} defaultProps={{id}} durationInFrames={shortSpec(id).frames}
+        fps={FILM.frame.fps} width={1080} height={1920} />
+    ))}
     <Composition id="M2Test" component={M2Test} durationInFrames={M2_FRAMES} fps={FILM.frame.fps}
       width={FILM.frame.width} height={FILM.frame.height} />
   </>

@@ -95,3 +95,7 @@ Append-only. Every human action: when, what, and why.
 ## 19. 2026-11-01 — Song doc and upload metadata
 
 - **What:** "yes update the doc's fact card. also write a METADATA.md with the YouTube metadata (some of the other projects have one for reference)"
+
+## 20. 2026-11-01 — Short freezes; two more Shorts
+
+- **What:** "reviewing the short it looks like it gets stuck on one frame. but let's also create more shorts from the verses: one centered around the labs' forecasts line, and one centered around the GPUs and RAM shot. for the shorts, keep the opening disclaimer but don't hold it for too long and start the music right away"

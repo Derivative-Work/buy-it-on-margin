@@ -1,24 +1,38 @@
 import React from 'react';
 import {AbsoluteFill, Audio, interpolate, Sequence, staticFile} from 'remotion';
+import shorts from '../config/shorts.json';
 import times from '../timing/shot_times.json';
 import {Captions} from './Captions';
-import {CARDS, cardHoldS, FPS} from './config';
+import {CARDS, FPS} from './config';
 import {Card} from './film/devices';
 import {FilmLayer} from './film/FilmLayer';
 import {Fonts} from './Fonts';
 import {Main} from './Main';
 
 /**
- * M5: the vertical Short (brief: N08 through N13, verse 1 into the first chorus, intertitle stacked above the
- * 4:3 picture, a "Not investment advice" card first). 1080x1920: title above, the film-layered picture (the main
- * edit, scaled 0.75 and cropped to its 4:3 picture) in the middle, captions below.
+ * The vertical Shorts, 1080x1920, one per entry in config/shorts.json: title above, the film-layered picture (the
+ * main edit, scaled 0.75 and cropped to its 4:3 picture) in the middle, captions below. The music and picture start on
+ * the first frame; the SH00 disclaimer card covers the picture for the first disclaimer_s.
  */
 const S = (times as any).shots;
-export const SH_FROM = S.N08.start_frame as number;
-export const SH_TO = S.N13.end_frame as number;
-export const SH_INTRO = Math.round(cardHoldS(CARDS.SH00.text) * FPS);
-export const SH_FRAMES = SH_INTRO + (SH_TO - SH_FROM);
+const CFG = shorts as any;
 const PIC_TOP = 560;
+
+/** "N08.start" | "N13.end" | seconds -> a frame on the master timeline. */
+const at = (v: string | number): number => {
+  if (typeof v === 'number') return Math.round(v * FPS);
+  const [id, edge] = v.split('.');
+  return S[id][edge === 'end' ? 'end_frame' : 'start_frame'];
+};
+
+export const shortSpec = (id: string) => {
+  const c = CFG.shorts[id];
+  const from = at(c.from), to = at(c.to);
+  return {from, to, frames: to - from, // a shot's end frame is the next shot's first: hold on the last frame of the named shot
+    hold: c.hold_from !== undefined ? at(c.hold_from) - (String(c.hold_from).endsWith('.end') ? 1 : 0) : undefined,
+    disclaimer: Math.round((c.disclaimer_s ?? CFG.disclaimer_s) * FPS)};
+};
+export const SHORT_IDS = Object.keys(CFG.shorts);
 
 /** The 1920x1080 main frame scaled to 1440x810; its 4:3 picture lands 1080 wide, centred. */
 const Picture: React.FC<{children: React.ReactNode}> = ({children}) => (
@@ -29,8 +43,8 @@ const Picture: React.FC<{children: React.ReactNode}> = ({children}) => (
   </div>
 );
 
-export const Shorts: React.FC = () => {
-  const music = SH_TO - SH_FROM;
+export const Short: React.FC<{id: string}> = ({id}) => {
+  const {from, frames, hold, disclaimer} = shortSpec(id);
   return (
     <AbsoluteFill style={{background: '#050505'}}>
       <Fonts />
@@ -39,22 +53,16 @@ export const Shorts: React.FC = () => {
         <div style={{fontFamily: 'Old Standard TT', fontStyle: 'italic', fontSize: 46, marginTop: 14, color: '#bdb7aa'}}>1929, again</div>
       </div>
       <Picture>
-        <Sequence durationInFrames={SH_INTRO}>
+        <Main captions={false} audio={false} holdFrom={hold} offset={from} />
+        <Sequence durationInFrames={disclaimer}>
           <FilmLayer><Card text={CARDS.SH00.text} /></FilmLayer>
         </Sequence>
-        <Sequence from={SH_INTRO}>
-          <Sequence from={-SH_FROM}>
-            <Main captions={false} audio={false} />
-          </Sequence>
-        </Sequence>
       </Picture>
-      <Sequence from={SH_INTRO} durationInFrames={music}>
-        <Audio src={staticFile('audio/master_padded.wav')} startFrom={SH_FROM}
-          volume={(f) => interpolate(f, [0, 6, music - 12, music], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} />
-        <div style={{position: 'absolute', top: PIC_TOP + 810 + 60, left: 0, right: 0, height: 400}}>
-          <Captions offsetS={SH_FROM / FPS} size={58} width={960} />
-        </div>
-      </Sequence>
+      <Audio src={staticFile('audio/master_padded.wav')} startFrom={from}
+        volume={(f) => interpolate(f, [0, 4, frames - 12, frames], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} />
+      <div style={{position: 'absolute', top: PIC_TOP + 810 + 60, left: 0, right: 0, height: 400}}>
+        <Captions offsetS={from / FPS} size={58} width={960} />
+      </div>
     </AbsoluteFill>
   );
 };

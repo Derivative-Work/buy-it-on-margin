@@ -2,7 +2,7 @@
 
 src/Captions.tsx applies the same rule to the burned-in captions, so the two match frame for frame.
 Usage: python3 -I scripts/export_srt.py [out=deliverables/buy_it_on_margin.en.srt] [offset_s=opening card length] [from_s] [to_s]
-       python3 -I scripts/export_srt.py short   (the Shorts cut: its offset and range from shot_times and SH00)
+       python3 -I scripts/export_srt.py short <id>   (a Short from config/shorts.json: its range, timed from its first frame)
 """
 import json
 import sys
@@ -11,12 +11,16 @@ tm = json.load(open("timing/timing_map.json"))
 rule = json.load(open("config/captions.json"))
 st = json.load(open("timing/shot_times.json"))
 if sys.argv[1:2] == ["short"]:
-    # The Shorts cut (src/Shorts.tsx): its first card (SH00, by the hold rule), then N08 through N13
-    film = json.load(open("config/film.json"))["card"]
-    words = len(json.load(open("config/cards.json"))["cards"]["SH00"]["text"].split())
-    intro = round((film["min_hold_s"] + words * film["s_per_word"]) * st["fps"]) / st["fps"]
-    lo, hi = st["shots"]["N08"]["start_frame"] / st["fps"], st["shots"]["N13"]["end_frame"] / st["fps"]
-    out, offset = "deliverables/buy_it_on_margin_short.en.srt", intro - lo
+    # A vertical Short (config/shorts.json, src/Shorts.tsx): music from its first frame, so cues shift by its start
+    sid = sys.argv[2]
+    c = json.load(open("config/shorts.json"))["shorts"][sid]
+    def frame(v):
+        if isinstance(v, (int, float)):
+            return round(v * st["fps"])
+        k, edge = v.split(".")
+        return st["shots"][k]["end_frame" if edge == "end" else "start_frame"]
+    lo, hi = frame(c["from"]) / st["fps"], frame(c["to"]) / st["fps"]
+    out, offset = f"deliverables/buy_it_on_margin_short_{sid}.en.srt", -lo
 else:
     out = sys.argv[1] if len(sys.argv) > 1 else "deliverables/buy_it_on_margin.en.srt"
     offset = float(sys.argv[2]) if len(sys.argv) > 2 else st["intro"]["duration_s"]

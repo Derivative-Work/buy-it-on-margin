@@ -292,3 +292,15 @@ Timing:
 - **METADATA.md**, in the format of Not Yet and Sandbox Rhapsody: a pre-upload checklist (repo public, IPO re-check, intervention count, the Short's link), then for each upload the title, description, tags and settings.
   - Main video: description 4,649 of 5,000 characters; chapters from the timing map plus the 5.17 s opening card, each over 10 s; facts and sources from the end cards; credits.
   - Short: its own title, description and tags.
+
+## 34. 2026-11-01 — The Short's freeze fixed; three Shorts
+
+- **The bug:** the Short froze on its first card ("Ten per cent down.") for its whole run. It nested Main in `<Sequence from={-SH_FROM}>`, and Remotion clamps every Sequence's duration to the composition length minus its own `from` (`node_modules/remotion/dist/cjs/Sequence.js`, `actualDurationInFrames`). In a 34 s composition, any shot cued past frame ~830 of the master never mounted, and the last one that did stayed on screen. The main video is unaffected: Release is longer than Main. Frame-hash checks missed it, because the grain changes every frame; a blurred, downscaled motion and brightness measure caught it.
+- **The fix:** `Main` takes `offset` and shifts its shots into the Short's timeline instead. `FilmLayer` takes `frameOffset`, so cadence, grain and dust match the main video's frames. With offset 0, the main video's code path is unchanged.
+- **Three Shorts:** `config/shorts.json`, compositions `Short-<id>`, files `deliverables/buy_it_on_margin_short_<id>.{mp4,en.srt}` plus `_thumbnail.jpg`.
+  - chorus: N08–N13, 29.7 s;
+  - forecast: N04 start → 37.60 s, 21.1 s, centred on N07 (the wall of charts, "Every lab's got a forecast");
+  - hardware: N14 start → 79.60 s, 20.7 s. It holds on N17 (the hatbox with RAM and GPUs) from its last frame through "Buy it on margin, sugar, buy it on margin!" (`Main holdFrom`, a Freeze inside the film layer, so grain keeps moving).
+- **Opening:** SH00 is now "AI-generated satire. Not investment advice.", over the picture for 2.5 s. The music and picture run from frame 0, with a 4-frame fade-in and a 12-frame fade-out. In the chorus Short the card runs 2.6 s, exactly over N08's own card, so it cuts straight to the margin slip.
+- **Scripts:** `export_srt.py short <id>`; `thumbnail.py` writes a vertical thumbnail per Short (its frame and tagline from the config); `archive.sh` and `rebuild.sh` handle the three Shorts. The rebuild now checks every video as identical, or as identical audio plus ≥ 40 dB picture.
+- **Checks:** motion per second is non-zero throughout all three; the hold measures 1.5–2.1 (grain and weave). The cut from the disclaimer to the margin slip was checked frame by frame. METADATA.md has a section per Short; the forecast Short's figures ($856B, −$278B) were checked on Crypto Briefing (citing the FT, Sept 18).

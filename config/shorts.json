@@ -1,0 +1,38 @@
+{
+ "_doc": "The vertical Shorts (src/Shorts.tsx, one composition per entry: Short-<id>). Each opens on the SH00 disclaimer card over the picture for disclaimer_s (a Short may override it) while the music and picture already run (human, 2026-11-01: 'keep the opening disclaimer but don't hold it for too long and start the music right away'). from/to: a shot id's start or end, or seconds on the master timeline. hold_from: the picture holds on that moment (grain still running) while the audio runs on to 'to'. thumb: the frame for the vertical thumbnail (seconds), with its tagline.",
+ "disclaimer_s": 2.5,
+ "shorts": {
+  "chorus": {
+   "from": "N08.start",
+   "to": "N13.end",
+   "thumb": "N30",
+   "tagline": [
+    "A cautionary tale of borrowed money.",
+    "Not investment advice."
+   ],
+   "note": "Verse 1's last line into the first chorus (brief: N08 through N13). The disclaimer covers N08's 'Ten per cent down.' card exactly (2.6 s), so it cuts straight to the margin slip instead of flashing the last frames of that card.",
+   "disclaimer_s": 2.6
+  },
+  "forecast": {
+   "from": "N04.start",
+   "to": 37.6,
+   "thumb": 27.0,
+   "tagline": [
+    "Every lab's got a forecast,",
+    "and the forecasts sure are grand."
+   ],
+   "note": "Verse 1 (barber, shoeshine legend, the thinking machine, the wall of charts on 'Every lab's got a forecast', the margin slip) into the first chorus line, which ends 37.04 s; out before 'Ten cents down' (38.04 s)."
+  },
+  "hardware": {
+   "from": "N14.start",
+   "to": 79.6,
+   "hold_from": "N17.end",
+   "thumb": 74.9,
+   "tagline": [
+    "With the IOUs in its hat.",
+    "(And the RAM. And the GPUs.)"
+   ],
+   "note": "Verse 2 (cornfield, power plant, the nested companies) to the hatbox of IOUs, RAM sticks and graphics cards (N17, 1.9 s), which holds through the first chorus line ('Buy it on margin, sugar, buy it on margin!', ends 79.30 s)."
+  }
+ }
+}

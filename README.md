@@ -63,25 +63,25 @@ Anthropic's S-1 was not yet effective on November 1, 2026. If it becomes effecti
 - [`docs/brief.md`](docs/brief.md): the brief (shot list, film layer, milestones).
 - [`shots/`](shots/): every still and clip prompt with its seed.
 - [`config/`](config/): the master edit, shot cues, cards, picks and every edit setting. [`timing/`](timing/): the timing map and shot times.
-- [`src/`](src/): the Remotion project: the film layer, the devices, the edit, the Short.
+- [`src/`](src/): the Remotion project: the film layer, the devices, the edit, the Shorts. [`config/shorts.json`](config/shorts.json) defines the three Shorts.
 - [`scripts/`](scripts/): one script per step. Each one documents itself at the top.
 - [`docs/planning_chat/`](docs/planning_chat/): the planning chat, as Markdown and as the raw share snapshot. [`docs/suno*/`](docs/): the Suno take records and the lyrics as submitted.
 - [`METADATA.md`](METADATA.md): the YouTube title, description, tags and settings for both uploads.
-- [`deliverables/`](deliverables/): the upload's captions (the lyrics as sung) and the thumbnails for the video and the Short.
+- [`deliverables/`](deliverables/): the upload's captions (the lyrics as sung) and the thumbnails for the video and the three Shorts.
 
 ## Reproducing it
 
 Large files (audio, takes, the videos) are not in git; [`MANIFEST.sha256`](MANIFEST.sha256) lists them with checksums. The release [`archive-2026-11-01`](https://github.com/Derivative-Work/buy-it-on-margin/releases/tag/archive-2026-11-01) has:
-- the two upload files, with English captions and the thumbnails, all also in [`deliverables/`](deliverables/);
+- the main video and the three Shorts, with English captions and the thumbnails, all also in [`deliverables/`](deliverables/);
 - the audio that can't be regenerated: the Suno takes and stems, the post-filtered takes and the master;
 - every still and clip the production made, and the picks and mattes as the edit uses them.
 
 ```sh
 scripts/setup_env.sh --no-comfy   # Node, Remotion, the Python venv (idempotent; drop --no-comfy for ComfyUI and the weights)
-scripts/rebuild.sh --fetch        # download the archive, re-render both videos, captions and thumbnails, check against the release
+scripts/rebuild.sh --fetch        # download the archive, re-render the videos, captions and thumbnails, check against the release
 ```
 
-On the production machine, the rebuild gives byte-identical captions, thumbnails and Short. The main video's audio is bit-identical, and its picture differs only in the last bit of a few panned stills (Chrome's compositing; worst frame 42.8 dB PSNR), so `rebuild.sh` checks it to 40 dB.
+On the production machine, the rebuild gives byte-identical captions and thumbnails, and bit-identical audio. The pictures can differ in the last bit of a few panned stills (Chrome's compositing; worst frame 42.8 dB PSNR in the main video), so `rebuild.sh` checks each video to 40 dB.
 
 Regenerating the takes themselves from the models is a per-stage job. The commands are in the production log, and the picks in `config/` make the same choices again.
 - Every random process reads its seed from `config/`. Stills and clips with the same seed, weights and ComfyUI version should match on the same GPU; expect small differences elsewhere.

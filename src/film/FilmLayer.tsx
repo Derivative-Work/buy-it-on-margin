@@ -83,8 +83,9 @@ const Dust: React.FC<{p: number; t: number}> = ({p, t}) => {
   );
 };
 
-export const FilmLayer: React.FC<{children: React.ReactNode; bypass?: boolean}> = ({children, bypass}) => {
-  const frame = useCurrentFrame();
+/** frameOffset: the master frame this layer's frame 0 stands for (the Shorts), so cadence, grain and dust match the main video. */
+export const FilmLayer: React.FC<{children: React.ReactNode; bypass?: boolean; frameOffset?: number}> = ({children, bypass, frameOffset = 0}) => {
+  const frame = useCurrentFrame() + frameOffset;
   const {fps} = useVideoConfig();
   const p = pictureIndex(frame);
   const t = frame / fps;
@@ -94,7 +95,7 @@ export const FilmLayer: React.FC<{children: React.ReactNode; bypass?: boolean}> 
   const g = Math.floor(hash(SEED, GRAIN, p) * FILM.grain.plates);
   const gx = (hash(SEED, GRAIN_X, p) - 0.5) * 200, gy = (hash(SEED, GRAIN_Y, p) - 0.5) * 200;
   const v = FILM.vignette;
-  const content = <Freeze frame={heldFrame(frame)}>{children}</Freeze>;
+  const content = <Freeze frame={heldFrame(frame) - frameOffset}>{children}</Freeze>;
   if (bypass) return <AbsoluteFill style={{background: '#000'}}>{content}</AbsoluteFill>;
   return (
     <AbsoluteFill style={{background: '#000', alignItems: 'center', justifyContent: 'center'}}>

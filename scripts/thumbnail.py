@@ -2,7 +2,9 @@
 
 Input: out/m4/n30_freeze.png, a 1080p frame of the main edit at N30's first frame, captions off:
   npx remotion still src/index.ts Main out/m4/n30_freeze.png --frame=<N30 start + 1> --props='{"captions":false}'
-Outputs: deliverables/buy_it_on_margin_thumbnail.jpg (1280x720), deliverables/buy_it_on_margin_short_thumbnail.jpg (1080x1920).
+and, per Short in config/shorts.json whose "thumb" is a time, out/m4/thumb_<id>.png, the frame at that time (same flags).
+Outputs: deliverables/buy_it_on_margin_thumbnail.jpg (1280x720) and deliverables/buy_it_on_margin_short_<id>_thumbnail.jpg
+(1080x1920) per Short, with its tagline.
 Usage: <venv>/bin/python -I scripts/thumbnail.py
 """
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -34,14 +36,17 @@ d = ImageDraw.Draw(im)
 banner(d, 1280, 34, ImageFont.truetype("public/fonts/Limelight-Regular.ttf", 112), ImageFont.truetype("public/fonts/OldStandard-Italic.ttf", 48))
 im.save("deliverables/buy_it_on_margin_thumbnail.jpg", quality=92)
 
-# 9:16: title above, the 4:3 picture in the middle (as in the Short)
-v = Image.new("RGB", (1080, 1920), (5, 5, 5))
-v.paste(pic.resize((1080, 810)), (0, 560))
-d = ImageDraw.Draw(v)
-banner(d, 1080, 250, ImageFont.truetype("public/fonts/Limelight-Regular.ttf", 100), ImageFont.truetype("public/fonts/OldStandard-Italic.ttf", 50))
+# 9:16, per Short: title above, the 4:3 picture in the middle (as in the Short), its tagline below
+import json
 tag = ImageFont.truetype("public/fonts/OldStandard-Italic.ttf", 52)
-for i, line in enumerate(["A cautionary tale of borrowed money.", "Not investment advice."]):
-    lw = d.textlength(line, font=tag)
-    d.text(((1080 - lw) / 2, 1460 + i * 72), line, font=tag, fill=(214, 208, 196))
-v.save("deliverables/buy_it_on_margin_short_thumbnail.jpg", quality=92)
+for sid, c in json.load(open("config/shorts.json"))["shorts"].items():
+    frame = src if c["thumb"] == "N30" else Image.open(f"out/m4/thumb_{sid}.png").convert("RGB")
+    v = Image.new("RGB", (1080, 1920), (5, 5, 5))
+    v.paste(frame.crop((240, 0, 1680, 1080)).resize((1080, 810)), (0, 560))
+    d = ImageDraw.Draw(v)
+    banner(d, 1080, 250, ImageFont.truetype("public/fonts/Limelight-Regular.ttf", 100), ImageFont.truetype("public/fonts/OldStandard-Italic.ttf", 50))
+    for i, line in enumerate(c["tagline"]):
+        lw = d.textlength(line, font=tag)
+        d.text(((1080 - lw) / 2, 1460 + i * 72), line, font=tag, fill=(214, 208, 196))
+    v.save(f"deliverables/buy_it_on_margin_short_{sid}_thumbnail.jpg", quality=92)
 print("thumbnails written")
