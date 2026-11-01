@@ -14,7 +14,8 @@ import soundfile as sf
 
 sys.argv = sys.argv[:1]
 cfg = json.load(open("config/master.json"))
-end_s = json.load(open("timing/shot_times.json"))["video_end"]
+st = json.load(open("timing/shot_times.json"))
+end_s = st["video_end"]
 x, sr = sf.read(cfg["locked"]["file"], always_2d=True)
 n = int(round(end_s * sr)) - len(x)
 c = dict(cfg["crackle"]); c["seed"] += 1
@@ -39,3 +40,16 @@ if cc:  # credits music over the crackle (not post-filtered: it should sound lik
 out = Path("public/audio"); out.mkdir(parents=True, exist_ok=True)
 sf.write(out / "master_padded.wav", np.concatenate([x, tail]), sr, subtype="PCM_16")
 print(f"master {len(x) / sr:.3f} s + crackle {n / sr:.3f} s = {end_s:.3f} s")
+
+# The opening card (Release comp) plays over its own crackle: seed + 2, same generator, 200 ms fade-out into the leader
+n = st["intro"]["frames"] * sr // st["fps"]
+rng = np.random.default_rng(cfg["crackle"]["seed"] + 2)
+hiss = np.convolve(rng.normal(0, 1, n), np.ones(8) / 8, mode="same")
+hiss *= 10 ** (cfg["crackle"]["hiss_dbfs"] / 20) / hiss.std()
+pops = np.zeros(n)
+for t in rng.choice(n - 200, size=int(n / sr * cfg["crackle"]["pops_per_s"]), replace=False):
+    pops[t:t + 200] += 10 ** (rng.uniform(-38, -22) / 20) * rng.choice([-1, 1]) * np.exp(-np.arange(200) / rng.uniform(8, 40))
+intro = np.stack([hiss + pops] * 2, 1)
+k = int(0.2 * sr); intro[-k:] *= np.linspace(1, 0, k)[:, None]
+sf.write(out / "intro_crackle.wav", intro, sr, subtype="PCM_16")
+print(f"opening card crackle {n / sr:.3f} s")

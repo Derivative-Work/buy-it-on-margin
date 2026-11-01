@@ -1,7 +1,7 @@
 """M5: captions as an SRT, from the lyrics as sung and the timing map, by the rule in config/captions.json.
 
 src/Captions.tsx applies the same rule to the burned-in captions, so the two match frame for frame.
-Usage: python3 -I scripts/export_srt.py [out=deliverables/buy_it_on_margin.en.srt] [offset_s=0] [from_s] [to_s]
+Usage: python3 -I scripts/export_srt.py [out=deliverables/buy_it_on_margin.en.srt] [offset_s=opening card length] [from_s] [to_s]
        (the Shorts cut passes its offset and range)
 """
 import json
@@ -10,7 +10,7 @@ import sys
 tm = json.load(open("timing/timing_map.json"))
 rule = json.load(open("config/captions.json"))
 out = sys.argv[1] if len(sys.argv) > 1 else "deliverables/buy_it_on_margin.en.srt"
-offset = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
+offset = float(sys.argv[2]) if len(sys.argv) > 2 else json.load(open("timing/shot_times.json"))["intro"]["duration_s"]
 lo = float(sys.argv[3]) if len(sys.argv) > 3 else -1e9
 hi = float(sys.argv[4]) if len(sys.argv) > 4 else 1e9
 

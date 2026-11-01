@@ -2,6 +2,11 @@
  "generated_by": "scripts/shot_times.py",
  "fps": 24,
  "picture_fps": 18,
+ "intro": {
+  "card": "OPEN",
+  "duration_s": 5.167,
+  "frames": 124
+ },
  "music_end": 185.834,
  "video_end": 242.294,
  "video_end_frame": 5815,

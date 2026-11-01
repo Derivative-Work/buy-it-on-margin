@@ -75,3 +75,7 @@ Append-only. Every human action: when, what, and why.
 ## 14. 2026-10-31 — Credits music: player-piano cover
 
 - **What:** made a Suno cover of the song (lyrics removed, instrumental, style prompt "1920s player piano" only): https://suno.com/s/DbAiN1YpFiQ1whef (clip 7cc9fb84, chirp-hawk v6, 143.6 s). Saved the WAV to ~/Downloads (`buy-it-on-margin-instrumental.wav`). "Instead of using static for the entire duration … Don't bother with the post-filter on that one, it is supposed to sound like it came off an old record (unlike the main track, whose words need to be understandable for the satire)."
+
+## 15. 2026-10-31 — Opening warning
+
+- **What:** "this could also use an era-appropriate "ai-generated satire, not investment advice" or similar warning right from the beginning too"

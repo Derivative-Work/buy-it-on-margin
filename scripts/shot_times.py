@@ -83,7 +83,10 @@ def main():
                             "cue": r["label"], "insert_over": "previous shot", "note": r.get("note")}
     order = sorted(out, key=lambda k: out[k]["start"])
     video_end = max(s["end"] for s in out.values())
-    json.dump({"generated_by": "scripts/shot_times.py", "fps": FPS, "picture_fps": PICTURE_FPS,
+    film = json.load(open("config/film.json"))["card"]   # the opening card before the leader (Release comp)
+    intro_s = film["min_hold_s"] + len(cards["OPEN"]["text"].split()) * film["s_per_word"]
+    intro = {"card": "OPEN", "duration_s": round(round(intro_s * FPS) / FPS, 3), "frames": round(intro_s * FPS)}
+    json.dump({"generated_by": "scripts/shot_times.py", "fps": FPS, "picture_fps": PICTURE_FPS, "intro": intro,
                "music_end": end_music, "video_end": round(video_end, 3), "video_end_frame": round(video_end * FPS),
                "master_sha256": tm["audio"]["sha256"], "shots": {k: out[k] for k in order},
                "hold_problems": problems}, open(OUT, "w"), indent=1, ensure_ascii=False)
@@ -91,7 +94,7 @@ def main():
         s = out[k]
         print(f"{k:5s} {s['start']:7.2f}-{s['end']:7.2f} ({s['duration']:5.2f} s, f{s['start_frame']}-{s['end_frame']})"
               f" snap {s.get('snapped_ms', 0):+4d}ms  {s['cue']}")
-    print(f"music ends {end_music:.2f} s; video ends {video_end:.2f} s")
+    print(f"music ends {end_music:.2f} s; video ends {video_end:.2f} s; opening card {intro['duration_s']} s before it")
     print("HOLD PROBLEMS:", *problems, sep="\n  ")
 
 

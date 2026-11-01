@@ -1,6 +1,11 @@
 {
  "_doc": "Every intertitle and overlay word on screen (brief: one file, so a fact fix is a one-line change). Text from the brief rev 10 and the song doc's fact card rev 24; checked against the fact card at M6. 'source' = where the text comes from, for the M6 fact check. 'hold_rule' = brief: >= 1.5 s + ~1 s per 3 words.",
  "cards": {
+  "OPEN": {
+   "kind": "card",
+   "text": "A satire, made with artificial intelligence. Nothing herein is investment advice.",
+   "source": "human request 2026-10-31: an era-appropriate AI-satire / not-investment-advice warning from the very start (main video, before the leader)"
+  },
   "N03": {
    "kind": "card",
    "text": "THE MUSIC OF TOMORROW"
@@ -75,8 +80,9 @@
   },
   "SH00": {
    "kind": "card",
-   "text": "A cautionary tale of borrowed money. Not investment advice.",
-   "source": "song doc review checklist: opening intertitle for the Shorts cut"
+   "text": "A cautionary tale, made with artificial intelligence. Not investment advice.",
+   "source": "song doc review checklist: opening intertitle for the Shorts cut",
+   "m6": "AI disclosure added with OPEN (2026-10-31)"
   },
   "SH_TITLE": {
    "kind": "title",
