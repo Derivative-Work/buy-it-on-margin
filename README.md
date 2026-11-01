@@ -4,6 +4,8 @@
 
 That line is literal: the lyrics were drafted by Claude, made by Anthropic, which filed to go public on October 26, 2026. The end cards disclose it and say where the comparison with 1929 doesn't hold. Their sources are under [Sources](#sources).
 
+**Watch it on YouTube:** https://www.youtube.com/watch?v=2bp3_BMylKY
+
 This repository is the production log the video's credits point to. Claude Code produced the video. A human approved each milestone, picked the takes, made the Suno generations and judged everything that needed ears or moving pictures. Every human action is logged.
 
 ## How it was made
@@ -66,7 +68,7 @@ Anthropic's S-1 was not yet effective on November 1, 2026. If it becomes effecti
 - [`src/`](src/): the Remotion project: the film layer, the devices, the edit, the Shorts. [`config/shorts.json`](config/shorts.json) defines the three Shorts.
 - [`scripts/`](scripts/): one script per step. Each one documents itself at the top.
 - [`docs/planning_chat/`](docs/planning_chat/): the planning chat, as Markdown and as the raw share snapshot. [`docs/suno*/`](docs/): the Suno take records and the lyrics as submitted.
-- [`METADATA.md`](METADATA.md): the YouTube title, description, tags and settings for both uploads.
+- [`METADATA.md`](METADATA.md): the YouTube title, description, tags and settings for the main video and the three Shorts.
 - [`deliverables/`](deliverables/): the upload's captions (the lyrics as sung) and the thumbnails for the video and the three Shorts.
 
 ## Reproducing it
