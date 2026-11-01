@@ -275,3 +275,8 @@ Timing:
 - The credits now run 181.00–296.01 s.
 - The credits cover's `src_in` moved 89.64 → 35.92 s, the downbeat of the phrase at ~36.0 s (phrases at 36.0, 53.9, 71.8, 89.7 s), so the piano still ends on its own final chord (at 294.4 s) under the last card.
 - Release re-rendered: 301.18 s. A/V offset 0.0 ms at 100, 170, 200 and 250 s (290 s: 0.02 ms). The SRTs are unchanged. The Short has no credits and is unchanged.
+
+## 32. 2026-11-01 — Pushed; release archive-2026-11-01
+
+- `scripts/manifest.sh` (246 files), then `scripts/archive.sh` rebuilt on the final content (main video 301.18 s). The rebuild check from that archive passed: the SRTs, thumbnails and Short identical; the main video's audio identical; main picture worst frame 42.79 dB PSNR.
+- The human approved: "that's it, go ahead and push". `git push -u origin main`, then `scripts/archive.sh --upload` → release `archive-2026-11-01`. The repo stays private until the human makes it public.
